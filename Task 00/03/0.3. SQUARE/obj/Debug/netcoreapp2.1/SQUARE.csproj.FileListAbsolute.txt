@@ -1,0 +1,10 @@
+D:\.NET projects\EPAM\03\0.3. SQUARE\bin\Debug\netcoreapp2.1\SQUARE.deps.json
+D:\.NET projects\EPAM\03\0.3. SQUARE\bin\Debug\netcoreapp2.1\SQUARE.runtimeconfig.json
+D:\.NET projects\EPAM\03\0.3. SQUARE\bin\Debug\netcoreapp2.1\SQUARE.runtimeconfig.dev.json
+D:\.NET projects\EPAM\03\0.3. SQUARE\bin\Debug\netcoreapp2.1\SQUARE.dll
+D:\.NET projects\EPAM\03\0.3. SQUARE\bin\Debug\netcoreapp2.1\SQUARE.pdb
+D:\.NET projects\EPAM\03\0.3. SQUARE\obj\Debug\netcoreapp2.1\SQUARE.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\03\0.3. SQUARE\obj\Debug\netcoreapp2.1\SQUARE.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\03\0.3. SQUARE\obj\Debug\netcoreapp2.1\SQUARE.AssemblyInfo.cs
+D:\.NET projects\EPAM\03\0.3. SQUARE\obj\Debug\netcoreapp2.1\SQUARE.dll
+D:\.NET projects\EPAM\03\0.3. SQUARE\obj\Debug\netcoreapp2.1\SQUARE.pdb

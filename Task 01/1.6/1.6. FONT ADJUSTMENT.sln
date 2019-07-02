@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.6. FONT ADJUSTMENT", "1.6. FONT ADJUSTMENT\1.6. FONT ADJUSTMENT.csproj", "{334E3437-01FD-4D50-8416-119AAF93E394}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{334E3437-01FD-4D50-8416-119AAF93E394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334E3437-01FD-4D50-8416-119AAF93E394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334E3437-01FD-4D50-8416-119AAF93E394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334E3437-01FD-4D50-8416-119AAF93E394}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {592C218D-8B26-4287-8411-24E68AF87D23}
+	EndGlobalSection
+EndGlobal

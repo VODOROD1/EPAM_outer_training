@@ -1,0 +1,11 @@
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\bin\Debug\netcoreapp2.1\1.4. X-MAS TREE.deps.json
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\bin\Debug\netcoreapp2.1\1.4. X-MAS TREE.runtimeconfig.json
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\bin\Debug\netcoreapp2.1\1.4. X-MAS TREE.runtimeconfig.dev.json
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\bin\Debug\netcoreapp2.1\1.4. X-MAS TREE.dll
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\bin\Debug\netcoreapp2.1\1.4. X-MAS TREE.pdb
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\obj\Debug\netcoreapp2.1\1.4. X-MAS TREE.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\obj\Debug\netcoreapp2.1\1.4. X-MAS TREE.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\obj\Debug\netcoreapp2.1\1.4. X-MAS TREE.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\obj\Debug\netcoreapp2.1\1.4. X-MAS TREE.AssemblyInfo.cs
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\obj\Debug\netcoreapp2.1\1.4. X-MAS TREE.dll
+D:\.NET projects\EPAM\task 01\1.4\1.4. X-MAS TREE\obj\Debug\netcoreapp2.1\1.4. X-MAS TREE.pdb

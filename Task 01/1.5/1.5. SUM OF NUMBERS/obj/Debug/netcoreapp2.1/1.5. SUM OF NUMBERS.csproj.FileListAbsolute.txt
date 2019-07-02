@@ -1,0 +1,11 @@
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\bin\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.deps.json
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\bin\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.runtimeconfig.json
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\bin\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.runtimeconfig.dev.json
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\bin\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.dll
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\bin\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.pdb
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\obj\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\obj\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\obj\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\obj\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.AssemblyInfo.cs
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\obj\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.dll
+D:\.NET projects\EPAM\task 01\1.5\1.5. SUM OF NUMBERS\obj\Debug\netcoreapp2.1\1.5. SUM OF NUMBERS.pdb

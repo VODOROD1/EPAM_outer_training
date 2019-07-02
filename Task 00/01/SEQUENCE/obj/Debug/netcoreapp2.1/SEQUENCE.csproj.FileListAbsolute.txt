@@ -1,0 +1,33 @@
+D:\.NET projects\EPAM\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.deps.json
+D:\.NET projects\EPAM\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.runtimeconfig.json
+D:\.NET projects\EPAM\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.runtimeconfig.dev.json
+D:\.NET projects\EPAM\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.dll
+D:\.NET projects\EPAM\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.pdb
+D:\.NET projects\EPAM\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.AssemblyInfo.cs
+D:\.NET projects\EPAM\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.dll
+D:\.NET projects\EPAM\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.pdb
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.deps.json
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.runtimeconfig.json
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.runtimeconfig.dev.json
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.dll
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.pdb
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.csprojAssemblyReference.cache
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.csproj.CoreCompileInputs.cache
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.AssemblyInfoInputs.cache
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.AssemblyInfo.cs
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.dll
+G:\C# core\theory\EPAM\task 0\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.pdb
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.deps.json
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.runtimeconfig.json
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.runtimeconfig.dev.json
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.dll
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\bin\Debug\netcoreapp2.1\SEQUENCE.pdb
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.AssemblyInfo.cs
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.dll
+D:\.NET projects\EPAM\task 00\01\SEQUENCE\obj\Debug\netcoreapp2.1\SEQUENCE.pdb

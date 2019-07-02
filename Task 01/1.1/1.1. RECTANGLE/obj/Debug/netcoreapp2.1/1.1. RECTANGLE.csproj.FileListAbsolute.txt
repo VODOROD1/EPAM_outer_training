@@ -1,0 +1,11 @@
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\bin\Debug\netcoreapp2.1\1.1. RECTANGLE.deps.json
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\bin\Debug\netcoreapp2.1\1.1. RECTANGLE.runtimeconfig.json
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\bin\Debug\netcoreapp2.1\1.1. RECTANGLE.runtimeconfig.dev.json
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\bin\Debug\netcoreapp2.1\1.1. RECTANGLE.dll
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\bin\Debug\netcoreapp2.1\1.1. RECTANGLE.pdb
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\obj\Debug\netcoreapp2.1\1.1. RECTANGLE.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\obj\Debug\netcoreapp2.1\1.1. RECTANGLE.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\obj\Debug\netcoreapp2.1\1.1. RECTANGLE.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\obj\Debug\netcoreapp2.1\1.1. RECTANGLE.AssemblyInfo.cs
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\obj\Debug\netcoreapp2.1\1.1. RECTANGLE.dll
+D:\.NET projects\EPAM\task 01\1.1\1.1. RECTANGLE\obj\Debug\netcoreapp2.1\1.1. RECTANGLE.pdb
