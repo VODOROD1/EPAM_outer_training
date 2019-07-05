@@ -1,0 +1,11 @@
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\bin\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.deps.json
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\bin\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\bin\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\bin\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.dll
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\bin\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.pdb
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\obj\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\obj\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\obj\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\obj\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\obj\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.dll
+D:\.NET projects\EPAM\Task 01\1.12\1.12. CHAR DOUBLER\obj\Debug\netcoreapp2.1\1.12. CHAR DOUBLER.pdb

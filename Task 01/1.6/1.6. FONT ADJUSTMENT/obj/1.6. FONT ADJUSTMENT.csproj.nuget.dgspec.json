@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET projects\\EPAM\\task 01\\1.6\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj": {}
+    "D:\\.NET projects\\EPAM\\Task 01\\1.6 (0)\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj": {}
   },
   "projects": {
-    "D:\\.NET projects\\EPAM\\task 01\\1.6\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj": {
+    "D:\\.NET projects\\EPAM\\Task 01\\1.6 (0)\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET projects\\EPAM\\task 01\\1.6\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj",
+        "projectUniqueName": "D:\\.NET projects\\EPAM\\Task 01\\1.6 (0)\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj",
         "projectName": "1.6. FONT ADJUSTMENT",
-        "projectPath": "D:\\.NET projects\\EPAM\\task 01\\1.6\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj",
+        "projectPath": "D:\\.NET projects\\EPAM\\Task 01\\1.6 (0)\\1.6. FONT ADJUSTMENT\\1.6. FONT ADJUSTMENT.csproj",
         "packagesPath": "C:\\Users\\vodor\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET projects\\EPAM\\task 01\\1.6\\1.6. FONT ADJUSTMENT\\obj\\",
+        "outputPath": "D:\\.NET projects\\EPAM\\Task 01\\1.6 (0)\\1.6. FONT ADJUSTMENT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,11 @@
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\bin\Debug\netcoreapp2.1\1.8. NO POSITIVE.deps.json
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\bin\Debug\netcoreapp2.1\1.8. NO POSITIVE.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\bin\Debug\netcoreapp2.1\1.8. NO POSITIVE.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\bin\Debug\netcoreapp2.1\1.8. NO POSITIVE.dll
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\bin\Debug\netcoreapp2.1\1.8. NO POSITIVE.pdb
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\obj\Debug\netcoreapp2.1\1.8. NO POSITIVE.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\obj\Debug\netcoreapp2.1\1.8. NO POSITIVE.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\obj\Debug\netcoreapp2.1\1.8. NO POSITIVE.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\obj\Debug\netcoreapp2.1\1.8. NO POSITIVE.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\obj\Debug\netcoreapp2.1\1.8. NO POSITIVE.dll
+D:\.NET projects\EPAM\Task 01\1.8\1.8. NO POSITIVE\obj\Debug\netcoreapp2.1\1.8. NO POSITIVE.pdb

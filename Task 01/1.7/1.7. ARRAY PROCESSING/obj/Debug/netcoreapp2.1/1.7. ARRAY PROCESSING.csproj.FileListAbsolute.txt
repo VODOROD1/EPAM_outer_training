@@ -1,0 +1,11 @@
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\bin\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.deps.json
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\bin\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\bin\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\bin\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.dll
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\bin\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.pdb
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\obj\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\obj\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\obj\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\obj\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\obj\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.dll
+D:\.NET projects\EPAM\Task 01\1.7\1.7. ARRAY PROCESSING\obj\Debug\netcoreapp2.1\1.7. ARRAY PROCESSING.pdb

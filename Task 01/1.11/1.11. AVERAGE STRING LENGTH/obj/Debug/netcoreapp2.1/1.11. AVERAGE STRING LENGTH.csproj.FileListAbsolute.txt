@@ -1,0 +1,11 @@
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\bin\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.deps.json
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\bin\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\bin\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\bin\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.dll
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\bin\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.pdb
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\obj\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\obj\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\obj\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\obj\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\obj\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.dll
+D:\.NET projects\EPAM\Task 01\1.11\1.11. AVERAGE STRING LENGTH\obj\Debug\netcoreapp2.1\1.11. AVERAGE STRING LENGTH.pdb

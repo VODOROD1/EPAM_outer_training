@@ -1,0 +1,10 @@
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\bin\Debug\netcoreapp2.1\1.10. 2D ARRAY.deps.json
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\bin\Debug\netcoreapp2.1\1.10. 2D ARRAY.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\bin\Debug\netcoreapp2.1\1.10. 2D ARRAY.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\bin\Debug\netcoreapp2.1\1.10. 2D ARRAY.dll
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\bin\Debug\netcoreapp2.1\1.10. 2D ARRAY.pdb
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\obj\Debug\netcoreapp2.1\1.10. 2D ARRAY.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\obj\Debug\netcoreapp2.1\1.10. 2D ARRAY.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\obj\Debug\netcoreapp2.1\1.10. 2D ARRAY.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\obj\Debug\netcoreapp2.1\1.10. 2D ARRAY.dll
+D:\.NET projects\EPAM\Task 01\1.10\1.10. 2D ARRAY\obj\Debug\netcoreapp2.1\1.10. 2D ARRAY.pdb

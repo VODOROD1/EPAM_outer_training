@@ -1,0 +1,22 @@
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.deps.json
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.dll
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.pdb
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.dll
+D:\.NET projects\EPAM\Task 01\1.6\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.pdb
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.deps.json
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.dll
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\bin\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.pdb
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.dll
+D:\.NET projects\EPAM\Task 01\1.6 (0)\1.6. FONT ADJUSTMENT\obj\Debug\netcoreapp2.1\1.6. FONT ADJUSTMENT.pdb

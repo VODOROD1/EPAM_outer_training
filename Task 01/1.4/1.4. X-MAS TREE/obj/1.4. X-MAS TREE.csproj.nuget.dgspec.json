@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET projects\\EPAM\\task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj": {}
+    "D:\\.NET projects\\EPAM\\Task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj": {}
   },
   "projects": {
-    "D:\\.NET projects\\EPAM\\task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj": {
+    "D:\\.NET projects\\EPAM\\Task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET projects\\EPAM\\task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj",
+        "projectUniqueName": "D:\\.NET projects\\EPAM\\Task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj",
         "projectName": "1.4. X-MAS TREE",
-        "projectPath": "D:\\.NET projects\\EPAM\\task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj",
+        "projectPath": "D:\\.NET projects\\EPAM\\Task 01\\1.4\\1.4. X-MAS TREE\\1.4. X-MAS TREE.csproj",
         "packagesPath": "C:\\Users\\vodor\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET projects\\EPAM\\task 01\\1.4\\1.4. X-MAS TREE\\obj\\",
+        "outputPath": "D:\\.NET projects\\EPAM\\Task 01\\1.4\\1.4. X-MAS TREE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

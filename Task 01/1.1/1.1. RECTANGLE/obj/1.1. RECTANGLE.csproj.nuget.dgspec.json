@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET projects\\EPAM\\task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj": {}
+    "D:\\.NET projects\\EPAM\\Task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj": {}
   },
   "projects": {
-    "D:\\.NET projects\\EPAM\\task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj": {
+    "D:\\.NET projects\\EPAM\\Task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET projects\\EPAM\\task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj",
+        "projectUniqueName": "D:\\.NET projects\\EPAM\\Task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj",
         "projectName": "1.1. RECTANGLE",
-        "projectPath": "D:\\.NET projects\\EPAM\\task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj",
+        "projectPath": "D:\\.NET projects\\EPAM\\Task 01\\1.1\\1.1. RECTANGLE\\1.1. RECTANGLE.csproj",
         "packagesPath": "C:\\Users\\vodor\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET projects\\EPAM\\task 01\\1.1\\1.1. RECTANGLE\\obj\\",
+        "outputPath": "D:\\.NET projects\\EPAM\\Task 01\\1.1\\1.1. RECTANGLE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

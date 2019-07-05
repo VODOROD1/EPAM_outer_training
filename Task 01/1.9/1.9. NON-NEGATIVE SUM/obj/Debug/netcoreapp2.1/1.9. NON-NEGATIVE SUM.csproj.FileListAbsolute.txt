@@ -1,0 +1,10 @@
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\bin\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.deps.json
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\bin\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.runtimeconfig.json
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\bin\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\bin\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.dll
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\bin\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.pdb
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\obj\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\obj\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\obj\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\obj\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.dll
+D:\.NET projects\EPAM\Task 01\1.9\1.9. NON-NEGATIVE SUM\obj\Debug\netcoreapp2.1\1.9. NON-NEGATIVE SUM.pdb
