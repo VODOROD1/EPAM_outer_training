@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 02\2.2. TRIANGLE\bin\Debug\_2._2.TRIANGLE.exe.config
+D:\.NET projects\EPAM\Task 02\2.2. TRIANGLE\bin\Debug\_2._2.TRIANGLE.exe
+D:\.NET projects\EPAM\Task 02\2.2. TRIANGLE\bin\Debug\_2._2.TRIANGLE.pdb
+D:\.NET projects\EPAM\Task 02\2.2. TRIANGLE\obj\Debug\2.2. TRIANGLE.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 02\2.2. TRIANGLE\obj\Debug\2.2. TRIANGLE.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 02\2.2. TRIANGLE\obj\Debug\_2._2.TRIANGLE.exe
+D:\.NET projects\EPAM\Task 02\2.2. TRIANGLE\obj\Debug\_2._2.TRIANGLE.pdb

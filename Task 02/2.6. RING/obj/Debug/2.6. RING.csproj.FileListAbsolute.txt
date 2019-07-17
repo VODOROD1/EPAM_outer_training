@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 02\2.6. RING\bin\Debug\_2._6.RING.exe.config
+D:\.NET projects\EPAM\Task 02\2.6. RING\bin\Debug\_2._6.RING.exe
+D:\.NET projects\EPAM\Task 02\2.6. RING\bin\Debug\_2._6.RING.pdb
+D:\.NET projects\EPAM\Task 02\2.6. RING\obj\Debug\2.6. RING.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 02\2.6. RING\obj\Debug\2.6. RING.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 02\2.6. RING\obj\Debug\_2._6.RING.exe
+D:\.NET projects\EPAM\Task 02\2.6. RING\obj\Debug\_2._6.RING.pdb

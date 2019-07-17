@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 02\2.3. USER\obj\Debug\2.3. USER.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 02\2.3. USER\obj\Debug\2.3. USER.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 02\2.3. USER\bin\Debug\_2._3.USER.exe.config
+D:\.NET projects\EPAM\Task 02\2.3. USER\bin\Debug\_2._3.USER.exe
+D:\.NET projects\EPAM\Task 02\2.3. USER\bin\Debug\_2._3.USER.pdb
+D:\.NET projects\EPAM\Task 02\2.3. USER\obj\Debug\_2._3.USER.exe
+D:\.NET projects\EPAM\Task 02\2.3. USER\obj\Debug\_2._3.USER.pdb

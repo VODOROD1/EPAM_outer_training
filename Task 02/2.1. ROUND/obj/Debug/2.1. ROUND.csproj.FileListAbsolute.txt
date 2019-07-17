@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 02\2.1. ROUND\bin\Debug\_2._1.ROUND.exe.config
+D:\.NET projects\EPAM\Task 02\2.1. ROUND\bin\Debug\_2._1.ROUND.exe
+D:\.NET projects\EPAM\Task 02\2.1. ROUND\bin\Debug\_2._1.ROUND.pdb
+D:\.NET projects\EPAM\Task 02\2.1. ROUND\obj\Debug\2.1. ROUND.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 02\2.1. ROUND\obj\Debug\2.1. ROUND.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 02\2.1. ROUND\obj\Debug\_2._1.ROUND.exe
+D:\.NET projects\EPAM\Task 02\2.1. ROUND\obj\Debug\_2._1.ROUND.pdb
