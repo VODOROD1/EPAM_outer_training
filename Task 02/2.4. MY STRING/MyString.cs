@@ -8,38 +8,82 @@ namespace _2._4.MY_STRING
 {
     class MyString
     {
-        String str = "";
-        char[] ch;
+        private char[] ch;
         public MyString(String str)
         {
-            this.str = str;
+            ch = str.ToCharArray();
         }
-
-        public void ToCharArray(String someStr) {
-            ch = new char[str.Length];
-            for(int i = 0; i < str.Length; i++)
+        public MyString(char[] ch)
+        {
+            this.ch = ch;
+        }
+        // индексатор
+        public char this[int index]
+        {
+            get
             {
-                ch[i] = someStr[i];
+                return ch[index];
+            }
+            set
+            {
+                ch[index] = value;
             }
         }
-
-        public void ToString(char [] someCh) {
-            for (int i = 0; i < ch.Length; i++)
-            {
-                str[i] = someCh[i];
-            }
+        public char[] getCh()
+        {
+            return ch;
         }
-
+        public void setCh(char[] ch)
+        {
+            this.ch=ch;
+        }
         public static MyString operator +(MyString c1, MyString c2)
         {
-            String newStr = c1.str + c2.str;
+            char[] newStr = c1.getCh().Concat(c2.getCh()).ToArray();
             return new MyString( newStr );
         }
-
-        public static bool operator <(MyString c1, MyString c2)
+        static bool Equals(MyString m1, MyString m2)
         {
-            return c1.Value < c2.Value;
+            char[] c1 = m1.ToCharArray();
+            char[] c2 = m2.ToCharArray();
+            if (c1.Length == c2.Length)
+            {
+                for (int i = 0; i < c1.Length; i++)
+                {
+                    if (!c1[i].Equals(c2[i]))
+                        return false;
+                }
+                return true;
+            }
+            return false;
         }
+        public int indexOf( char someCh)
+        {
+            int index = 0;
+            for (int i=0; i< ch.Length; i++)
+            {
+                if (ch[i] == someCh)
+                {
+                    index = i;
+                    break;
+                }
+            }
+            return index;
+        }  
+        public int lastIndexOf(char someCh)
+        {
+            int index = 0;
+            for (int i = 0; i < ch.Length; i++)
+            {
+                if (ch[i] == someCh)
+                {
+                   index = i;
+                }
 
+            }
+            return index;
+        }
+        public char[] ToCharArray() => ch;
+        public override String ToString() => new String(ch);
     }
 }
