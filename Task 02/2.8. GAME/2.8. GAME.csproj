@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{935E944B-E00F-4F6E-8FA0-8FDCD6BCB6DC}</ProjectGuid>
+    <ProjectGuid>{31EA9F38-E056-4CBA-A2A6-575FD82230E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2._7.VECTOR_GRAPHICS_EDITOR</RootNamespace>
-    <AssemblyName>_2._7.VECTOR_GRAPHICS_EDITOR</AssemblyName>
+    <RootNamespace>_2._8.GAME</RootNamespace>
+    <AssemblyName>_2._8.GAME</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
-    <Compile Include="get.cs" />
-    <Compile Include="IDrawable.cs" />
-    <Compile Include="Figure.cs" />
-    <Compile Include="Line.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Ring.cs" />
-    <Compile Include="Round.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

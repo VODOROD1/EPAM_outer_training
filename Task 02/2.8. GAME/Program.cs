@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2._4.MY_STRING
+namespace _2._8.GAME
 {
     class Program
     {

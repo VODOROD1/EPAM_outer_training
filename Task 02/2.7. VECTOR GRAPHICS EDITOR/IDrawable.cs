@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2._4.MY_STRING
+namespace _2._7.VECTOR_GRAPHICS_EDITOR
 {
-    class Program
+    interface IDrawable
     {
-        static void Main(string[] args)
-        {
-        }
+        void draw();
     }
 }
