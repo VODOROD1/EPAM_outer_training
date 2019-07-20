@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 02\2.8. GAME\bin\Debug\_2._8.GAME.exe.config
+D:\.NET projects\EPAM\Task 02\2.8. GAME\bin\Debug\_2._8.GAME.exe
+D:\.NET projects\EPAM\Task 02\2.8. GAME\bin\Debug\_2._8.GAME.pdb
+D:\.NET projects\EPAM\Task 02\2.8. GAME\obj\Debug\2.8. GAME.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 02\2.8. GAME\obj\Debug\2.8. GAME.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 02\2.8. GAME\obj\Debug\_2._8.GAME.exe
+D:\.NET projects\EPAM\Task 02\2.8. GAME\obj\Debug\_2._8.GAME.pdb
