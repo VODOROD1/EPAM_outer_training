@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace _3._3.DYNAMIC_ARRAY
 {
-    class DynamicArray<T> : IEnumerable, ICloneable
+    class DynamicArray<T> : IEnumerable, IEnumerable<T>, ICloneable
     {
         #region FIELDS
-        T[] arr;
+        protected T[] arr;
         private int length;
 
         public int Length
@@ -39,15 +39,9 @@ namespace _3._3.DYNAMIC_ARRAY
             arr = new T[n];
             capacity = n;
         }
-        public DynamicArray(List<T> collect)
+        public DynamicArray(IEnumerable<T> collect)
         {
-            arr = new T[collect.Count];
-            for (int i = 0; i < collect.Count; i++)
-            {
-                arr[i] = collect[i];
-            }
-            capacity = collect.Count;
-            length = capacity;
+            AddRange(collect);
         }
         #endregion
 
@@ -102,14 +96,23 @@ namespace _3._3.DYNAMIC_ARRAY
         #endregion
 
         #region ADD_RANGE
-        public void AddRange(List<T> collect)
+        public void AddRange(IEnumerable<T> collect)
         {
-            if (length + collect.Count > capacity)
+            int lengthCollect = 0;
+            foreach (T item in collect)
             {
-                Array.Resize(ref arr, capacity + collect.Count + 5);
+                lengthCollect++;
+            }
+            if (length + lengthCollect > capacity)
+            {
+                Array.Resize(ref arr, capacity + lengthCollect + 5);
             }// число 5 просто для заблаговременного увеличения capacity -
             //- если вдруг понадобится потом вставить какие-либо одиночные элементы
-            Array.Copy(collect.Cast<T>().ToArray(), 0, arr, length, collect.Count);
+            foreach (var elem in collect)
+            {
+                arr[Length] = elem;
+                Length++;
+            }
         }
         public bool Remove(T elem)
         {
@@ -175,12 +178,16 @@ namespace _3._3.DYNAMIC_ARRAY
         #endregion
 
         #region GET_ENUMERATOR
-        public IEnumerator GetEnumerator()
+        public virtual IEnumerator<T> GetEnumerator()
         {
             for (int i = 0; i < length; i++)
             {
                 yield return arr[i];
             }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
         #endregion
 
@@ -198,22 +205,15 @@ namespace _3._3.DYNAMIC_ARRAY
         #endregion
 
         #region TO_ARRAY
-        public T [] ToArray()
+        public T[] ToArray()
         {
-            return arr;
+            T[] newArr = new T[Length];
+            for (int i = 0; i < Length; i++)
+            {
+                newArr[i] = arr[i];
+            }
+            return newArr;
         }
         #endregion
-        /*public IEnumerator<T> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            for (int i =0; i<length; i++)
-            {
-                yield return arr[i];
-            }
-        }*/
     }
 }
