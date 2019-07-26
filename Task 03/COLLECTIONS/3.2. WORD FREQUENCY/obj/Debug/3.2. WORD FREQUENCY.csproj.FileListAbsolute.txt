@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.2. WORD FREQUENCY\bin\Debug\_3._2.WORD_FREQUENCY.exe.config
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.2. WORD FREQUENCY\bin\Debug\_3._2.WORD_FREQUENCY.exe
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.2. WORD FREQUENCY\bin\Debug\_3._2.WORD_FREQUENCY.pdb
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.2. WORD FREQUENCY\obj\Debug\3.2. WORD FREQUENCY.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.2. WORD FREQUENCY\obj\Debug\_3._2.WORD_FREQUENCY.exe
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.2. WORD FREQUENCY\obj\Debug\_3._2.WORD_FREQUENCY.pdb
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.2. WORD FREQUENCY\obj\Debug\3.2. WORD FREQUENCY.csprojAssemblyReference.cache

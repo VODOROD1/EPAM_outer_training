@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.1. LOST\bin\Debug\_3._1.LOST.exe.config
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.1. LOST\bin\Debug\_3._1.LOST.exe
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.1. LOST\bin\Debug\_3._1.LOST.pdb
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.1. LOST\obj\Debug\3.1. LOST.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.1. LOST\obj\Debug\3.1. LOST.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.1. LOST\obj\Debug\_3._1.LOST.exe
+D:\.NET projects\EPAM\Task 03\COLLECTIONS\3.1. LOST\obj\Debug\_3._1.LOST.pdb
