@@ -2,10 +2,11 @@
 EPAM_TASKS
 Structure of tasks
 
-Task_00_Intro
+<Task_00_Intro>
 0.1 Sequence
 0.2 Simple
 0.3 Square
+</Task_00_Intro>
 Task_01_CSharp_Basics
 1.1 Rectangle
 1.2 Triangle
