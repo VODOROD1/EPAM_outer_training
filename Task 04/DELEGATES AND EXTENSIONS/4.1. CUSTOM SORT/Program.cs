@@ -10,7 +10,8 @@ namespace _4._1.CUSTOM_SORT
     {
         static void Main(string[] args)
         {
-            int[] array = new int[] {1, 9, 2, 8, 3, 7, 4, 6, 5 };
+            var array = new int[] {1, 9, 2, 8, 3, 7, 4, 6, 5 };
+            //Применяется базовый делегат, в который передается лямбда-метод сравнения
             Func<int, int, bool> cs = (int n1, int n2) => { if (n1 < n2) { return true; } else { return false; } };
             Sort(array, cs);
 
@@ -20,12 +21,12 @@ namespace _4._1.CUSTOM_SORT
             }
             Console.ReadLine();
         }
-
+        //Метод сортировки
         public static void Sort<T>(T[] arr, Func<T, T, bool> compare)
         {
-            if (compare == null)
+            if (compare is null)
             {
-                throw new ArgumentException();
+                throw new ArgumentNullException($"{nameof(compare)} is null!");
             }
 
             for (int i = 0; i < arr.Length; i++)

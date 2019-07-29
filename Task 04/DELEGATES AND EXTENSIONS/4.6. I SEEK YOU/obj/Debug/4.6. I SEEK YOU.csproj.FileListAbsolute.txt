@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 04\DELEGATES AND EXTENSIONS\4.6. I SEEK YOU\bin\Debug\_4._6.I_SEEK_YOU.exe.config
+D:\.NET projects\EPAM\Task 04\DELEGATES AND EXTENSIONS\4.6. I SEEK YOU\bin\Debug\_4._6.I_SEEK_YOU.exe
+D:\.NET projects\EPAM\Task 04\DELEGATES AND EXTENSIONS\4.6. I SEEK YOU\bin\Debug\_4._6.I_SEEK_YOU.pdb
+D:\.NET projects\EPAM\Task 04\DELEGATES AND EXTENSIONS\4.6. I SEEK YOU\obj\Debug\4.6. I SEEK YOU.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 04\DELEGATES AND EXTENSIONS\4.6. I SEEK YOU\obj\Debug\4.6. I SEEK YOU.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 04\DELEGATES AND EXTENSIONS\4.6. I SEEK YOU\obj\Debug\_4._6.I_SEEK_YOU.exe
+D:\.NET projects\EPAM\Task 04\DELEGATES AND EXTENSIONS\4.6. I SEEK YOU\obj\Debug\_4._6.I_SEEK_YOU.pdb

@@ -10,27 +10,32 @@ namespace _4._5.TO_INT_OR_NOT_TO_INT
     {
         static void Main(string[] args)
         {
-            String str1 = "1256";
-            String str2 = "-8907";
+            var str1 = "1256";
+            var str2 = "-8907";
             Console.WriteLine(str1.CheckPositive());
+            Console.WriteLine(str2.CheckPositive());
             Console.ReadKey();
         }
     }
+    //Расширяющий класс
+    #region EXTENDED_CLASS
     public static class CheckPositiveExtension
     {
-        public static int CheckPositive(this string str)
+        public static bool CheckPositive(this string str)
         {
-            int result = 0;
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (str[i] != '-')
+            bool result = true;
+            //Перевожу строку в массив кодов ASCII
+            byte[] bytes = Encoding.ASCII.GetBytes(str);
+            foreach (byte b in bytes)
+            {   //Проверяю -- попадает ли символ в отрезок чисел таблицы ASCII
+                if (!(48 <= b && b <= 57))
                 {
-                    Console.WriteLine("Число является положительным!");
-                    result += ((int)str[str.Length - i - 1] - 48) * (int)Math.Pow(10, i);
+                    result = false;
+                    break;
                 }
-                else { Console.WriteLine("Число не является положительным!"); }
             }
             return result;
         }
     }
+    #endregion
 }

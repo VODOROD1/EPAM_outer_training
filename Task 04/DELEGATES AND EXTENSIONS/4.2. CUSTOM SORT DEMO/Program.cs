@@ -10,17 +10,17 @@ namespace _4._2.CUSTOM_SORT_DEMO
     {
         static void Main(string[] args)
         {
-            string[] arr = new string[] { "BBB", "AAA", "badbaf", "gsdf", "wwmbn", "ll", "rty", "r","CCC", "DDD", "T", "asd", "asfggrege" };
+            var arr = new string[] { "BBB", "AAA", "badbaf", "gsdf", "wwmbn", "ll", "rty", "r","CCC", "DDD", "T", "asd", "asfggrege" };
             Func<string, string, int> cs = CompareString;
             Sort(arr, cs);
             OutputArr(arr);
         }
-
+        //Сортировка
         public static void Sort<T>(T[] arr, Func<T, T, int> compare)
         {
-            if (compare == null)
+            if (compare is null)
             {
-                throw new ArgumentException();
+                throw new ArgumentNullException($"{nameof(compare)} is null!");
             }
 
             for (int i = 0; i < arr.Length; i++)
@@ -36,6 +36,7 @@ namespace _4._2.CUSTOM_SORT_DEMO
                 }
             }
         }
+        //Метод в котором проиходит сравнение строк
         public static int CompareString(string s1, string s2)
         {
             if (s1 == s2) return 0;
