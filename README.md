@@ -35,3 +35,11 @@ Structure of tasks
 <li>3.1 Lost</li>
 <li>3.2 Word_Frequency</li>
 <li>3.3 - 3.4 Dynamic_Array&Hardcore_Mode</li>
+
+### Task_03_Delegates_And_Extensions
+<li>4.1.  CUSTOM SORT</li>
+<li>4.2.  CUSTOM SORT DEMO</li>
+<li>4.3.	SORTING UNIT</li>
+<li>4.4.	NUMBER ARRAY SUM</li>
+<li>4.5.	TO INT OR NOT TO INT?</li>
+<li>4.6.	I SEEK YOU</li>
