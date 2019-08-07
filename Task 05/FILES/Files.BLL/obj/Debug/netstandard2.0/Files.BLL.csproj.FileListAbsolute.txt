@@ -1,0 +1,18 @@
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\bin\Debug\netstandard2.0\Files.BLL.deps.json
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\bin\Debug\netstandard2.0\Files.BLL.dll
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\bin\Debug\netstandard2.0\Files.BLL.pdb
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.dll
+D:\.NET projects\EPAM\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\bin\Debug\netstandard2.0\Files.BLL.deps.json
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\bin\Debug\netstandard2.0\Files.BLL.dll
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\bin\Debug\netstandard2.0\Files.BLL.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.csprojAssemblyReference.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.csproj.CoreCompileInputs.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.AssemblyInfoInputs.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.AssemblyInfo.cs
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.dll
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\Files.BLL\obj\Debug\netstandard2.0\Files.BLL.pdb

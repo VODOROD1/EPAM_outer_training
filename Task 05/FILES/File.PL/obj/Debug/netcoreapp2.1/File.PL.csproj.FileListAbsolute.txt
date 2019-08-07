@@ -1,0 +1,28 @@
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.deps.json
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.runtimeconfig.json
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.runtimeconfig.dev.json
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.dll
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.pdb
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\Files.BLL.dll
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\Files.BLL.pdb
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.AssemblyInfoInputs.cache
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.AssemblyInfo.cs
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.csproj.CopyComplete
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.dll
+D:\.NET projects\EPAM\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.deps.json
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.runtimeconfig.json
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.runtimeconfig.dev.json
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.dll
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\File.PL.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\Files.BLL.dll
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\bin\Debug\netcoreapp2.1\Files.BLL.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.csprojAssemblyReference.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.csproj.CoreCompileInputs.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.AssemblyInfoInputs.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.AssemblyInfo.cs
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.csproj.CopyComplete
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.dll
+D:\GitHub\Mike_Bel\Mike_Bel\Task 05\FILES\File.PL\obj\Debug\netcoreapp2.1\File.PL.pdb

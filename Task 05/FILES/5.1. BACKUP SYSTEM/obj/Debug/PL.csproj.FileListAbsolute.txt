@@ -1,0 +1,7 @@
+D:\.NET projects\EPAM\Task 05\FILES\5.1. BACKUP SYSTEM\bin\Debug\_5._1.BACKUP_SYSTEM.exe.config
+D:\.NET projects\EPAM\Task 05\FILES\5.1. BACKUP SYSTEM\bin\Debug\_5._1.BACKUP_SYSTEM.exe
+D:\.NET projects\EPAM\Task 05\FILES\5.1. BACKUP SYSTEM\bin\Debug\_5._1.BACKUP_SYSTEM.pdb
+D:\.NET projects\EPAM\Task 05\FILES\5.1. BACKUP SYSTEM\obj\Debug\PL.csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 05\FILES\5.1. BACKUP SYSTEM\obj\Debug\PL.csproj.CoreCompileInputs.cache
+D:\.NET projects\EPAM\Task 05\FILES\5.1. BACKUP SYSTEM\obj\Debug\_5._1.BACKUP_SYSTEM.exe
+D:\.NET projects\EPAM\Task 05\FILES\5.1. BACKUP SYSTEM\obj\Debug\_5._1.BACKUP_SYSTEM.pdb
