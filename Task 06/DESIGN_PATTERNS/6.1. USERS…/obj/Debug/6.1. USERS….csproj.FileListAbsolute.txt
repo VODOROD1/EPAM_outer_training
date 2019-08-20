@@ -1,0 +1,2 @@
+D:\.NET projects\EPAM\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\6.1. USERS….csprojAssemblyReference.cache
+D:\.NET projects\EPAM\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\6.1. USERS….csproj.CoreCompileInputs.cache

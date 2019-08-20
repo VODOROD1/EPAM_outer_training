@@ -54,9 +54,9 @@ namespace _5._1._BACKUP_SYSTEM
         static object ChooseAndCreateMode()
         {
             Console.WriteLine("Выберите режим работы программы:");
-            Console.WriteLine("\t\t1) - Мониторинг");
-            Console.WriteLine("\t\t2) - Откат изменений");
-            Console.WriteLine("\t\t3) - Выход");
+            Console.WriteLine("\t\t1) Мониторинг");
+            Console.WriteLine("\t\t2) Откат изменений");
+            Console.WriteLine("\t\t3) Выход");
 
             while (true)
             {
