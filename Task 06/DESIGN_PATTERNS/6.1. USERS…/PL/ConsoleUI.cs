@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace _6._1.USERS_.PL
 {
+    //Класс получения данных получился намного больше чем класс бизнес-логику -- не знаю правильно это или нет, но
+    //всё же прямого взаимодействия с DAL нет, а постоянно метаться в BLL и обратно за крупицами информации для того
+    //чтобы понять что данные введены неврно -- как то слишком затратно
     class ConsoleUI : IUI
     {
         UsersAwardsManager UAM = new UsersAwardsManager();
@@ -148,7 +151,7 @@ namespace _6._1.USERS_.PL
             }
         }
         #endregion
-        //Спросить о добавлении награды из общего перечня в перечень какого-либо пользователя
+        //Спросить какую награду из общего перечня нужно добавить в перечень какого пользователя
         #region ASK_AWARD_FOR_USER
         public void AskAwardForUser()
         {
@@ -159,11 +162,12 @@ namespace _6._1.USERS_.PL
             while (b1) {
                 Console.WriteLine("Выберите пользователя, которому хотите вручить награду!");
                 ShowAllUsers();
-                char key = Console.ReadKey(true).KeyChar;
+                char input = Console.ReadKey(true).KeyChar;
                 var users = UAM.GetAllUsers();
                 
-                if (char.IsDigit(key) && (uint)Char.GetNumericValue(key) <= users.Count)
+                if (char.IsDigit(input) && (uint)Char.GetNumericValue(input) <= users.Count)
                 {
+                    int key = (int)Char.GetNumericValue(input);
                     userGuid = users[key - 1].Id;
                     b1 = false;
                     continue;
@@ -174,16 +178,17 @@ namespace _6._1.USERS_.PL
             {
                 Console.WriteLine("Выберите награду, которую хотите вручить!");
                 ShowAllAwards();
-                char key = Console.ReadKey(true).KeyChar;
+                char input = Console.ReadKey(true).KeyChar;
                 var awards = UAM.GetAllAwards();
 
-                if (char.IsDigit(key) && (uint)Char.GetNumericValue(key) <= awards.Count)
+                if (char.IsDigit(input) && (uint)Char.GetNumericValue(input) <= awards.Count)
                 {
+                    int key = (int)Char.GetNumericValue(input);
                     awardGuid = awards[key - 1].Id;
                 }
                 else { Console.WriteLine("Введите корректное число!"); }
 
-                //проверяем есть уже ли у пользователя такая награда
+                //проверяем есть уже ли у пользователя такая награда через обобщающую сущность
                 bool k = true;
                 foreach (var awardUser in UAM.GetAllAwardsUsers())
                 {
@@ -194,10 +199,14 @@ namespace _6._1.USERS_.PL
                         break;
                     }
                     else {
-                        //Добавляем юзера и награду в общую сущность
-                        UAM.AddAwardForUser(userGuid, awardGuid);
+                        
                         b2 = false; }
                 }
+            }
+            if (!b1 && !b2)
+            {
+                //Добавляем юзера и награду в общую сущность
+                UAM.AddAwardForUser(userGuid, awardGuid);
             }
         }                   
         #endregion
@@ -263,7 +272,6 @@ namespace _6._1.USERS_.PL
                 temp = CheckUA.CheckDate(inputDate);
             }
             birthDay = DateTime.ParseExact(inputDate, "dd.MM.yyyy", null);
-            //10.11.2005
         }
         public void AskAge(out uint age)
         {
@@ -284,10 +292,11 @@ namespace _6._1.USERS_.PL
             {
                 Console.WriteLine("Выберите пользователя, которого вы хотите удалить!");
                 ShowAllUsers();
-                char key = Console.ReadKey(true).KeyChar;
+                char input = Console.ReadKey(true).KeyChar;
 
-                if (char.IsDigit(key) && (uint)Char.GetNumericValue(key) <= UAM.GetAllUsers().Count)
+                if (char.IsDigit(input) && (uint)Char.GetNumericValue(input) <= UAM.GetAllUsers().Count)
                 {
+                    int key = (int)Char.GetNumericValue(input);
                     UAM.DeleteUser(key);
                     return;
                 }

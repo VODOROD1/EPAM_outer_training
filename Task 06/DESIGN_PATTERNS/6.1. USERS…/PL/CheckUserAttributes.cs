@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace _6._1.USERS_.PL
-{
+{//Класс проверки правильности введенных атрибутов создаваемого пользователя
     class CheckUserAttributes
     {
         public bool CheckName(String inputName)

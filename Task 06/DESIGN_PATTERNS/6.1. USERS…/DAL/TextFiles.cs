@@ -14,12 +14,14 @@ namespace _6._1.USERS_.DAL
         private Storage storage;
 
         public TextFiles()
-        {
+        {   //Возможно здесь и не нужно содавать напрямую директорию, но я создал на всякий случай
             Directory.CreateDirectory(JsonDirectoryPath);
             SetBaseSerialized();
             SetBaseSerialized();
         }
-        //Создаю базовую информацию потому как не до конца разобрался с Newtonsoft.Json
+        //Создаем базовую информацию потому как не до конца разобрался с Newtonsoft.Json
+        //Не получится десериализовать файл в котором будет не заполнена хотя бы одна коллекция -
+        //- содержимое файла не будет соответствовать структуре класса Storage
         //Поэтому этот набор базовых объектов нельзя удалять
         public void SetBaseSerialized()
         {
@@ -30,16 +32,6 @@ namespace _6._1.USERS_.DAL
             storage.Users.Add(user);
             storage.Awards.Add(award);
             storage.AwardsUsers.Add(new AwardsAndUsers { UserId = user.Id, AwardId = award.Id });
-            
-                Award award1 = new Award { Title = "BaseAward1", Id = Guid.NewGuid() };
-                Award award2 = new Award { Title = "BaseAward2", Id = Guid.NewGuid() };
-                DateTime birthDay1 = DateTime.ParseExact("05.11.2001", "dd.MM.yyyy", null);
-                User user1 = new User { Name = "BaseUser2", BirthDay = birthDay1, Age = 68, Id = Guid.NewGuid() };
-                storage.Users.Add(user1);
-                storage.Awards.Add(award1);
-                storage.Awards.Add(award2);
-                storage.AwardsUsers.Add(new AwardsAndUsers { UserId = user1.Id, AwardId = award1.Id });
-                storage.AwardsUsers.Add(new AwardsAndUsers { UserId = user1.Id, AwardId = award2.Id });
 
             Serialize();
             RecordInFile();
@@ -64,7 +56,6 @@ namespace _6._1.USERS_.DAL
         {
             serialized = "";
             serialized = File.ReadAllText(JsonFilePath);
-            //Console.WriteLine(serialized); //!!!!!!!!!!!!
         }
         #endregion
         #region ADD_REMOVE
@@ -84,33 +75,20 @@ namespace _6._1.USERS_.DAL
             Serialize();
             RecordInFile();
         }
+        //добавляем новую награду пользователю
         public void AddAwardForUser(User user, Award award)
         {
-            //добавляем новую награду пользователю
             ReadFromFile();
             DeSerialize();
+            //Добавляем в обобщающую сущность полученные объекты
             storage.AwardsUsers.Add(new AwardsAndUsers { UserId = user.Id, AwardId = award.Id });
             Serialize();
             RecordInFile();
         }
-        public void RemoveUser(User user)
-        {
-            ReadFromFile();
-            DeSerialize();
-            foreach (User u in storage.Users)
-            {
-                if (u.Id == user.Id)
-                {
-                    storage.Users.Remove(u);
-                }
-            }
-            foreach (AwardsAndUsers aau in storage.AwardsUsers)
-            {
-                if (aau.UserId == user.Id)
-                {
-                    storage.AwardsUsers.Remove(aau);
-                }
-            }
+        public void RemoveUser(Guid userGuid)
+        {//применяем анонимные методы для удаления всех тех сущностей, которые имеют GUID равный GUID выбранного юзера
+            storage.Users.RemoveAll(x => x.Id == userGuid);
+            storage.AwardsUsers.RemoveAll(x => x.UserId == userGuid);
             Serialize();
             RecordInFile();
         }
