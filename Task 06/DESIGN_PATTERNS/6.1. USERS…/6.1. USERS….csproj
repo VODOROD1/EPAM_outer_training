@@ -49,11 +49,10 @@
     <Compile Include="BLL\UsersAwardsManager.cs" />
     <Compile Include="Common\Award.cs" />
     <Compile Include="Common\AwardsAndUsers.cs" />
-    <Compile Include="Common\Dependecsies.cs" />
+    <Compile Include="Common\Dependensies.cs" />
     <Compile Include="Common\IStorable.cs" />
     <Compile Include="Common\IUI.cs" />
     <Compile Include="Common\User.cs" />
-    <Compile Include="DAL\Memory.cs" />
     <Compile Include="DAL\Storage.cs" />
     <Compile Include="DAL\TextFiles.cs" />
     <Compile Include="PL\CheckUserAttributes.cs" />

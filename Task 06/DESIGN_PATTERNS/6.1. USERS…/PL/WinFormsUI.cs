@@ -14,7 +14,17 @@ namespace _6._1.USERS_.PL
             throw new NotImplementedException();
         }
 
+        public void AskUserAttributes(out string name, out DateTime birthDay, out uint age)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SelectOption()
         {
             throw new NotImplementedException();
         }

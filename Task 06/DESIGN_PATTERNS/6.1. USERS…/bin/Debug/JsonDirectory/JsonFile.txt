@@ -1,0 +1,44 @@
+{
+  "Users": [
+    {
+      "Id": "6dbfb210-e799-4dff-899a-5e650be98851",
+      "Name": "BaseUser",
+      "BirthDay": "2001-11-05T00:00:00",
+      "Age": 34
+    },
+    {
+      "Id": "4704042d-047a-47f7-b2f7-942049043895",
+      "Name": "BaseUser1",
+      "BirthDay": "2001-11-05T00:00:00",
+      "Age": 68
+    }
+  ],
+  "Awards": [
+    {
+      "Id": "4238b921-a730-4a9d-9992-cfe4ee9f402a",
+      "Title": "BaseAward"
+    },
+    {
+      "Id": "be7c8e4c-256a-4795-9047-f983a7316666",
+      "Title": "BaseAward1"
+    },
+    {
+      "Id": "a3db9a55-f7c8-4348-be74-e8cf037b43e1",
+      "Title": "BaseAward2"
+    }
+  ],
+  "AwardsUsers": [
+    {
+      "UserId": "6dbfb210-e799-4dff-899a-5e650be98851",
+      "AwardId": "4238b921-a730-4a9d-9992-cfe4ee9f402a"
+    },
+    {
+      "UserId": "4704042d-047a-47f7-b2f7-942049043895",
+      "AwardId": "be7c8e4c-256a-4795-9047-f983a7316666"
+    },
+    {
+      "UserId": "4704042d-047a-47f7-b2f7-942049043895",
+      "AwardId": "a3db9a55-f7c8-4348-be74-e8cf037b43e1"
+    }
+  ]
+}

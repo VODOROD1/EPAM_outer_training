@@ -13,19 +13,21 @@ namespace _6._1.USERS_.PL
     {
         UsersAwardsManager UAM = new UsersAwardsManager();
         CheckUserAttributes CheckUA = new CheckUserAttributes();
+        #region SELECT_OPTION
         public void SelectOption()
         {
             String name;
             DateTime birthDay;
             uint age;
-            Console.WriteLine("Выберите действие:\n " +
+            while (true)
+            {
+                Console.WriteLine("Выберите действие:\n " +
                 "\t\t 1) Создать нового пользователя\n " +
                 "\t\t 2) Удалить пользователя\n " +
                 "\t\t 3) Посмотреть список всех пользователей\n" +
                 "\t\t 4) Манипуляции с наградами\n" +
                 "\t\t 5) Выход\n");
-            while (true)
-            {
+            
                 char key = Console.ReadKey(true).KeyChar;
                 if (char.IsDigit(key) && (uint)Char.GetNumericValue(key) <= 5)
                 {
@@ -51,16 +53,19 @@ namespace _6._1.USERS_.PL
                 }
             }
         }
+        #endregion
+        #region MANIPULATION_WITH_AWARD
         public void ManipulationWithAward()
         {
-            Console.WriteLine(
-                "\t 1) Добавить новую награду в общий перечень наград\n" +
-                "\t 2) Добавить награду из общего перечня в перечень какого-либо пользователя\n" +
-                "\t 3) Просмотр перечня вообще всех наград\n " +
-                "\t 4) Просмотр перечня наград какого-либо пользователя\n" +
-                "\t 5) Назад\n");
             while (true)
             {
+                Console.WriteLine(
+                "\t\t 1) Добавить новую награду в общий перечень наград\n" +
+                "\t\t 2) Добавить награду из общего перечня в перечень какого-либо пользователя\n" +
+                "\t\t 3) Просмотр перечня вообще всех наград\n " +
+                "\t\t 4) Просмотр перечня наград какого-либо пользователя\n" +
+                "\t\t 5) Назад\n");
+            
                 char key = Console.ReadKey(true).KeyChar;
                 if (char.IsDigit(key) && (uint)Char.GetNumericValue(key) <= 5)
                 {
@@ -86,6 +91,8 @@ namespace _6._1.USERS_.PL
                 }
             }
         }
+        #endregion
+        #region SHOW
         public void ShowAllAwards()
         {
             Console.WriteLine("Перечень всех наград:");
@@ -109,18 +116,22 @@ namespace _6._1.USERS_.PL
                 Console.WriteLine();
             }
         }
-        #region SHOW_ALL_AWARDS_OF_USER
         public void ShowAllAwardsOfUser()
         {
             Console.WriteLine("Выберите пользователя, награды которого вы хотите посмотреть!");
             ShowAllUsers();
-            char key = Console.ReadKey(true).KeyChar;
+            //Console.Write("Выбор:");
+            char input = Console.ReadKey(true).KeyChar;
+            var users = UAM.GetAllUsers();
             Guid userGuid;
-            if (char.IsDigit(key) && (uint)Char.GetNumericValue(key) <= 5)
+            if (char.IsDigit(input) && (uint)Char.GetNumericValue(input) <= users.Count)
             {
-                userGuid = UAM.GetAllUsers()[key - 1].Id;
-                Console.WriteLine("Перечень всех наград пользователя");
-                var someAwardsUsers = UAM.GetAllAwardsUsers().Where(p => p.UserId == userGuid);
+                int key = (int)Char.GetNumericValue(input);
+                userGuid = users[key-1].Id;
+                Console.WriteLine("Перечень всех наград пользователя!");
+                //По гуиду находим выбранного пользователя
+                IList<AwardsAndUsers> a = UAM.GetAllAwardsUsers();
+                var someAwardsUsers = a.Where(p => p.UserId == userGuid).ToList();
                 foreach (AwardsAndUsers aau in someAwardsUsers)
                 {
                     foreach (Award award in UAM.GetAllAwards())
@@ -182,12 +193,11 @@ namespace _6._1.USERS_.PL
                         b2 = true;
                         break;
                     }
-                    else { b2 = false; }
+                    else {
+                        //Добавляем юзера и награду в общую сущность
+                        UAM.AddAwardForUser(userGuid, awardGuid);
+                        b2 = false; }
                 }
-            }
-            
-            if (!b1 && !b2) {
-                UAM.AddAwardForUser(userGuid, awardGuid);
             }
         }                   
         #endregion
@@ -236,7 +246,7 @@ namespace _6._1.USERS_.PL
             name = default;
             while (!temp)
             {
-                Console.Write("\t - Имя:");
+                Console.Write("\t - Имя (буквами):");
                 String inputName = Console.ReadLine();
                 temp = CheckUA.CheckName(inputName);
                 name = inputName;
@@ -246,28 +256,44 @@ namespace _6._1.USERS_.PL
         {
             bool temp = false;
             birthDay = default;
+            String inputDate = " ";
             while (!temp) {
-                Console.Write("\t - Дата рождения (Шаблон dd.MM.yyyy HH:mm):");
-                String inputDate = Console.ReadLine();
+                Console.Write("\t - Дата рождения (Шаблон dd.MM.yyyy):");
+                inputDate = Console.ReadLine();
                 temp = CheckUA.CheckDate(inputDate);
-                birthDay = DateTime.Parse(inputDate);
             }
+            birthDay = DateTime.ParseExact(inputDate, "dd.MM.yyyy", null);
+            //10.11.2005
         }
         public void AskAge(out uint age)
         {
             bool temp = false;
             age = default;
             while (!temp) {
-                Console.Write("\t - Возраст:");
+                Console.Write("\t - Возраст (цифрами):");
                 string inputAge = Console.ReadLine();
                 temp = CheckUA.CheckAge(inputAge);
-                age = Convert.ToUInt32(Console.ReadLine());
+                age = Convert.ToUInt32(inputAge);
             }
         }
         #endregion
+        #region DELETE_USER
         public void DeleteUser()
         {
-            
+            while (true)
+            {
+                Console.WriteLine("Выберите пользователя, которого вы хотите удалить!");
+                ShowAllUsers();
+                char key = Console.ReadKey(true).KeyChar;
+
+                if (char.IsDigit(key) && (uint)Char.GetNumericValue(key) <= UAM.GetAllUsers().Count)
+                {
+                    UAM.DeleteUser(key);
+                    return;
+                }
+                else { Console.WriteLine("Введите корректное число!"); }
+            }
         }
+        #endregion
     }
 }

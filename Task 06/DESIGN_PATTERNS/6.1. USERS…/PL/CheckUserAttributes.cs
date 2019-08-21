@@ -24,7 +24,7 @@ namespace _6._1.USERS_.PL
         }
         public bool CheckDate(String inputDate)
         {
-            if (DateTime.TryParseExact(inputDate, "dd.MM.yyyy HH:mm", null, DateTimeStyles.None, out DateTime date))
+            if (DateTime.TryParseExact(inputDate, "dd.MM.yyyy", null, DateTimeStyles.None, out DateTime date))
             {
                 return true;
             }
@@ -34,7 +34,7 @@ namespace _6._1.USERS_.PL
         {
             for (int i = 0; i < inputAge.Length; i++)
             {
-                if (!char.IsLetter(inputAge[i]))
+                if (!char.IsDigit(inputAge[i]))
                 {
                     Console.WriteLine("Введите возраст правильно!");
                     return false;
@@ -42,6 +42,5 @@ namespace _6._1.USERS_.PL
             }
             return true;
         }
-
     }
 }

@@ -8,14 +8,12 @@ namespace _6._1.USERS_.Common
 {
     public class Award
     {
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
         public String Title { get; set; }
-        //public List<AwardsAndUsers> AwardsUsers { get; set; }
-        public Award(String title)
-        {
-            Id = Guid.NewGuid();
-            Title = title;
-            //AwardsUsers = new List<AwardsAndUsers>();
-        }
+        //public Award(String title)
+        //{
+        //    Id = Guid.NewGuid();
+        //    Title = title;
+        //}
     }
 }
