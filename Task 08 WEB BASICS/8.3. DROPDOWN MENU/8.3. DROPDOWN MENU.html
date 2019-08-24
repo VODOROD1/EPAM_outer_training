@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="REGISTRATION FORM"
+          content="Некоторая форма">
+    <title>REGISTRATION FORM</title>
+    <style>
+          .n {
+              	display: inline-block;
+              	margin-right: 20px;
+              	position: relative;
+              	padding: 6px;
+              	color: blue;
+              	text-decoration: underline;
+              }
+              .cont, .n::after {
+              	position: absolute;
+              	visibility: hidden;
+              	z-index: 1;
+                  background-color: white;
+                  left: 0;
+              }
+              .n::after {
+              	content: "";
+              	width: 100%;
+              	height: 5px;
+              	bottom: 2px;
+              }
+              .cont {
+              	width: 120px;
+                  top: 28px;
+                  box-shadow: 0 0 7px gray;
+              }
+              ul{
+              	list-style: none;
+              	padding: 4px;
+              	margin: 0;
+              }
+              li {
+              	padding: 3px;
+              }
+              .n:hover {
+                cursor: pointer;
+              	background-color: white;
+              	box-shadow: 0 0 8px gray;
+              	border-radius: 5px 5px 0 0;
+              	text-decoration: none;
+              }
+              .n:hover::after, .n:hover .cont{
+              	visibility: visible;
+              }
+              .n:hover .tit {
+              	color: black;
+              }
+              .n:hover li:hover {
+              	color: white;
+              	background-color: #37abff;
+              }
+        }
+  </style>
+  </head>
+  <body>
+    <div class="n">
+	 	<div class="tit">Файл</div>
+	 	<div class="cont">
+	 		<ul>
+	 			<li>Новый</li>
+	 			<li>Открыть</li>
+	 			<li>Сохранить</li>
+	 			<li>Закрыть</li>
+	 		</ul>
+	 	</div>
+    </div>
+ 	<div class="n">
+ 		<div class="tit">Правка</div>
+        <div class="cont">
+	 		<ul>
+	 			<li>Вырезать</li>
+	 			<li>Копировать</li>
+	 			<li>Вставить</li>
+	 			<li>Удалить</li>
+	 		</ul>
+	 	</div>
+ 	</div>
+  </body>
+</html>
