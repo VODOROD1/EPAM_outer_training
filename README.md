@@ -46,3 +46,19 @@ Structure of tasks
 
 ## Task_05_Files
 <li>5.1.	BACKUP SYSTEM</li>
+
+## Task_06_DESIGN_PATTERNS
+<li>6.1.	USERS…</li>
+<li>6.2.	… AND AWARDS</li>
+
+## Task_08_WEB BASICS
+<li>8.1. LIST MENU</li>
+<li>8.2. REGISTRATION FORM</li>
+<li>8.3. DROPDOWN MENU</li>
+<li>8.4. POINTING BLOCK</li>
+<li>8.5. THREE COLUMN BLOCK</li>
+<li>8.6. EQUALIZER</li>
+<li>8.7. HEADER</li>
+<li>8.8. ARTICLE</li>
+<li>8.9. STEP COUNTER</li>
+<li>8.10. * VK</li>
