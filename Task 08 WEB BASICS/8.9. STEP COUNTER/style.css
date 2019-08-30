@@ -1,31 +1,27 @@
-nav {
+div{
   width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
+  text-align: center;
 }
 ul {
   font-family: Arial;
   font-size: 18px;
   list-style: none;
-  display: flex;
-  overflow: hidden;
 }
 li {
-  width: 125px;
+  float:left;
+  display: block;
+  width: 115px;
   position: relative;
   background: linear-gradient(#dbdbdb 10px, #bfbfbf 20px, #dbdbdb 30px);
   text-align: center;
-}
-li a {
   color: black;
-  display: block;
   padding: 5px 0;
-  text-decoration: none;
 }
 li:hover {
    background: linear-gradient(#a9df82 10px, #6bc727 20px, #a9df82 30px);
-}
-li:hover a {
-  color: white;
+   color: white;
+   cursor: pointer;
 }
 li:not(:last-child)::after {
   content: '';

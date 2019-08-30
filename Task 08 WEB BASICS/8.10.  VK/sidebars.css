@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #edeef0;
+}
+.main{
+    margin-top: 65px !important;
+    background-color: #edeef0;
+    max-width: 1200px;
+    min-width: 768px;
+    margin: 0 auto;
+}
+a{
+  text-decoration: none !important;
+}
+/*Оформим левый сайд-бар*/
+#sidebar1 {
+    background-color: #edeef0;
+    font-size: 12px;
+    margin-left: 8%;
+    float: left;
+    width: 16%;
+    padding: 0 10px 0 20px;
+}
+#sidebar1 table td{
+  height:28px;
+}
+#sidebar1 table td:nth-child(1), td:nth-child(2), td:nth-child(4) {
+  text-align:center;
+  vertical-align: middle;
+}
+#sidebar1 table td:nth-child(3){
+  vertical-align: middle;
+}
+.fas{
+  color: #99b1c6;
+}
+.fa-cog{
+color: #d4d9e4 !important;
+}
+.count{
+  width:15px;
+  height:20px;
+  color:#607389;
+  border-radius: 2px;
+  font-family: Arial;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #d1d9e0;
+  padding-top: 4px;
+}
+/*Конец оформления левого сайд-бара*/
+
+/*Оформим правый сайд-бар*/
+#sidebar2 {
+  background-color: white;
+  margin-right:9%;
+  float: right;
+  width: 20%;
+  height:auto;
+  padding: 5px 0px 5px 0px;
+  border-radius: 5px;
+}
+#sidebar2 ul{
+  margin-left: 0px;
+  margin-right: 0px;
+  list-style: none;
+}
+#sidebar2 ul li{
+  height: 32px;
+  display: block;
+  vertical-align: middle;
+}
+#sidebar2 ul li a{
+  display: block;
+  color: #2a5885;
+  font-size: 13px;
+  font-family: Arial;
+  padding-top: 8px;
+  margin-left: 20px;
+
+}
+/*Конец оформления правого сайд-бара*/

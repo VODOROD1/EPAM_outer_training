@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+#header{
+  top: 0;
+  left: 0;
+  margin: 0;
+  vertical-align: baseline;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #4a76a8;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+#wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #4a76a8;
+  font-family: Arial;
+  font-size: 18px;
+  list-style: none;
+}
+#header #wrapper div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #4a76a8;
+  color: white;
+  padding: 5px 0;
+}
+#logo{
+  justify-content: flex-start !important;
+  width: 165px;
+}
+#logo:hover{
+
+  cursor: pointer;
+}
+.fa-vk{
+  color:white;
+  font-size: 30px;
+}
+
+/*Оформление поля поиска*/
+#searchField{
+  justify-content: flex-start !important;
+  width: 245px;
+  vertical-align: middle !important;
+  position: relative;
+}
+#searchField input#search{
+  width: 230px;
+  height: 30px;
+  background: #224b7a;
+  border: none;
+  font-size: 14px;
+  float: left;
+  color: black;
+  padding-left: 30px;
+  border-radius: 42px;
+}
+#searchField .icon{
+  position: absolute;
+  left: 8px;
+  margin-top: 2px;
+  font-size: 14px;
+  z-index: 1;
+  color: #86a1bf;
+}
+#searchField input#search:focus {
+ background: white;
+}
+#searchField input#search::placeholder {
+   color: #82a2bf;
+}
+/*Конец оформления поля поиска*/
+
+#notice{
+  width: 45px;
+}
+/*Оформляем музыкальный плеер*/
+.player{
+  width: 300px;
+}
+#back{
+  background: rgba(0, 0, 0, 0) !important;
+  width: 30px;
+  justify-content: flex-end !important;
+}
+#start{
+  background: rgba(0, 0, 0, 0) !important;
+  width: 35px;
+}
+#forward{
+  background: rgba(0, 0, 0, 0) !important;
+  width: 30px;
+  justify-content: flex-start !important;
+}
+#nameOfMusic{
+  justify-content: flex-start !important;
+  background: rgba(0, 0, 0, 0) !important;
+  width: 200px;
+}
+.fa-bell {
+  color: #1e3c5f !important;
+}
+.player{
+  color: #bfcee0;
+  font-size: 13px;
+}
+.fa-step-backward, .fa-play, .fa-step-forward, .nameOfMusic{
+  color: #bfcee0;
+  font-size: 13px;
+}
+.fa-step-backward:hover, .fa-play:hover, .fa-step-forward:hover{
+  color: white;
+}
+/*Конец оформления музыкльного плеера*/
+#empty{
+  width: 80px;
+}
+/*Оформление профиля пользователя*/
+.profile{
+  width: 125px;
+}
+#nameOfUser{
+  width: 70px;
+  text-align: center;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0) !important;
+}
+#photo{
+  background: rgba(0, 0, 0, 0) !important;
+}
+#photo .avatar{
+    justify-content: flex-start !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#arrowBelow{
+  width: 25px;
+  background: rgba(0, 0, 0, 0) !important;
+}
+/*Конец оформления профиля пользователя*/
+
+#wrapper #notice:hover, .player:hover, .profile:hover{
+  background: #3d6898 !important;
+}
+#wrapper div:hover:not(#searchField):not(#empty) {
+   cursor: pointer;
+}

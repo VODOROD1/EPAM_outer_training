@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #edeef0;
+}
+/*Оформление центральной части*/
+#middle{
+  background-color: white;
+  width:46%;
+  height: auto;
+  margin-left: 24%;
+  font-family: Arial;
+  font-size: 13px
+  /*padding: 15px;*/
+}
+#common{
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #fafbfc;
+  border-bottom:1px solid #e7e8ec;
+  height:55px;
+  width:100%;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+#middle table{
+  margin-left: 20px;
+  width:515px;
+}
+table #menu td{
+  height:58px;
+  border-bottom:1px solid #e7e8ec;
+  text-align: left;
+}
+table #profileSettings td{
+  height:135px;
+  border-bottom:1px solid #e7e8ec;
+  text-align: left;
+}
+table #contentSettings td{
+  height:185px;
+  border-bottom:1px solid #e7e8ec;
+  text-align: left;
+}
+table #password td, #email td, #telephone td, #address td, #language td{
+  height:58px;
+  border-bottom:1px solid #e7e8ec;
+  text-align: left;
+}
+table #language td{
+  border-bottom: none;
+}
+#delete{
+  text-align: center;
+  padding-top: 20px;
+  background-color: #fafbfc;
+  border-top:1px solid #e7e8ec;
+  height:55px;
+  width:100%;
+  font-size: 14px !important;
+}
+/*Конец оформления центральной части*/
