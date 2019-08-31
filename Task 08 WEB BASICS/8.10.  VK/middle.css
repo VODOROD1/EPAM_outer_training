@@ -9,13 +9,14 @@ body {
 }
 /*Оформление центральной части*/
 #middle{
+  display:inline-block;
+  top:0;
   background-color: white;
-  width:46%;
+  width:555px;
   height: auto;
-  margin-left: 24%;
+  margin-left: 10px;
   font-family: Arial;
   font-size: 13px
-  /*padding: 15px;*/
 }
 #common{
   padding-top: 20px;
@@ -30,6 +31,10 @@ body {
 #middle table{
   margin-left: 20px;
   width:515px;
+  border-collapse:collapse;
+}
+table td:first-child{
+  color:#656565;
 }
 table #menu td{
   height:58px;
@@ -41,15 +46,29 @@ table #profileSettings td{
   border-bottom:1px solid #e7e8ec;
   text-align: left;
 }
+table #profileSettings:nth-child(2) p{
+  margin-bottom: 10px;
+}
+table #profileSettings:nth-child(2) p label:hover, p input:hover{
+  cursor: pointer;
+}
 table #contentSettings td{
   height:185px;
   border-bottom:1px solid #e7e8ec;
   text-align: left;
 }
+/* Следующие 2 селектора почему то не работают */
+table #contentSettings:nth-child(2) p{
+  margin-bottom: 10px;
+}
+table #contentSettings:nth-child(2) p label:hover, p input:hover{
+  cursor: pointer;
+}
 table #password td, #email td, #telephone td, #address td, #language td{
   height:58px;
   border-bottom:1px solid #e7e8ec;
   text-align: left;
+  cursor: pointer;
 }
 table #language td{
   border-bottom: none;
@@ -63,4 +82,32 @@ table #language td{
   width:100%;
   font-size: 14px !important;
 }
+#middle a{
+  color:#2a5885;
+}
+#middle a:hover{
+  text-decoration: underline !important;
+}
+/* Здесь стилизуем подчеркивание "Изменить" при наведении на строку*/
+table #password:hover a{
+  text-decoration: underline !important;
+}
+table #email:hover a{
+  text-decoration: underline !important;
+}
+table #telephone:hover a{
+  text-decoration: underline !important;
+}
+table #address:hover a{
+  text-decoration: underline !important;
+}
+table #language:hover a{
+  text-decoration: underline !important;
+}
 /*Конец оформления центральной части*/
+
+/* Оформим по простому футер */
+.footer{
+  width:100%;
+  height:600px;
+}

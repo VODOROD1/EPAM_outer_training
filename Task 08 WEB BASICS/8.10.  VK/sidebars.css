@@ -7,6 +7,9 @@ body {
     font-family: Verdana, Arial, sans-serif;
     background-color: #edeef0;
 }
+table{
+  border-collapse:collapse;
+}
 .main{
     margin-top: 65px !important;
     background-color: #edeef0;
@@ -19,22 +22,44 @@ a{
 }
 /*Оформим левый сайд-бар*/
 #sidebar1 {
+    vertical-align: top;
+    display:inline-block;
+    margin-left:100px;
     background-color: #edeef0;
     font-size: 12px;
-    margin-left: 8%;
-    float: left;
-    width: 16%;
+    width: 14%;
     padding: 0 10px 0 20px;
 }
+#sidebar1 hr {
+    border: none;
+    background-color: #e7e8ec;
+    height: 2px;
+   }
 #sidebar1 table td{
   height:28px;
 }
-#sidebar1 table td:nth-child(1), td:nth-child(2), td:nth-child(4) {
+#sidebar1 table td:nth-child(3) {
   text-align:center;
   vertical-align: middle;
 }
+#sidebar1 table td:nth-child(2){
+  width: 100px;
+  color:#285473;
+}
+#sidebar1 table td:nth-child(1){
+  width: 30px;
+}
 #sidebar1 table td:nth-child(3){
   vertical-align: middle;
+  width: 30px;
+}
+#sidebar1 table td:nth-child(3) div{
+  margin-left: 15px;
+}
+/* Изменение элементов при наведении */
+#sidebar1 table  tr:hover:not(.line){
+  background-color: #e1e5eb;
+  cursor: pointer;
 }
 .fas{
   color: #99b1c6;
@@ -57,14 +82,19 @@ color: #d4d9e4 !important;
 
 /*Оформим правый сайд-бар*/
 #sidebar2 {
+  vertical-align: top;
+  display:inline-block;
+  position:sticky;
   background-color: white;
-  margin-right:9%;
-  float: right;
+  top: 65px;
+  margin-left: 10px;
+  overflow-x: hidden;
   width: 20%;
   height:auto;
   padding: 5px 0px 5px 0px;
   border-radius: 5px;
 }
+
 #sidebar2 ul{
   margin-left: 0px;
   margin-right: 0px;
@@ -74,6 +104,10 @@ color: #d4d9e4 !important;
   height: 32px;
   display: block;
   vertical-align: middle;
+}
+#sidebar2 ul li:hover{
+  background-color: #f0f2f5;
+  border-left: 3px solid #5181b8;
 }
 #sidebar2 ul li a{
   display: block;
