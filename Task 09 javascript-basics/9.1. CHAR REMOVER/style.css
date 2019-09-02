@@ -1,0 +1,15 @@
+#baseString{
+  width:100px;
+}
+#baseString:focus{
+  border-color: blue;
+}
+#baseString:hover{
+  border-color: green;
+}
+form:nth-child(3):hover{
+  border-color: green;
+}
+div{
+  margin-bottom: 10px;
+}
