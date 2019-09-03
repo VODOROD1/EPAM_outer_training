@@ -1,0 +1,16 @@
+input[type=text]{
+  width:200px;
+}
+#baseString:focus{
+  border-color: blue;
+}
+#baseString:hover{
+  border-color: green;
+}
+/* #button:hover{
+  background-color: green;
+  color: white;
+} */
+div{
+  margin-bottom: 10px;
+}
