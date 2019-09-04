@@ -6,23 +6,43 @@
           content="Строковый калькулятор">
     <title>BUTTERFLY CONTROL</title>
     <link rel="stylesheet" href="9.3style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   </head>
   <body>
 
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th colspan="3">Available</th>
-          </tr>
-        </thead>
-      </table>
+    <div class="block">
+      <div><p>Available</p></div>
+      <div class="inner">
+          <ul id="leftUL">
+            <li onclick="mutateLI(this)">Option 1</li>
+            <li onclick="mutateLI(this)">Option 2</li>
+            <li onclick="mutateLI(this)">Option 3</li>
+            <li onclick="mutateLI(this)">Option 4</li>
+            <li onclick="mutateLI(this)">Option 5</li>
+            <li onclick="mutateLI(this)">Option 6</li>
+          </ul>
+      </div>
     </div>
 
-    <div></div>
+    <div>
+      <form>
+        <button class="btn btn-medium"><i class="fas fa-angle-double-right"></i></button>
+        <button class="btn btn-medium"><i class="fas fa-angle-right"></i></button>
+        <button class="btn btn-medium"><i class="fas fa-angle-left"></i></button>
+        <button class="btn btn-medium"><i class="fas fa-angle-double-left"></i></button>
+      </form>
+    </div>
 
-    <div></div>
-    
+    <div class="block">
+      <div><p>Selected</p></div>
+      <div class="inner">
+          <ul id="rightUL">
+            <li onclick="mutateLI(this)">Option 6</li>
+            <li onclick="mutateLI(this)">Option 7</li>
+            <li onclick="mutateLI(this)">Option 8</li>
+          </ul>
+      </div>
+    </div>
     <script type="text/javascript" src="9.3script.js"></script>
   </body>
 </html>

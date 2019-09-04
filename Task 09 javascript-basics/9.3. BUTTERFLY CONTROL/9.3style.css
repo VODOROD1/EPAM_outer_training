@@ -1,0 +1,65 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body > div{
+  display:inline-block; 
+  vertical-align:top; 
+  /* overflow:hidden;  */
+  border:none; 
+}
+.block:nth-child(1), .block:nth-child(3){
+  width: 180px;
+}
+.inner{
+  overflow: auto;
+  overflow-x:hidden;
+  border:solid grey 1px; 
+  height: 210px;
+}
+p{
+  text-align: center;
+  margin: 0px;
+  font-weight: bold;
+  font-size: 15px;
+}
+/*Стилизуем список */
+ul{
+  list-style-type:none; 
+  padding:10px; 
+  margin:-5px -20px -5px -10px; 
+  width: 100%px;
+  font-size: 16px;
+}
+ul li{
+height: 20px;
+display: block;
+}
+ul li:hover{
+  cursor: default;
+}
+.selected{
+  background-color: #a3c8f5;
+}
+
+form button{
+  font-size: 15px;
+  width:35px;
+  height: 25px;
+  margin-top: 20px;
+  display: block;
+  background-color: #d4d0c8;
+  /* background-color: #f4f4f4; */
+}
+
+.inner select { 
+  padding:10px; 
+  margin:-10px -20px -5px -12px; 
+  width: 230px;
+  font-size: 15px;
+  -webkit-appearance: none; 
+}
+.inner select option{
+  width: 110%;
+}
