@@ -62,3 +62,9 @@ Structure of tasks
 <li>8.8. ARTICLE</li>
 <li>8.9. STEP COUNTER</li>
 <li>8.10. * VK</li>
+
+## Task_09_JAVASCRIPT BASICS
+<li>9.1. CHAR REMOVER</li>
+<li>9.2. MATH CALCULATOR</li>
+<li>9.3. BUTTERFLY CONTROL</li>
+<li>9.4. SIMPLE GALLERY</li>
