@@ -1,0 +1,7 @@
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.3. EMAIL FINDER\bin\Debug\_7._3.EMAIL_FINDER.exe.config
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.3. EMAIL FINDER\bin\Debug\_7._3.EMAIL_FINDER.exe
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.3. EMAIL FINDER\bin\Debug\_7._3.EMAIL_FINDER.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.3. EMAIL FINDER\obj\Debug\7.3. EMAIL FINDER.csprojAssemblyReference.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.3. EMAIL FINDER\obj\Debug\7.3. EMAIL FINDER.csproj.CoreCompileInputs.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.3. EMAIL FINDER\obj\Debug\_7._3.EMAIL_FINDER.exe
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.3. EMAIL FINDER\obj\Debug\_7._3.EMAIL_FINDER.pdb

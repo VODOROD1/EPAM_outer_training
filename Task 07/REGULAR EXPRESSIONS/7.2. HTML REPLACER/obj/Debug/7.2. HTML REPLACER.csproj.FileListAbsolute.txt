@@ -4,3 +4,10 @@ D:\.NET projects\EPAM\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\bin\Debug\_
 D:\.NET projects\EPAM\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\7.2. HTML REPLACER.csproj.CoreCompileInputs.cache
 D:\.NET projects\EPAM\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.exe
 D:\.NET projects\EPAM\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\bin\Debug\_7._2.HTML_REPLACER.exe.config
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\bin\Debug\_7._2.HTML_REPLACER.exe
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\bin\Debug\_7._2.HTML_REPLACER.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\7.2. HTML REPLACER.csprojAssemblyReference.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\7.2. HTML REPLACER.csproj.CoreCompileInputs.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.exe
+D:\GitHub\Mike_Bel\Mike_Bel\Task 07\REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.pdb
