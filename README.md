@@ -51,6 +51,11 @@ Structure of tasks
 <li>6.1.	USERS…</li>
 <li>6.2.	… AND AWARDS</li>
 
+## Task_07_REGULAR_EXPRESSIONS
+<li>7.1.  DATE EXISTANCE</li>
+<li>7.2.	HTML REPLACER</li>
+<li>7.3.	EMAIL FINDER</li>
+
 ## Task_08_WEB BASICS
 <li>8.1. LIST MENU</li>
 <li>8.2. REGISTRATION FORM</li>
