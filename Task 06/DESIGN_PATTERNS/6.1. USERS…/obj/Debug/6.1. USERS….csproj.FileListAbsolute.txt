@@ -8,3 +8,13 @@ D:\.NET projects\EPAM\Task 06\DESIGN_PATTERNS\6.1. USERS…\bin\Debug\Newtonsoft
 D:\.NET projects\EPAM\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\6.1. USERS….csproj.CopyComplete
 D:\.NET projects\EPAM\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\_6._1.USERS_.exe
 D:\.NET projects\EPAM\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\_6._1.USERS_.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\bin\Debug\_6._1.USERS_.exe.config
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\bin\Debug\_6._1.USERS_.exe
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\bin\Debug\_6._1.USERS_.pdb
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\6.1. USERS….csprojAssemblyReference.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\6.1. USERS….csproj.CoreCompileInputs.cache
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\6.1. USERS….csproj.CopyComplete
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\_6._1.USERS_.exe
+D:\GitHub\Mike_Bel\Mike_Bel\Task 06\DESIGN_PATTERNS\6.1. USERS…\obj\Debug\_6._1.USERS_.pdb

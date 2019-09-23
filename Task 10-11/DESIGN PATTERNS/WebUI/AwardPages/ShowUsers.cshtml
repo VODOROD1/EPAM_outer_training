@@ -1,0 +1,36 @@
+﻿@using WebUI.Models;
+@using _6._1.USERS_.BLL;
+@using _6._1.USERS_.Entities;
+
+@{
+    Layout = null;
+}
+
+@{
+    EntityWithUsersAwardsManager entity = new EntityWithUsersAwardsManager();
+    IList<String[]> awards = entity.GetAllAwards();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <button id="back">Назад</button>
+    @foreach (String[] award in awards)
+    {
+    <div>@award[1]</div>
+    }
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $('#back').click(function () {
+            location = "/AwardsPage";
+        });
+    </script>
+</body>
+</html>

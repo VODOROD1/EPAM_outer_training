@@ -1,0 +1,28 @@
+{
+  "Users": [
+    {
+      "Id": "33869af8-ee0a-4dec-910b-506259fe9cd4",
+      "Name": "BaseUser1",
+      "BirthDay": "2001-11-05T00:00:00",
+      "Age": 34
+    },
+    {
+      "Id": "8c4ab030-d225-4a83-83c1-eb701285e4b4",
+      "Name": "QWE",
+      "BirthDay": "2005-11-05T00:00:00",
+      "Age": 22
+    }
+  ],
+  "Awards": [
+    {
+      "Id": "7dd05165-95d2-4ce5-898f-2e804b984a2e",
+      "Title": "BaseAward"
+    }
+  ],
+  "AwardsUsers": [
+    {
+      "UserId": "33869af8-ee0a-4dec-910b-506259fe9cd4",
+      "AwardId": "7dd05165-95d2-4ce5-898f-2e804b984a2e"
+    }
+  ]
+}

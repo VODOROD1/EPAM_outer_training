@@ -54,7 +54,7 @@
     <Compile Include="Common\User.cs" />
     <Compile Include="DAL\Storage.cs" />
     <Compile Include="DAL\TextFiles.cs" />
-    <Compile Include="PL\CheckUserAttributes.cs" />
+    <Compile Include="BLL\CheckUserAttributes.cs" />
     <Compile Include="PL\ConsoleUI.cs" />
     <Compile Include="PL\WinFormsUI.cs" />
     <Compile Include="Program.cs" />

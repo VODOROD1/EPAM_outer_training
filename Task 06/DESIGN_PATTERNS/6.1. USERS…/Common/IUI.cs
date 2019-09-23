@@ -13,7 +13,12 @@ namespace _6._1.USERS_.Common
         void SelectOption();
         void AskUserAttributes(out String name, out DateTime birthDay, out uint age);
         void DeleteUser();
+        void ManipulationWithAward();
+        void AskNewAward();
+        void AskAwardForUser();
         void ShowAllUsers();
+        void ShowAllAwards();
+        void ShowAllAwardsOfUser();
 
     }
 }

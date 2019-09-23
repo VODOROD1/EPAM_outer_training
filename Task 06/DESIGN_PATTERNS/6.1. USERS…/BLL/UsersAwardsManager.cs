@@ -8,43 +8,43 @@ using System.Threading.Tasks;
 
 namespace _6._1.USERS_.BLL
 {
-    public class UsersAwardsManager
+    public static class UsersAwardsManager
     {
         public static IStorable TextFiles;
-        public UsersAwardsManager()
+        static UsersAwardsManager()
         {
             TextFiles = new TextFiles();
         }
-        public void AddUser(String name, DateTime date, uint age)
+        public static void AddUser(String name, DateTime date, uint age)
         {
             User user = new User { Id = Guid.NewGuid(), Name = name, BirthDay = date, Age = age };
             TextFiles.AddUser(user);
         }
-        public void AddNewAward(String title)
+        public static void AddNewAward(String title)
         {
             Award award = new Award {Id=Guid.NewGuid(), Title = title };
             TextFiles.AddNewAward(award);
         }
-        public void AddAwardForUser(Guid userGuid, Guid awardGuid) 
+        public static void AddAwardForUser(Guid userGuid, Guid awardGuid) 
         {   //Берем пользователя и награду по их гуайдам
             User user = TextFiles.GetAllUsers().First(u => u.Id == userGuid);
             Award award = TextFiles.GetAllAwards().First(a => a.Id == awardGuid);
             TextFiles.AddAwardForUser(user, award);
         }
-        public void DeleteUser(int key)
+        public static void DeleteUser(int key)
         {
             Guid userGuid = TextFiles.GetAllUsers()[key - 1].Id;
             TextFiles.RemoveUser(userGuid);
         }
-        public IList<User> GetAllUsers()
+        public static IList<User> GetAllUsers()
         {
             return TextFiles.GetAllUsers();
         }
-        public IList<Award> GetAllAwards()
+        public static IList<Award> GetAllAwards()
         {
             return TextFiles.GetAllAwards();
         }
-        public IList<AwardsAndUsers> GetAllAwardsUsers()
+        public static IList<AwardsAndUsers> GetAllAwardsUsers()
         {
             return TextFiles.GetAllAwardsUsers();
         }
