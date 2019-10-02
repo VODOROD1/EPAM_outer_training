@@ -1,0 +1,6 @@
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.Entities\bin\Debug\_3_Layer_Arch.Entities.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.Entities\bin\Debug\_3_Layer_Arch.Entities.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.Entities\obj\Debug\_3_Layer_Arch.Entities.csprojAssemblyReference.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.Entities\obj\Debug\_3_Layer_Arch.Entities.csproj.CoreCompileInputs.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.Entities\obj\Debug\_3_Layer_Arch.Entities.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.Entities\obj\Debug\_3_Layer_Arch.Entities.pdb

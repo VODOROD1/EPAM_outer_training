@@ -1,0 +1,13 @@
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\_3_Layer_Arch.DAL.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\_3_Layer_Arch.DAL.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\Newtonsoft.Json.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\_3_Layer_Arch.DAL.Interfaces.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\_3_Layer_Arch.Entities.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\_3_Layer_Arch.DAL.Interfaces.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\_3_Layer_Arch.Entities.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\bin\Debug\Newtonsoft.Json.xml
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\obj\Debug\_3_Layer_Arch.FileDAL.csprojAssemblyReference.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\obj\Debug\_3_Layer_Arch.FileDAL.csproj.CoreCompileInputs.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\obj\Debug\_3_Layer_Arch.FileDAL.csproj.CopyComplete
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\obj\Debug\_3_Layer_Arch.DAL.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL\obj\Debug\_3_Layer_Arch.DAL.pdb

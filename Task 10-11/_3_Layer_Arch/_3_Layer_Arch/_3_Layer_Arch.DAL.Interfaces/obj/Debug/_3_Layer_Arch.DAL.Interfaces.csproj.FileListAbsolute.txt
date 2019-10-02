@@ -1,0 +1,9 @@
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\bin\Debug\_3_Layer_Arch.DAL.Interfaces.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\bin\Debug\_3_Layer_Arch.DAL.Interfaces.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\bin\Debug\_3_Layer_Arch.Entities.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\bin\Debug\_3_Layer_Arch.Entities.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\obj\Debug\_3_Layer_Arch.DAL.Interfaces.csprojAssemblyReference.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\obj\Debug\_3_Layer_Arch.DAL.Interfaces.csproj.CoreCompileInputs.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\obj\Debug\_3_Layer_Arch.DAL.Interfaces.csproj.CopyComplete
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\obj\Debug\_3_Layer_Arch.DAL.Interfaces.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DAL.Interfaces\obj\Debug\_3_Layer_Arch.DAL.Interfaces.pdb

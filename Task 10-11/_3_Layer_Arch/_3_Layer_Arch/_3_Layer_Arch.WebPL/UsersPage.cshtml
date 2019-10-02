@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <button id="back" class="btn btn-primary" type="button">НАЗАД</button>
+    </div>
+    <div>
+        <button id="createUser" class="btn btn-primary" type="button">Добавить нового пользователя</button>
+    </div>
+    <div>
+        <button id="showUser" class="btn btn-primary" type="button">Посмотреть список всех пользователей и информацию о них</button>
+    </div>
+    <div>
+        <button id="updateUser" class="btn btn-primary" type="button">Редактировать пользователя</button>
+    </div>
+    <div>
+        <button id="deleteUser" class="btn btn-primary" type="button">Удалить пользователя</button>
+    </div>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $('#back').click(function () {
+            location = "/StartPage";
+        });
+        $('#createUser').click(function () {
+            location = "/UserPages/CreateUser";
+        });
+        $('#showUser').click(function () {
+            location = "/UserPages/ShowUsers";
+        });
+        $('#updateUser').click(function () {
+            location = "/UserPages/UpdateUser";
+        });
+        $('#deleteUser').click(function () {
+            location = "/UserPages/DeleteUser";
+        });
+    </script>
+</body>
+</html>

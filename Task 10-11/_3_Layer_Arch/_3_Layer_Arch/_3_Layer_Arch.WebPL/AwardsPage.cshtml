@@ -1,0 +1,172 @@
+﻿@using _3_Layer_Arch.WebPL.Models;
+@{
+    Layout = null;
+}
+
+@{
+    EntityWithUsersAwardsManager entity = new EntityWithUsersAwardsManager();
+    IList<String[]> allAwards = entity.GetAllAwards();
+    int i = 1;
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    string errorMessage3 = null;
+
+    if (IsPost)
+    {
+        var nameAward = Request["nameAward"];
+        switch (Request.Form["btn"])
+        {
+            case "Добавить":
+                var addAward = Request["addAward"];
+                if (entity.AddAward(addAward))
+                {
+                    Response.Redirect(Request.RawUrl);
+                    errorMessage1 = "null";
+                    return;
+                }
+                else { errorMessage1 = "Такая награда уже существует!"; }
+                break;
+
+            case "Удалить":
+                var deleteAward = Request["deleteAward"];
+                int index1 = 0;
+                if (int.TryParse(deleteAward, out index1))
+                {
+                    var awardGuid = allAwards[index1 - 1][0];
+                    if (index1 > 0 && index1 <= allAwards.Count)
+                    {
+                        entity.DeleteAward(int.Parse(allAwards[index1-1][0]));
+                        Response.Redirect(Request.RawUrl);
+                        errorMessage2 = "null";
+                        return;
+                    }
+                    else { errorMessage2 = "Выберите существующий элемент!"; }
+                }
+                else { errorMessage2 = "Введите число!"; }
+                break;
+
+            case "Изменить":
+                int index2 = 0;
+                var selectedAward = Request["selectAward"];
+                if (int.TryParse(selectedAward, out index2))
+                {
+                    var awardId = allAwards[index2 - 1][0];
+                    if (index2 > 0 && index2 <= allAwards.Count)
+                    {
+                        var editAward = Request["editAward"];
+                        if (editAward != allAwards[index2 - 1][1])
+                        {
+                            if (entity.EditAward(awardId, editAward))
+                            {
+                                Response.Redirect(Request.RawUrl);
+                                errorMessage3 = "null";
+                                return;
+                            }
+                            else { errorMessage3 = "Такая награда уже существует!"; }
+                        }
+                        else { errorMessage3 = "Награда не изменена!"; }
+                    }
+                    else { errorMessage3 = "Выберите существующий элемент!"; }
+                }
+                else { errorMessage3 = "Введите число!"; }
+                break;
+        }
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <button id="back" class="btn btn-primary" type="button">Назад</button>
+    </div>
+    <form enctype="multipart/form-data" method="post">
+        <div style="margin-left:50px">
+            <div>
+                <div style="display:inline-block">Введите название награды и выберите картинку</div>
+                @if (errorMessage1 != null)
+                {
+                    <div class="alert alert-danger" style="display:inline-block">@errorMessage1</div>
+                }
+                <br>
+                <input type="text" name="addAward" style="display:inline-block" />
+                <input type="file" name="addImage" accept="image/*,image/jpg" style="display:inline-block" />
+                <input type="submit" name="btn" value="Добавить" style="display:inline-block" />
+            </div>
+
+            <div>
+                <div style="display:inline-block">Введите номер награды</div>
+                @if (errorMessage2 != null)
+                {
+                    <div class="alert alert-danger" style="display:inline-block">@errorMessage2</div>
+                }
+                <br>
+                <input type="text" name="deleteAward" style="display:inline-block" />
+                <input type="submit" name="btn" value="Удалить" style="display:inline-block" />
+            </div>
+
+            <div>
+                <label for="login">Введите номер награды и название награды</label><br>
+                <input type="text" name="selectAward" style="display:inline-block" />
+                @if (errorMessage3 != null)
+                {
+                    <div class="alert alert-danger" style="display:inline-block">@errorMessage3</div>
+                }
+                <br />
+                <input type="text" name="editAward" />
+                <input type="submit" name="btn" value="Изменить" />
+            </div>
+            <br />
+            <div>
+
+
+            </div>
+            @if (allAwards.Count > 0)
+            {
+                <br />
+                <div style="margin-top:30px;">Все награды:</div>
+                foreach (String[] award in allAwards)
+                {
+                    <div>
+                        @i. @award[1]
+                        @*@if (award.Image != null)
+                            {
+                                var pic = File.ReadAllBytes("monica_bellucci.jpeg");
+                                var text = Convert.ToBase64String(pic);
+                                File.WriteAllText("monica_bellucci.txt", text);
+
+                                text = File.ReadAllText("monica_bellucci.txt");
+                                pic = Convert.FromBase64String(text);
+
+
+                                var src = Convert.ToBase64String(award.Image);
+
+                                <div class="img-fluid text-center">
+                                    <img style="width:150px; height:150px" class="rounded mx-auto d-block"
+                                         src="data:image;base64, @src" alt="image" />
+                                </div>
+                            }*@
+                    </div>
+                    i++;
+                }
+            }
+            else
+            {
+                <br />
+                <div style="margin-top:30px;">Нет наград!</div>
+            }
+        </div>
+    </form>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $('#back').click(function () {
+            location = "/StartPage";
+        });
+    </script>
+</body>
+</html>

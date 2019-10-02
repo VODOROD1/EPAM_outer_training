@@ -1,0 +1,78 @@
+﻿@using _3_Layer_Arch.WebPL.Models;
+@{
+    Layout = null;
+}
+
+@{
+    EntityWithUsersAwardsManager entity = new EntityWithUsersAwardsManager();
+    IList<String[]> users = entity.GetAllUsers();
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    var i = 1;
+
+    if (IsPost)
+    {
+        var select = Request["selectField"];
+        int index = 1;
+        if (int.TryParse(select, out index))
+        {
+            if (index > 0 && index <= users.Count)
+            {
+                Temp.selectedIndexUser = index;
+                Temp.selectedIdUser = users[index - 1][0];
+                Response.Redirect("/UserPages/ChangeUserAttr");
+                errorMessage2 = null;
+                return;
+            }
+            else { errorMessage2 = "Выберите существующий элемент!"; }
+            errorMessage1 = null;
+        }
+        else { errorMessage1 = "Введите число!"; }
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <button id="back" type="button">Назад</button>
+        </div>
+        @if (users.Count > 0)
+        {<div>
+                Выберите номер элемента, который нужно отредактировать: <input type="text" name="selectField" value="" /><button id="select">OK</button>
+                @if (errorMessage1 != null)
+                {
+                    <div class="alert alert-danger" style="display:inline-block">@errorMessage1</div>
+                }
+                @if (errorMessage2 != null)
+                {
+                    <div class="alert alert-danger" style="display:inline-block">@errorMessage2</div>
+                }
+            </div>
+            foreach (String[] user in users)
+            {
+                <div>@i. @user[1]</div>
+                i++;
+            }
+        }
+        else
+        {
+            <div>Нет пользователей!</div>
+        }
+    </form>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $('#back').click(function () {
+            location = "/UsersPage";
+        });
+    </script>
+</body>
+</html>

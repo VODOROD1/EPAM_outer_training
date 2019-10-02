@@ -1,0 +1,74 @@
+﻿@using _3_Layer_Arch.WebPL.Models;
+@{
+    Layout = null;
+}
+
+@{
+
+    EntityWithUsersAwardsManager entity = new EntityWithUsersAwardsManager();
+    IList<String[]> users = entity.GetAllUsers();
+    IList<String[]> allAwardsOfUser = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <button id="back" type="button">Назад</button>
+
+    @if (users.Count > 0)
+    {<table style="text-align:center">
+            <tr>
+                <th>
+                    Имя
+                </th>
+                <th>
+                    Дата рождения
+                </th>
+                <th>
+                    Возраст
+                </th>
+                <th>
+                    Награды
+                </th>
+            </tr>
+            @foreach (String[] user in users)
+            {
+                <tr>
+                    <td>
+                        @user[1]
+                    </td>
+                    <td>
+                        @user[2]
+                    </td>
+                    <td>
+                        @user[3]
+                    </td>
+                    <td>
+                        @{allAwardsOfUser = entity.GetAllAwardsOfUser(user[0]);}
+                        @foreach (String[] awardOfUser in allAwardsOfUser)
+                        {
+                            <i> @awardOfUser[1]</i>
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <div>Нет пользователей!</div>
+    }
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $('#back').click(function () {
+            location = "/UsersPage";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{371F5D86-5AFC-48C0-9386-5CC66DED0A4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_3_Layer_Arch.Common</RootNamespace>
+    <AssemblyName>_3_Layer_Arch.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DependencyResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\_3_Layer_Arch.BLL.Interfaces\_3_Layer_Arch.BLL.Interfaces.csproj">
+      <Project>{0e944cb1-5e37-4350-a80c-eb8114e77d54}</Project>
+      <Name>_3_Layer_Arch.BLL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\_3_Layer_Arch.BLL\_3_Layer_Arch.BLL.csproj">
+      <Project>{d5a093d7-6f94-46fd-a5f3-2f5bb9fdb20b}</Project>
+      <Name>_3_Layer_Arch.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\_3_Layer_Arch.DAL.Interfaces\_3_Layer_Arch.DAL.Interfaces.csproj">
+      <Project>{70becb98-1c8e-47c4-b802-9026415e7721}</Project>
+      <Name>_3_Layer_Arch.DAL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\_3_Layer_Arch.DAL\_3_Layer_Arch.FileDAL.csproj">
+      <Project>{b234be3a-9414-4aa7-b66c-89d23c8303f8}</Project>
+      <Name>_3_Layer_Arch.FileDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\_3_Layer_Arch.DBDAL\_3_Layer_Arch.DBDAL.csproj">
+      <Project>{1130c0a4-5665-4343-88cc-caeed49b6e56}</Project>
+      <Name>_3_Layer_Arch.DBDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

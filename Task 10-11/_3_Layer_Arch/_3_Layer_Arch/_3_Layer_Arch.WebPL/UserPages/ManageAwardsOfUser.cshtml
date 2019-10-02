@@ -1,0 +1,150 @@
+﻿@using _3_Layer_Arch.WebPL.Models;
+@{
+    Layout = null;
+}
+
+@{
+    EntityWithUsersAwardsManager entity = new EntityWithUsersAwardsManager();
+    IList<String[]> allAwards = entity.GetAllAwards();
+    IList<String[]> allAwardsOfUser = entity.GetAllAwardsOfUser(Temp.selectedIdUser);
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    var i = 1;
+    var j = 1;
+    if (IsPost)
+    {
+        switch (Request.Form["btn"])
+        {
+            case "Добавить":
+                int index1 = 0;
+                var selectedAward = Request["selectedAward"];
+                if (int.TryParse(selectedAward, out index1))
+                {
+                    if (index1 > 0 && index1 <= allAwards.Count)
+                    {
+                        if (entity.AddAwardForUser(Temp.selectedIndexUser.ToString(), selectedAward))
+                        {
+                            Response.Redirect(Request.RawUrl);
+                            errorMessage1 = "null";
+                            return;
+                        }
+                        else { errorMessage1 = "Такая награда уже есть у данного пользователя!"; }
+                    }
+                    else { errorMessage1 = "Выберите существующий элемент!"; }
+                }
+                else { errorMessage1 = "Введите число!"; }
+                break;
+            case "Удалить только у этого пользователя":
+                int index2 = 0;
+                var selectedAwardOfUser = Request["selectedAwardOfUser"];
+                if (int.TryParse(selectedAwardOfUser, out index2))
+                {
+                    var selectedAwardOfUserId = allAwardsOfUser[index2 - 1][0];
+                    if (index2 > 0 && index2 <= allAwardsOfUser.Count)
+                    {
+                        entity.DeleteAwardFromUser(Temp.selectedIdUser, selectedAwardOfUserId);
+                        errorMessage2 = null;
+                        Response.Redirect(Request.RawUrl);
+                        return;
+                    }
+                    else { errorMessage2 = "Выберите существующий элемент!"; }
+                }
+                else { errorMessage2 = "Введите число!"; }
+                break;
+            case "Удалить сразу у всех пользователей":
+                int index3 = 0;
+                var selectedAwardOfUsers = Request["selectedAwardOfUser"];
+                if (int.TryParse(selectedAwardOfUsers, out index3))
+                {
+                    var selectedAwardOfUserId = allAwardsOfUser[index3 - 1][0];
+                    if (index3 > 0 && index3 <= allAwardsOfUser.Count)
+                    {
+                        entity.DeleteAwardFromUsers(selectedAwardOfUserId);
+                        errorMessage2 = null;
+                        Response.Redirect(Request.RawUrl);
+                        return;
+                    }
+                    else { errorMessage2 = "Выберите существующий элемент!"; }
+                }
+                else { errorMessage2 = "Введите число!"; }
+                break;
+        }
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        <div><button id="back" type="button">Назад</button></div>
+        <div style="display: flex; align-items: top;">
+            <div style="margin-top:20px; margin-left:50px; display:inline-block; width:400px;">
+                <fieldset>
+                    <legend style="font-size:15px">Добавить награду пользователю</legend>
+                    <label for="login">Введите номер награды:</label><br>
+                    @if (errorMessage1 != null)
+                    {
+                        <div class="alert alert-danger">@errorMessage1</div>
+                    }
+                    <input type="text" name="selectedAward" /><br>
+                    <input type="submit" name="btn" value="Добавить" />
+                </fieldset>
+                @if (allAwards.Count > 0)
+                {
+                    <br />
+                    <div style="margin-top:30px;">Все награды:</div>
+                    foreach (String[] award in allAwards)
+                    {
+                        <div>@i. @award[1]</div>
+                        i++;
+                    }
+                }
+                else
+                {
+                    <br />
+                    <div style="margin-top:30px;">Нет наград!</div>
+                }
+            </div>
+            <div style="margin-top:20px; margin-left:150px; display:inline-block">
+                <fieldset>
+                    <legend style="font-size:15px">Удаление награды:</legend>
+                    <label for="login">Введите номер награды:</label><br>
+                    @if (errorMessage2 != null)
+                    {
+                        <div class="alert alert-danger">@errorMessage2</div>
+                    }
+                    <input type="text" name="selectedAwardOfUser" /><br>
+                    <input type="submit" name="btn" value="Удалить только у этого пользователя" />
+                    <br />
+                    <input type="submit" name="btn" value="Удалить сразу у всех пользователей" />
+                </fieldset>
+                @if (allAwardsOfUser.Count > 0)
+                {
+                    <div style="margin-top:30px;">Все награды данного пользователя:</div>
+                    foreach (String[] award in allAwardsOfUser)
+                    {
+                        <div>@j. @award[1]</div>
+                        j++;
+                    }
+                }
+                else
+                {
+                    <div style="margin-top:30px;">У данного пользователя нет наград!</div>
+                }
+            </div>
+        </div>
+    </form>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $('#back').click(function () {
+            location = "/UserPages/ChangeUserAttr";
+        });
+    </script>
+</body>
+</html>

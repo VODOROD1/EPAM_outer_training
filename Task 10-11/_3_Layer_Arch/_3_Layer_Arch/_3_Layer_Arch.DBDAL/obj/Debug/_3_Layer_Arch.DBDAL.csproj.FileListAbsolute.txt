@@ -1,0 +1,11 @@
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\obj\Debug\_3_Layer_Arch.DBDAL.csprojAssemblyReference.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\obj\Debug\_3_Layer_Arch.DBDAL.csproj.CoreCompileInputs.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\bin\Debug\_3_Layer_Arch.DBDAL.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\bin\Debug\_3_Layer_Arch.DBDAL.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\bin\Debug\_3_Layer_Arch.DAL.Interfaces.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\bin\Debug\_3_Layer_Arch.Entities.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\bin\Debug\_3_Layer_Arch.DAL.Interfaces.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\bin\Debug\_3_Layer_Arch.Entities.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\obj\Debug\_3_Layer_Arch.DBDAL.csproj.CopyComplete
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\obj\Debug\_3_Layer_Arch.DBDAL.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.DBDAL\obj\Debug\_3_Layer_Arch.DBDAL.pdb

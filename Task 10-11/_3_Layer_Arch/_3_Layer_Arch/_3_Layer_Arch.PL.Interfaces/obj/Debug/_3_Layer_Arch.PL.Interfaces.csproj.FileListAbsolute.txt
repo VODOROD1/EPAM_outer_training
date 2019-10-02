@@ -1,0 +1,6 @@
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.PL.Interfaces\bin\Debug\_3_Layer_Arch.PL.Interfaces.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.PL.Interfaces\bin\Debug\_3_Layer_Arch.PL.Interfaces.pdb
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.PL.Interfaces\obj\Debug\_3_Layer_Arch.PL.Interfaces.csprojAssemblyReference.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.PL.Interfaces\obj\Debug\_3_Layer_Arch.PL.Interfaces.csproj.CoreCompileInputs.cache
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.PL.Interfaces\obj\Debug\_3_Layer_Arch.PL.Interfaces.dll
+C:\_3_Layer_Arch\_3_Layer_Arch\_3_Layer_Arch.PL.Interfaces\obj\Debug\_3_Layer_Arch.PL.Interfaces.pdb

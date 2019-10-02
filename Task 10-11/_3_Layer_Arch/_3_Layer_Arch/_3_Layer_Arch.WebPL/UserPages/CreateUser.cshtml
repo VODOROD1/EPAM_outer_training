@@ -1,0 +1,130 @@
+﻿@using _3_Layer_Arch.WebPL.Models;
+@using System.IO;
+@{
+    Layout = null;
+}
+
+@{
+    string workingDirectory = Environment.CurrentDirectory;
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    string errorMessage3 = null;
+    EntityWithUsersAwardsManager entity = new EntityWithUsersAwardsManager();
+    WebImage photo = null;
+    var imagePath = "";
+
+
+    if (IsPost)
+    {
+        //var path = HttpRequest.ApplicationPath;
+        photo = WebImage.GetImageFromRequest();
+        var name = Request["userName"];
+        var date = Request["dateOfBirth"];
+        var age = Request["userAge"];
+
+        var boolName = CheckUserAttributes.CheckName(name);
+        var boolDate = CheckUserAttributes.CheckDate(date);
+        var boolAge = CheckUserAttributes.CheckAge(age);
+        //var boolAvatar = CheckUserAttributes.CheckAge(avatar);
+
+        //if(photo != null){
+        //    newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(photo.FileName);
+        //    imagePath = @"~/" + newFileName;
+        //    //photo.Save(@Environment.CurrentDirectory + imagePath);
+        //    //photo.Save(@"~\" + imagePath);
+        //}
+
+        if (!boolName)
+        {
+            errorMessage1 = " Введите имя правильно!";
+        }
+        else
+        {
+            errorMessage1 = null;
+        }
+        if (!boolDate)
+        {
+            errorMessage2 = " Введите дату в соответствии с шаблоном!";
+        }
+        else { errorMessage2 = null; }
+        if (!boolAge)
+        {
+            errorMessage3 = " Введите возраст цифрами!";
+        }
+        else { errorMessage3 = null; }
+
+        if (boolName && boolDate && boolAge)
+        {
+            entity.AddUser(name, date, age);
+            Response.Redirect("/UsersPage");
+            return;
+        }
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post">
+        <div>
+            <label for="userName">Введите имя пользователя:</label>
+        </div>
+        <div>
+            <input type="text" name="userName" value="RRRRRRR" style="display:inline-block" />
+            @if (errorMessage1 != null)
+            {
+                <div class="alert alert-danger" style="display:inline-block">@errorMessage1</div>
+            }
+        </div>
+
+        <div>
+            <label for="dateOfBirth">Введите дату рождения пользователя:</label>
+        </div>
+        <div>
+            <input type="text" name="dateOfBirth" value="05.11.2005" style="display:inline-block" />
+            @if (errorMessage2 != null)
+            {
+                <div class="alert alert-danger" style="display:inline-block">@errorMessage2</div>
+            }
+        </div>
+
+        <div>
+            <label for="userAge">Введите возраст пользователя</label>
+        </div>
+        <div>
+            <input type="text" name="userAge" value="33" style="display:inline-block" />
+            @if (errorMessage3 != null)
+            {
+                <div class="alert alert-danger" style="display:inline-block">@errorMessage3</div>
+            }
+        </div>
+        <div>
+            <label for="userAge">Выберите аватар</label>
+        </div>
+        <input type="file" name="addImage" accept="image/*,image/jpg" />
+        <div>
+            <button id="cancel" class="btn btn-primary" type="button" style="display:inline-block; color:white; background-color:crimson">Отмена</button>
+            <button id="create" class="btn btn-primary" style="display:inline-block; color:white; background-color:lightseagreen ">Создать</button>
+        </div>
+
+        @if (photo != null)
+        {
+            <img src="@imagePath" alt="Alternate Text" />
+        }
+    </form>
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script>
+        $('#cancel').click(function () {
+            location = "/UsersPage";
+        });
+    </script>
+</body>
+</html>

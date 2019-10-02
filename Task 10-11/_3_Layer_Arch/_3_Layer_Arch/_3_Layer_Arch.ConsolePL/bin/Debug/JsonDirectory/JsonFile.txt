@@ -1,0 +1,32 @@
+{
+  "Users": [
+    {
+      "Id": "1e1ae74b-4aba-4d40-9c9c-cf336d37c74b",
+      "Name": "A",
+      "BirthDay": "2001-11-05T00:00:00",
+      "Age": 34
+    },
+    {
+      "Id": "65170ea0-ab8f-47c9-a50b-dae285409a83",
+      "Name": "afafa",
+      "BirthDay": "1999-05-12T00:00:00",
+      "Age": 55
+    }
+  ],
+  "Awards": [
+    {
+      "Id": "61ac6373-2c80-4dc6-a255-d804b074c20a",
+      "Title": "BaseAward1"
+    },
+    {
+      "Id": "2b9d2166-a26c-476c-a485-618bd60fde0d",
+      "Title": "BaseAward2"
+    }
+  ],
+  "AwardsUsers": [
+    {
+      "UserId": "1e1ae74b-4aba-4d40-9c9c-cf336d37c74b",
+      "AwardId": "61ac6373-2c80-4dc6-a255-d804b074c20a"
+    }
+  ]
+}
