@@ -73,3 +73,7 @@ Structure of tasks
 <li>9.2. MATH CALCULATOR</li>
 <li>9.3. BUTTERFLY CONTROL</li>
 <li>9.4. SIMPLE GALLERY</li>
+
+## Task_10_Task_11_ASP_ADO
+<li>10. ASP.NET WEB PAGES</li>
+<li>11 DATABASES</li>
