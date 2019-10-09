@@ -1,0 +1,9 @@
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\bin\Debug\BLOG.BLL.Interfaces.dll
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\bin\Debug\BLOG.BLL.Interfaces.pdb
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\bin\Debug\BLOG.Entities.dll
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\bin\Debug\BLOG.Entities.pdb
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\obj\Debug\BLOG.BLL.Interfaces.csprojAssemblyReference.cache
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\obj\Debug\BLOG.BLL.Interfaces.csproj.CoreCompileInputs.cache
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\obj\Debug\BLOG.BLL.Interfaces.csproj.CopyComplete
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\obj\Debug\BLOG.BLL.Interfaces.dll
+C:\FinalTask\BLOG\BLOG.BLL.Interfaces\obj\Debug\BLOG.BLL.Interfaces.pdb

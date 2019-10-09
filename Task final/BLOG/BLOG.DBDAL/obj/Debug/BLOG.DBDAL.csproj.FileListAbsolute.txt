@@ -1,0 +1,11 @@
+C:\FinalTask\BLOG\BLOG.DBDAL\obj\Debug\BLOG.DBDAL.csprojAssemblyReference.cache
+C:\FinalTask\BLOG\BLOG.DBDAL\obj\Debug\BLOG.DBDAL.csproj.CoreCompileInputs.cache
+C:\FinalTask\BLOG\BLOG.DBDAL\bin\Debug\BLOG.DBDAL.dll
+C:\FinalTask\BLOG\BLOG.DBDAL\bin\Debug\BLOG.DBDAL.pdb
+C:\FinalTask\BLOG\BLOG.DBDAL\bin\Debug\BLOG.DAL.Interfaces.dll
+C:\FinalTask\BLOG\BLOG.DBDAL\bin\Debug\BLOG.Entities.dll
+C:\FinalTask\BLOG\BLOG.DBDAL\bin\Debug\BLOG.DAL.Interfaces.pdb
+C:\FinalTask\BLOG\BLOG.DBDAL\bin\Debug\BLOG.Entities.pdb
+C:\FinalTask\BLOG\BLOG.DBDAL\obj\Debug\BLOG.DBDAL.csproj.CopyComplete
+C:\FinalTask\BLOG\BLOG.DBDAL\obj\Debug\BLOG.DBDAL.dll
+C:\FinalTask\BLOG\BLOG.DBDAL\obj\Debug\BLOG.DBDAL.pdb

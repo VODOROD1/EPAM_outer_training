@@ -1,0 +1,6 @@
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\bin\Debug\BLOG.PL.Interfaces.dll
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\bin\Debug\BLOG.PL.Interfaces.pdb
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.csprojAssemblyReference.cache
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.csproj.CoreCompileInputs.cache
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.dll
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.pdb

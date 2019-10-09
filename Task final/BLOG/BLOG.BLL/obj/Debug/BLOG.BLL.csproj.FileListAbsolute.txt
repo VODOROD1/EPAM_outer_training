@@ -1,0 +1,15 @@
+C:\FinalTask\BLOG\BLOG.BLL\obj\Debug\BLOG.BLL.csprojAssemblyReference.cache
+C:\FinalTask\BLOG\BLOG.BLL\obj\Debug\BLOG.BLL.csproj.CoreCompileInputs.cache
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.BLL.dll
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.BLL.pdb
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.BLL.Interfaces.dll
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.DBDAL.dll
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.Entities.dll
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.DAL.Interfaces.dll
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.BLL.Interfaces.pdb
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.DBDAL.pdb
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.Entities.pdb
+C:\FinalTask\BLOG\BLOG.BLL\bin\Debug\BLOG.DAL.Interfaces.pdb
+C:\FinalTask\BLOG\BLOG.BLL\obj\Debug\BLOG.BLL.csproj.CopyComplete
+C:\FinalTask\BLOG\BLOG.BLL\obj\Debug\BLOG.BLL.dll
+C:\FinalTask\BLOG\BLOG.BLL\obj\Debug\BLOG.BLL.pdb

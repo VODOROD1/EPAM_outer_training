@@ -1,0 +1,6 @@
+C:\FinalTask\BLOG\BLOG.Entities\bin\Debug\BLOG.Entities.dll
+C:\FinalTask\BLOG\BLOG.Entities\bin\Debug\BLOG.Entities.pdb
+C:\FinalTask\BLOG\BLOG.Entities\obj\Debug\BLOG.Entities.csprojAssemblyReference.cache
+C:\FinalTask\BLOG\BLOG.Entities\obj\Debug\BLOG.Entities.csproj.CoreCompileInputs.cache
+C:\FinalTask\BLOG\BLOG.Entities\obj\Debug\BLOG.Entities.dll
+C:\FinalTask\BLOG\BLOG.Entities\obj\Debug\BLOG.Entities.pdb
