@@ -1,6 +1,64 @@
-﻿@{
+﻿@using PersonalBlog.Models;
+@using BLOG.Entities;
+@{
     Layout = "~/_mainLayout.cshtml";
     Page.Name = "Unknown";
+    EntityWithBlogManager entity = new EntityWithBlogManager();
+}
+@{
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    string errorMessage3 = null;
+
+    IList<Post> posts = entity.getAllPosts();
+    IList<Category> categories = entity.getAllCategories();
+    IList<Tag> tags = entity.getAllTags();
+
+    IList<Tag> postTags = new List<Tag>();
+    if (IsPost)
+    {
+        foreach (Post currentPost in posts) {
+            switch (Request.Form[currentPost.Id + "Continue"])
+            {
+                case "Продолжить чтение...":
+                    Temp.selectedPostId = currentPost.Id;
+
+                    var title = Request["title"];
+                    var shortDescription = Request["shortDescription"];
+                    var description = Request["description"];
+                    var dateCreate = Request["dataCreate"];
+                    var dateModified = Request["dateModified"];
+                    var select1 = Request["category"];
+                    var select2 = Request["tag"];
+
+                    Category choisenCategory = null;
+                    IList<Tag> choisenTags = new List<Tag>();
+
+                    if (select1 != null)
+                    {
+                        choisenCategory = categories.First(a => a.Id.ToString() == select1);
+                    }
+
+                    if (select2 != null)
+                    {
+                        string[] split = select2.Split(new char[] { ',' });
+                        for (int j = 0; j < split.Length; j++)
+                        {
+                            choisenTags.Add(tags.First(a => a.Id.ToString() == split[j]));
+                        }
+                    }
+
+                    if (select1 != null && select2 != null)
+                    {
+                        entity.ChangePost(title, shortDescription, description, dateCreate, dateModified, choisenCategory, choisenTags);
+                        Response.Redirect(Request.RawUrl); /*Остаться на этой же странице*/
+                        return;
+                    }
+                    break;
+            }
+        }
+    }
+
 }
 
 @section head{
@@ -48,6 +106,50 @@
         </div>
     </div>
 
+
+    
+    <div id="templatemo_main">
+
+        <div class="post_section">
+
+            @if (posts.Count > 0)
+            {
+                foreach (Post post in posts)
+                {
+                    Category postCategory = categories.First(u => u.Id == post.CategoryId);
+            <form method="post">
+
+                <span class="comment"><a href="blog_post.cshtml">128</a></span>
+
+                <h2>@post.Title</h2>
+
+                @post.DataCreate <strong>|</strong> <strong>Категория:</strong> @postCategory.Title <strong>|</strong> <strong>Теги:</strong> @postCategory.Title
+
+                <img src="Content/images/templatemo_image_01.jpg" alt="image 1" />
+
+                <p>@post.ShortDescription</p>
+                <input type="submit" class="submit_btn" name=@(post.Id + "Continue") id="changePost" value="Продолжить чтение..." @*onsubmit="return validate();"*@ />
+            </form>
+            }
+            }
+            else
+            {
+                <div>К сожалению нет статей!</div>
+            }
+
+        </div>
+    </div>
+        
+
+
+
+
+
+
+
+
+
+
     <div id="templatemo_main">
 
         <div class="post_section">
@@ -62,25 +164,11 @@
             <img src="Content/images/templatemo_image_01.jpg" alt="image 1" />
 
             <p>Clean Blog is a <a href="http://www.templatemo.com" target="_parent">Free HTML-CSS Template</a> provided by <a href="#">templatemo.com</a> for everyone. Validate <a href="http://validator.w3.org/check?uri=referer" rel="nofollow">XHTML</a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow">CSS</a>. Donec enim enim, imperdiet quis, mollis a, elementum a, diam. Lorem ipsum  dolor sit amet, consectetur adipiscing elit. Nulla et nunc commodo ante ornare imperdiet.</p>
-            <a href="blog_post.cshtml">Continue reading...</a>
-
-        </div>
-
-        <div class="post_section">
-
-            <span class="comment"><a href="blog_post.cshtml">256</a></span>
-
-            <h2><a href="blog_post.cshtml">Lorem ipsum dolor sit amet</a></h2>
-
-            December 24, 2048 | <strong>Author:</strong> Steve | <strong>Category:</strong> <a href="#">Web Design</a>
-
-            <img src="Content/images/templatemo_image_02.jpg" alt="image 2" />
-
-            <p>Credits go to <a href="http://www.smashingmagazine.com/2008/09/23/practika-a-free-icon-set/" target="_blank">Smashing Magazine</a> for icons, <a href="http://www.photovaco.com" target="_blank">Free photos</a> for photos, and <a href="http://www.serie3.info/s3slider/" target="_blank">Serie3</a> for the slider. Ut nec vestibulum odio. Vivamus vitae nibh eu sem malesuada rutrum et sit amet magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <a href="blog_post.cshtml">Continue reading...</a>
+            <a href="blog_post.cshtml">Продолжить чтение...</a>
 
         </div>
     </div>
+
 
     <div class="cleaner"></div>
 </div>

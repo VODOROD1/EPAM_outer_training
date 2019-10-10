@@ -1,0 +1,109 @@
+﻿@using PersonalBlog.Models;
+@using BLOG.Entities;
+@{
+    Layout = "~/_mainLayout.cshtml";
+    Page.Name = "Unknown";
+    EntityWithBlogManager entity = new EntityWithBlogManager();
+}
+@{
+    IList<User> users = entity.GetAllUsers();
+    IList<PostComment> comments = new List<PostComment>();
+    int userId = -1;
+
+    if (IsPost)
+    {
+        var selectUser = Request["user"];
+        userId = int.Parse(selectUser);
+        if (selectUser != null) {
+            switch (Request.Form["addPost"])
+            {
+                case "Удалить":
+                    entity.DeleteUser(userId);
+                    break;
+                case "Добавить в черный список":
+                    entity.AddBlackList(userId);
+                    break;
+                case "Убрать из черного списка":
+                    entity.RemoveBlackList(userId);
+                    break;
+                case "Смотреть комментарии":
+                    comments = entity.GetAllCommentsOfUser(userId);
+                    break;
+
+            }
+            Response.Redirect(Request.RawUrl); /*Остаться на этой же странице*/
+            return;
+        }
+    }
+}
+
+@section head{
+    <title>Clean Blog - Contact Page</title>
+    <meta name="keywords" content="clean blog template, contact form, html css layout" />
+    <meta name="description" content="Clean Blog Template - Contact Form, easy to use" />
+    <link href="Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="Content/MyCSS/hideArea.css" rel="stylesheet" type="text/css" />
+}
+<div id="templatemo_right_column">
+
+    <div id="templatemo_main">
+    <em></em>
+
+        <h2>Управление пользователями</h2>
+        <form method="post">
+
+            @if (users.Count > 0)
+            {<div>
+                    Выберите пользователя
+                </div>
+                <p>
+                    @foreach (User user in users)
+                    {
+                        <input type="radio" id="hd-1" @*class="hide"*@ name="user" value=@user.Id />
+                        <label for="hd-1">
+                            <em>
+                                @user.Login
+                            </em>
+                            <em>
+                                @user.Password
+                            </em>
+                            <em>
+                                @user.DataRegistration
+                            </em>
+                            @if (user.MetaId != 0)
+                            {
+                                <em>
+                                    @entity.GetMetaAboutUser(user.Id);
+                                </em>
+                            }
+                            else
+                            {<em>Нет мета-информации о пользователе!</em>}
+                        </label>
+                    }
+                </p>
+                <button id="delete" name="btn">Удалить</button>
+                <button id="addBlackList" name="btn">Добавить в черный список</button>
+                <button id="removeBlackList" name="btn">Убрать из черного списка</button>
+                <button id="removeBlackList" name="btn">Смотреть комментарии</button>
+                <div>
+                    @if (userId >= 0)
+                    {
+                        foreach (PostComment comment in comments)
+                        {
+                            <div>
+                                @comment.Description
+                            </div>
+                        }
+
+                    }
+                </div>
+            }
+            else
+            {
+                <div>Нет пользователей!</div>
+            }
+        </form>
+
+    </div> <!-- end of main -->
+    <div class="cleaner"></div>
+</div> <!-- end of right column -->

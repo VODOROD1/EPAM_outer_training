@@ -1,10 +1,12 @@
-﻿@{
+﻿@using PersonalBlog.Models;
+@{
     Layout = null;
     Page.Name = "Unknown";
 }
 
 @{
     string entryExit = "Вход";
+    EntityWithBlogManager entity = new EntityWithBlogManager();
 }
 @{
     if (IsPost)
@@ -36,6 +38,7 @@
         <div id="templatemo_menu">
 
             <ul>
+                <li><a href="manageUsers.cshtml">Управление пользователями</a></li>
                 <li><a href="managePosts.cshtml">Управление статьями</a></li>
                 <li><a href="index.cshtml" class="current">Статьи</a></li>
                 <li><a href="about.cshtml">Обо мне</a></li>
@@ -140,16 +143,16 @@
                 return false;
             }
             return true;
-            }
+        }
         function validateSearchByTitle() {
-                var searchByTitle = document.getElementById("searchByTitle");
+            var searchByTitle = document.getElementById("searchByTitle");
 
-                if (!searchByTitle.value) {
-                    searchByTitle.style.border = "2px solid red";
-                    return false;
-                }
-                return true;
+            if (!searchByTitle.value) {
+                searchByTitle.style.border = "2px solid red";
+                return false;
             }
+            return true;
+        }
     </script>
 
     @RenderSection("validate", false)

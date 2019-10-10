@@ -73,3 +73,11 @@ C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.PL.Interfaces.dll
 C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.BLL.Interfaces.pdb
 C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.Common.pdb
 C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.PL.Interfaces.pdb
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.Entities.dll
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.DAL.Interfaces.dll
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.DBDAL.dll
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.BLL.dll
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.Entities.pdb
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.DAL.Interfaces.pdb
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.DBDAL.pdb
+C:\FinalTask\BLOG\PersonalBlog\bin\BLOG.BLL.pdb

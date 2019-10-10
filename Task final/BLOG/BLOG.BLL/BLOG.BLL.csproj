@@ -49,9 +49,9 @@
       <Project>{03c303de-7d8a-4599-9f43-1be4abfa77cc}</Project>
       <Name>BLOG.BLL.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BLOG.DBDAL\BLOG.DBDAL.csproj">
-      <Project>{d9f25089-c064-4a28-87dd-587e260ad21b}</Project>
-      <Name>BLOG.DBDAL</Name>
+    <ProjectReference Include="..\BLOG.DAL.Interfaces\BLOG.DAL.Interfaces.csproj">
+      <Project>{ad4b2b97-4385-45d1-af76-4b8312a52aa0}</Project>
+      <Name>BLOG.DAL.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\BLOG.Entities\BLOG.Entities.csproj">
       <Project>{44adfbc2-8683-40e7-a074-2fe1754eb931}</Project>

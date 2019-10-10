@@ -127,6 +127,7 @@
     <Content Include="enter.cshtml" />
     <Content Include="registration.cshtml" />
     <Content Include="managePosts.cshtml" />
+    <Content Include="manageUsers.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -155,6 +156,7 @@
     <Compile Include="Models\Auth.cs" />
     <Compile Include="Models\EntityWithBlogManager.cs" />
     <Compile Include="Models\MyRoleProvider.cs" />
+    <Compile Include="Models\Temp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +185,10 @@
     <ProjectReference Include="..\BLOG.Common\BLOG.Common.csproj">
       <Project>{e5ea87f8-6125-40bb-ad42-e959e15c73c9}</Project>
       <Name>BLOG.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLOG.Entities\BLOG.Entities.csproj">
+      <Project>{44adfbc2-8683-40e7-a074-2fe1754eb931}</Project>
+      <Name>BLOG.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\BLOG.PL.Interfaces\BLOG.PL.Interfaces.csproj">
       <Project>{d690ed15-a115-4b4a-800b-bae384fb5ea3}</Project>
