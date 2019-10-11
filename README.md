@@ -77,3 +77,5 @@ Structure of tasks
 ## Task_10_Task_11_ASP_ADO
 <li>10. ASP.NET WEB PAGES</li>
 <li>11 DATABASES</li>
+## FINAL TASK
+<li>Personal Blog</li>
