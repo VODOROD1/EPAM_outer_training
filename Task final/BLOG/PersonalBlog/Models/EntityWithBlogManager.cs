@@ -146,21 +146,21 @@ namespace PersonalBlog.Models
         {
             BlogManager.DeleteCommentFromPost(commentId, postId);
         }
-        public void DeleteTag(int commentId)
+        public void DeleteTag(int tagId)
         {
-            BlogManager.DeleteTag(commentId);
+            BlogManager.DeleteTag(tagId);
         }
-        public void DeleteCategory(int commentId)
+        public void DeleteCategory(int categoryId)
         {
-            BlogManager.DeleteCategory(commentId);
+            BlogManager.DeleteCategory(categoryId);
         }
-        public void DeleteCategoryFromPost(int commentId)
+        public void DeleteCategoryFromPost(int postId)
         {
-            BlogManager.DeleteCategoryFromPost(commentId);
+            BlogManager.DeleteCategoryFromPost(postId);
         }
-        public void DeleteTagFromPost(int commentId)
+        public void DeleteTagFromPost(int postId, int tagId)
         {
-            BlogManager.DeleteTagFromPost(commentId);
+            BlogManager.DeleteTagFromPost(postId, tagId);
         }
         #endregion
 

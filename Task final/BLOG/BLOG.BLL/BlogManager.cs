@@ -213,21 +213,21 @@ namespace BLOG.BLL
         {
             storage.DeleteCommentFromPost(commentId, postId);
         }
-        public void DeleteTag(int commentId)
+        public void DeleteTag(int tagId)
         {
-            storage.DeleteTag(commentId);
+            storage.DeleteTag(tagId);
         }
-        public void DeleteCategory(int commentId)
+        public void DeleteCategory(int categoryId)
         {
-            storage.DeleteCategory(commentId);
+            storage.DeleteCategory(categoryId);
         }
-        public void DeleteCategoryFromPost(int commentId)
+        public void DeleteCategoryFromPost(int postId)
         {
-            storage.DeleteCategoryFromPost(commentId);
+            storage.DeleteCategoryFromPost(postId);
         }
-        public void DeleteTagFromPost(int commentId)
+        public void DeleteTagFromPost(int postId, int tagId)
         {
-            storage.DeleteTagFromPost(commentId);
+            storage.DeleteTagFromPost(postId, tagId);
         }
         #endregion
 

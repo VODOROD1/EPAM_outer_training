@@ -41,10 +41,10 @@ namespace BLOG.DAL.Interfaces
         void DeleteUser(int userId);
         void DeleteComment(int commentId);
         void DeleteCommentFromPost(int commentId, int postId);
-        void DeleteTag(int commentId);
-        void DeleteCategory(int commentId);
-        void DeleteCategoryFromPost(int commentId);
-        void DeleteTagFromPost(int commentId);
+        void DeleteTag(int tagId);
+        void DeleteCategory(int categoryId);
+        void DeleteCategoryFromPost(int postId);
+        void DeleteTagFromPost(int postId, int tagId);
 
         void ChangePost(Post newPost);
         void ChangeComment(PostComment comment);

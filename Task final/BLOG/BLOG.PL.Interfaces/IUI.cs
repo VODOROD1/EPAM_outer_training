@@ -67,13 +67,13 @@ namespace BLOG.PL.Interfaces
 
          void DeleteCommentFromPost(int commentId, int postId);
 
-         void DeleteTag(int commentId);
+         void DeleteTag(int tagId);
 
-         void DeleteCategory(int commentId);
+         void DeleteCategory(int categoryId);
 
-         void DeleteCategoryFromPost(int commentId);
+         void DeleteCategoryFromPost(int postId);
 
-         void DeleteTagFromPost(int commentId);
+         void DeleteTagFromPost(int postId, int tagId);
 
         #endregion
 
