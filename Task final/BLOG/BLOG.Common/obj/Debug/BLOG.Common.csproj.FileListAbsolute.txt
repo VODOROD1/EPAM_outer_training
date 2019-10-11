@@ -13,3 +13,5 @@ C:\FinalTask\BLOG\BLOG.Common\bin\Debug\BLOG.DBDAL.pdb
 C:\FinalTask\BLOG\BLOG.Common\obj\Debug\BLOG.Common.csproj.CopyComplete
 C:\FinalTask\BLOG\BLOG.Common\obj\Debug\BLOG.Common.dll
 C:\FinalTask\BLOG\BLOG.Common\obj\Debug\BLOG.Common.pdb
+C:\FinalTask\BLOG\BLOG.Common\bin\Debug\BLOG.Entities.dll
+C:\FinalTask\BLOG\BLOG.Common\bin\Debug\BLOG.Entities.pdb

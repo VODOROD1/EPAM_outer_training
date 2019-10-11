@@ -85,7 +85,7 @@
 
                     if (select1 != null && select2 != null)
                     {
-                        entity.ChangePost(title, shortDescription, description, dateCreate, dateModified, choisenCategory, choisenTags);
+                        entity.ChangePost(currentPost.Id,title, shortDescription, description, dateCreate, dateModified, choisenCategory, choisenTags);
                         Response.Redirect(Request.RawUrl); /*Остаться на этой же странице*/
                         return;
                     }

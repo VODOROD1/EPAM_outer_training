@@ -4,3 +4,6 @@ C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.csprojAssembly
 C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.csproj.CoreCompileInputs.cache
 C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.dll
 C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.pdb
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\bin\Debug\BLOG.Entities.dll
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\bin\Debug\BLOG.Entities.pdb
+C:\FinalTask\BLOG\BLOG.PL.Interfaces\obj\Debug\BLOG.PL.Interfaces.csproj.CopyComplete

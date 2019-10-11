@@ -2,37 +2,7 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\managePosts.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\index.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\blog_post.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\registration.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\BLOG.Entities\Post.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\_mainLayout.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\Models\Temp.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\BLOG.Entities\Tag.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\BLOG.Entities\Category.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\Models\EntityWithBlogManager.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\BLOG.Entities\PostComment.cs</string>
+      <string>D:\GitHub\Mike_Bel\Mike_Bel\Task final\BLOG\BLOG.DBDAL\DataBase.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

@@ -11,6 +11,7 @@ namespace BLOG.Entities
         public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public string Email { get; set; }
         public DateTime DataRegistration { get; set; }
         public int MetaId { get; set; }
         //public Image Avatar { get; set; }

@@ -10,9 +10,11 @@
     string errorMessage2 = null;
     string errorMessage3 = null;
 
+    IList<Tag> test = entity.GetPostTags(5);
     IList<Post> posts = entity.getAllPosts();
     IList<Category> categories = entity.getAllCategories();
-    IList<Tag> tags = entity.getAllTags();
+    //IList<Tag> tags = entity.getAllTags();
+    IList<Tag> tags = new List<Tag>();
 
     IList<Tag> postTags = new List<Tag>();
     if (IsPost)
@@ -23,37 +25,7 @@
                 case "Продолжить чтение...":
                     Temp.selectedPostId = currentPost.Id;
 
-                    var title = Request["title"];
-                    var shortDescription = Request["shortDescription"];
-                    var description = Request["description"];
-                    var dateCreate = Request["dataCreate"];
-                    var dateModified = Request["dateModified"];
-                    var select1 = Request["category"];
-                    var select2 = Request["tag"];
 
-                    Category choisenCategory = null;
-                    IList<Tag> choisenTags = new List<Tag>();
-
-                    if (select1 != null)
-                    {
-                        choisenCategory = categories.First(a => a.Id.ToString() == select1);
-                    }
-
-                    if (select2 != null)
-                    {
-                        string[] split = select2.Split(new char[] { ',' });
-                        for (int j = 0; j < split.Length; j++)
-                        {
-                            choisenTags.Add(tags.First(a => a.Id.ToString() == split[j]));
-                        }
-                    }
-
-                    if (select1 != null && select2 != null)
-                    {
-                        entity.ChangePost(title, shortDescription, description, dateCreate, dateModified, choisenCategory, choisenTags);
-                        Response.Redirect(Request.RawUrl); /*Остаться на этой же странице*/
-                        return;
-                    }
                     break;
             }
         }
@@ -116,7 +88,9 @@
             {
                 foreach (Post post in posts)
                 {
-                    Category postCategory = categories.First(u => u.Id == post.CategoryId);
+                    //Category postCategory = categories.First(u => u.Id == post.CategoryId);
+                    Category postCategory = entity.GetPostCategory(post.Id);
+                    tags = entity.GetPostTags(post.Id);
             <form method="post">
 
                 <span class="comment"><a href="blog_post.cshtml">128</a></span>

@@ -20,143 +20,177 @@ namespace PersonalBlog.Models
         #region ADD
         public bool AddPost(String title, String shortDescription, String description, String dateCreate, Category choisenCategory, IList<Tag> choisenTags)
         {
-            //BlogManager.AddPost(name, date, strAge);
-            return true;
+            return BlogManager.AddPost(title, shortDescription, description, dateCreate, choisenCategory, choisenTags);
         }
-        public void AddBlackList(int userId)
+        public bool AddBlackList(int userId)
         {
             //Далее в BLL
+            return BlogManager.AddBlackList(userId);
         }
-        public bool AddNewUser(String login, String password, String email)
+        public bool AddMetaAboutUser(string info, string dateBirth, int age)
+        {
+
+            return BlogManager.AddMetaAboutUser( info,  dateBirth, age);
+        }
+        public bool AddNewUser(String login, String password, String email, int meta)
         {
             //Далее в BLL
-            return true;
+            return BlogManager.AddNewUser(login, password, email, meta);
         }
         public bool AddNewTag(String name, String description)
         {
             //Далее в BLL
-            return true;
+            return BlogManager.AddNewTag(name, description);
         }
         public bool AddNewCategory(String title, String description)
         {
             //Далее в BLL
-            return true;
+            return BlogManager.AddNewCategory(title, description);
         }
         public bool AddNewComment(int postId, int userId, String description, String dateCreate)
         {
             //Далее в BLL
-            return true;
+            return BlogManager.AddNewComment(postId, userId, description, dateCreate);
         }
         #endregion
 
         #region GET
         public IList<Post> getAllPosts()
         {
-            //Далее в BLL
-            return new List<Post>();
+            return BlogManager.getAllPosts();
+        }
+        public Post getPostById(int postId)
+        {
+            return BlogManager.getPostById(postId);
+        }
+        public IList<Post> getPostsByTag(String tagName)
+        {
+            return BlogManager.getPostsByTag(tagName);
+        }
+        public IList<Post> getPostsByText(String text)
+        {
+            return BlogManager.getPostsByText(text);
         }
         public IList<Category> getAllCategories()
         {
-            //Далее в BLL
-            return new List<Category>();
+            return BlogManager.getAllCategories();
         }
         public IList<Tag> getAllTags()
         {
-            //Далее в BLL
-            return new List<Tag>();
+            return BlogManager.getAllTags();
         }
         public IList<User> GetAllUsers()
         {
-            //Далее в BLL
-            return new List<User>();
+            return BlogManager.GetAllUsers();
         }
-        public IList<MetaAboutUser> GetMetaAboutUser(int metaId)
+        public IList<User> GetBlackList()
         {
-            return new List<MetaAboutUser>();
+            return BlogManager.GetBlackList();
+        }
+        public User GetUserById(int Id)
+        {
+            return BlogManager.GetUserById(Id);
+        }
+        public MetaAboutUser GetMetaAboutUser(int metaId)
+        {
+            return BlogManager.GetMetaAboutUser(metaId);
         }
         public IList<PostComment> GetAllCommentsOfUser(int userId)
         {
-            return new List<PostComment>();
+            return BlogManager.GetAllCommentsOfUser(userId);
         }
         public IList<PostComment> GetAllCommentsOfPost(int postId)
         {
-            return new List<PostComment>();
+            return BlogManager.GetAllCommentsOfPost(postId);
         }
         public IList<User> GetUsersOfPost(int postId)
         {
-            return new List<User>();
+            return BlogManager.GetUsersOfPost(postId);
         }
         public IList<Tag> GetPostTags(int postId)
         {
-            //Далее в BLL
-            return new List<Tag>();
+            return BlogManager.GetPostTags(postId);
         }
         public Category GetPostCategory(int postId)
         {
-            //Далее в BLL
-            return new Category();
+            return BlogManager.GetPostCategory(postId);
         }
         public Post GetChoisenPost(int postId)
         {
-            //Далее в BLL
-            return new Post();
+            return BlogManager.GetChoisenPost(postId);
         }
         public User GetUserOfComment(int commentId)
         {
-            //Далее в BLL
-            return new User();
+            return BlogManager.GetUserOfComment(commentId);
         }
         #endregion
 
         #region REMOVE
         public void DeletePost(int deleteId)
         {
-            //Далее в BLL
+            BlogManager.DeletePost(deleteId);
         }
         public void DeleteUser(int userId)
         {
-            //Далее в BLL
+            BlogManager.DeleteUser(userId);
         }
-
         public void RemoveBlackList(int userId)
         {
-            //Далее в BLL
+            BlogManager.RemoveBlackList(userId);
         }
         public void DeleteComment(int commentId)
         {
-            //Далее в BLL
+            BlogManager.DeleteComment(commentId);
+        }
+        public void DeleteCommentFromPost(int commentId, int postId)
+        {
+            BlogManager.DeleteCommentFromPost(commentId, postId);
+        }
+        public void DeleteTag(int commentId)
+        {
+            BlogManager.DeleteTag(commentId);
+        }
+        public void DeleteCategory(int commentId)
+        {
+            BlogManager.DeleteCategory(commentId);
+        }
+        public void DeleteCategoryFromPost(int commentId)
+        {
+            BlogManager.DeleteCategoryFromPost(commentId);
+        }
+        public void DeleteTagFromPost(int commentId)
+        {
+            BlogManager.DeleteTagFromPost(commentId);
         }
         #endregion
 
         #region CHANGE
-        public bool ChangePost(String title, String shortDescription, String description, String dateCreate, String dateModified, Category choisenCategory, IList<Tag> choisenTags)
+        public bool ChangePost(int postId, String title, String shortDescription, String description, String dateCreate, String dateModified, Category choisenCategory, IList<Tag> choisenTags)
         {
-            //BlogManager.AddPost(name, date, strAge);
-            return true;
+            
+            return BlogManager.ChangePost( postId,  title,  shortDescription,  description,  dateCreate,  dateModified,  choisenCategory,  choisenTags);
         }
         public void ChangeComment(int commentId, string newDescription)
         {
-            //Далее в BLL
+            BlogManager.ChangeComment(commentId, newDescription);
         }
-        #endregion
-
-        #region CHECK
-        public bool CheckNewUser(String login, String Password)
+        public bool ChangeUser(int userId, string newLogin ,string newPassword, string newEmail, int newMetaId)
         {
-            //Далее в BLL
-            return true;
+            
+            return BlogManager.ChangeUser( userId, newLogin, newPassword, newEmail, newMetaId);
         }
-        public bool CheckNewTag(String name)
+        public void ChangeTag(int tagId, string newName, string newDescription)
         {
-            //Далее в BLL
-            return true;
+            BlogManager.ChangeTag(tagId, newName, newDescription);
         }
-        public bool CheckNewCategory(String title)
+        public void ChangeCategory(int categoryId, string newTitle, string newDescription)
         {
-            //Далее в BLL
-            return true;
+            BlogManager.ChangeCategory(categoryId, newTitle, newDescription);
         }
-        
+        public void ChangeMeta(int id, string info, string dateBirth, int age)
+        {
+            BlogManager.ChangeMeta(id, info, dateBirth, age);
+        }
         #endregion
     }
 }

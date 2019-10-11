@@ -44,5 +44,11 @@
     <Compile Include="IUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLOG.Entities\BLOG.Entities.csproj">
+      <Project>{44adfbc2-8683-40e7-a074-2fe1754eb931}</Project>
+      <Name>BLOG.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
