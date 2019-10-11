@@ -74,10 +74,10 @@ namespace BLOG.BLL
             else { return false; }
             
         }
-        public bool AddMetaAboutUser(string info, string dateBirth, int age)
+        public int AddMetaAboutUser(string info, string dateBirth, int age)
         {
-            storage.AddMetaAboutUser(new MetaAboutUser { Info=info, DateBirth = DateTime.ParseExact(dateBirth, "dd.MM.yyyy", null), Age = age});
-            return true;
+            
+            return storage.AddMetaAboutUser(new MetaAboutUser { Info=info, DateBirth = DateTime.ParseExact(dateBirth, "dd.MM.yyyy", null), Age = age});;
         }
         public bool AddNewTag(String name, String description)
         {

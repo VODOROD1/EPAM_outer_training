@@ -2,7 +2,45 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>D:\GitHub\Mike_Bel\Mike_Bel\Task final\BLOG\BLOG.DBDAL\DataBase.cs</string>
+      <string>C:\FinalTask\BLOG\PersonalBlog\Models\EntityWithBlogManager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.BLL\BlogManager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.DBDAL\DataBase.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\PersonalBlog\index.cshtml</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\User.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\Tag.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\PrimaryAnswerComment.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\PostTag.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\PostComment.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\Post.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\MetaAboutUser.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\Category.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.Entities\BlogBlackList.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

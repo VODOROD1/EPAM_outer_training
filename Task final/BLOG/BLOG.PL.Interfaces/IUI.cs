@@ -17,7 +17,7 @@ namespace BLOG.PL.Interfaces
        bool AddNewTag(String name, String description);
        bool AddNewCategory(String title, String description);
        bool AddNewComment(int postId, int userId, String description, String dateCreate);
-        bool AddMetaAboutUser(string info, string dateBirth, int age);
+        int AddMetaAboutUser(string info, string dateBirth, int age);
         #endregion
 
         #region GET

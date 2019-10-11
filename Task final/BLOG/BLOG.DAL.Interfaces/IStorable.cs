@@ -13,7 +13,7 @@ namespace BLOG.DAL.Interfaces
         void AddTagForPost(PostTag newPostTag);
         void AddBlackList(int userId);
         void AddNewUser(User user);
-        void AddMetaAboutUser(MetaAboutUser metaAboutUser);
+        int AddMetaAboutUser(MetaAboutUser metaAboutUser);
         void AddNewTag(Tag tag);
         void AddNewCategory(Category category);
         void AddNewComment(PostComment comment);

@@ -27,7 +27,7 @@ namespace PersonalBlog.Models
             //Далее в BLL
             return BlogManager.AddBlackList(userId);
         }
-        public bool AddMetaAboutUser(string info, string dateBirth, int age)
+        public int AddMetaAboutUser(string info, string dateBirth, int age)
         {
 
             return BlogManager.AddMetaAboutUser( info,  dateBirth, age);
