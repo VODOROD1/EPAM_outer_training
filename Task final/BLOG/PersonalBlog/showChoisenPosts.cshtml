@@ -1,0 +1,121 @@
+﻿
+@using PersonalBlog.Models;
+@using BLOG.Entities;
+@{
+    Layout = "~/_mainLayout.cshtml";
+    Page.Name = "Unknown";
+    EntityWithBlogManager entity = new EntityWithBlogManager();
+}
+@{
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    string errorMessage3 = null;
+
+    IList<Post> posts = new List<Post>();
+    foreach (int id in Temp.selectedPostsId)
+    {
+        posts.Add(entity.getPostById(id));
+    }
+    IList<Tag> tags = new List<Tag>();
+
+    IList<Tag> postTags = new List<Tag>();
+    if (IsPost)
+    {
+        foreach (Post currentPost in posts) {
+            switch (Request.Form[currentPost.Id + "Continue"])
+            {
+                case "Продолжить чтение...":
+                    Temp.selectedPostId = currentPost.Id;
+                    Temp.selectedPostsId = new List<int>();
+                    Response.Redirect("/showFullPost");
+                    break;
+            }
+        }
+    }
+
+}
+
+@section head{
+    <title>Show choisen posts</title>
+    <meta name="keywords" content="clean blog template, html css layout" />
+    <meta name="description" content="Clean Blog Template is provided by templatemo.com" />
+    <link href="Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+    <link href="Content/s3slider.css" rel="stylesheet" type="text/css" />
+    <!-- JavaScripts-->
+    <script type="text/javascript" src="Content/js/jquery.js"></script>
+    <script type="text/javascript" src="Content/js/s3Slider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#slider').s3Slider({
+                timeOut: 1600
+            });
+        });
+    </script>
+}
+
+<div id="templatemo_right_column">
+
+    <div id="featured_project">
+        <div id="slider">
+            <ul id="sliderContent">
+                <li class="sliderImage">
+                    <a href=""><img src="Content/images/slider/1.jpg" alt="1" /></a>
+                    <span class="top"><strong>Реклама 1</strong><br />Suspendisse turpis arcu, dignissim ac laoreet a, condimentum in massa.</span>
+                </li>
+                <li class="sliderImage">
+                    <a href=""><img src="Content/images/slider/2.jpg" alt="2" /></a>
+                    <span class="bottom"><strong>Реклама 2</strong><br />uisque eget elit quis augue pharetra feugiat.</span>
+                </li>
+                <li class="sliderImage">
+                    <img src="Content/images/slider/3.jpg" alt="3" />
+                    <span class="left"><strong>Реклама 3</strong><br />Sed et quam vitae ipsum vulputate varius vitae semper nunc.</span>
+                </li>
+                <li class="sliderImage">
+                    <img src="Content/images/slider/4.jpg" alt="4" />
+                    <span class="right"><strong>Реклама 4</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                </li>
+                <li class="clear sliderImage"></li>
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="templatemo_main">
+
+        <div class="post_section">
+
+            @if (posts.Count > 0)
+            {
+                foreach (Post post in posts)
+                {
+                    Category postCategory = entity.GetPostCategory(post.Id);
+                    tags = entity.GetPostTags(post.Id);
+            <form method="post">
+
+                <span class="comment"><a href="blog_post.cshtml">@entity.GetAllCommentsOfPost(post.Id).Count</a></span>
+
+                <h2>@post.Title</h2>
+
+                @post.DataCreate.ToString("dd:MM:yyyy") <strong>|</strong> <strong>Категория:</strong> @postCategory.Title <strong>|</strong> <strong>Теги:</strong> 
+                @foreach(Tag tag in tags) {<em>@tag.Name</em> }
+
+                <img src="Content/images/templatemo_image_01.jpg" alt="image 1" />
+
+                <p>@post.ShortDescription</p>
+                <input type="submit" class="submit_btn" name=@(post.Id + "Continue") id="changePost" value="Продолжить чтение..." @*onsubmit="return validate();"*@ />
+            </form>
+            }
+            }
+            else
+            {
+                <div>К сожалению, вашему выбору не соответствует ни одна статья...</div>
+            }
+
+        </div>
+    </div>
+
+    <div class="cleaner"></div>
+</div>
+<!-- end of templatemo_main -->

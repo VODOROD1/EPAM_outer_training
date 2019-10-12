@@ -1,4 +1,5 @@
 ﻿@using PersonalBlog.Models;
+@using BLOG.Entities;
 @{
     Layout = null;
     Page.Name = "Unknown";
@@ -9,19 +10,62 @@
     EntityWithBlogManager entity = new EntityWithBlogManager();
 }
 @{
+    IList<Post> allPosts = entity.getAllPosts();
+    IList<Tag> tags = entity.getAllTags();
+    IList<Category> categories = entity.getAllCategories();
+
     if (IsPost)
     {
         switch (Request.Form["search1"])
         {
-            case "Поиск":
-                Response.Redirect("/about");
+
+            case "Найти":
+                var choiceField = Request["searchByTitle"];
+                Post choisenPost = allPosts.FirstOrDefault(u => u.Title == choiceField);
+                if (choisenPost != null)
+                {
+                    Temp.selectedPostsId.Add(choisenPost.Id);
+                    Response.Redirect("/showChoisenPosts");
+                }
                 break;
+
         }
         switch (Request.Form["search2"])
         {
-            case "Поиск":
-                Response.Redirect("/contact");
+            case "Найти":
+                var choiceField = Request["searchByText"];
+                IList<Post> posts = entity.getPostsByText(choiceField);
+
+                foreach (Post post in posts)
+                {
+                    Temp.selectedPostsId.Add(post.Id);
+                }
+
+                Response.Redirect("/showChoisenPosts");
+
                 break;
+        }
+        foreach (Tag choisenTag in tags)
+        {
+            
+            switch (Request.Form[choisenTag.Id + "choiseTag"])
+            {
+                case "tag":
+
+                    break;
+            }
+            
+        }
+        foreach (Category choisenCategory in categories)
+        {
+            
+            switch (Request.Form[choisenCategory.Id + "choiseTag"])
+            {
+                case "tag":
+
+                    break;
+            }
+            
         }
     }
 }
@@ -40,80 +84,84 @@
             <ul>
                 <li><a href="manageUsers.cshtml">Управление пользователями</a></li>
                 <li><a href="managePosts.cshtml">Управление статьями</a></li>
-                <li><a href="index.cshtml" class="current">Статьи</a></li>
+                <li><a href="recentPosts.cshtml" class="current">Статьи</a></li>
                 <li><a href="about.cshtml">Обо мне</a></li>
                 <li><a href="contact.cshtml">Связаться</a></li>
                 <li><a href="enter.cshtml">@entryExit</a></li>
             </ul>
 
         </div> <!-- end of templatemo_menu -->
-
         <div id="templatemo_left_column">
-
             <div id="templatemo_header">
-
                 <div id="site_title">
                     <h1><a href="#" target="_parent">Personal <strong>Blog</strong><span>Useful Information</span></a></h1>
                 </div><!-- end of site_title -->
-
             </div> <!-- end of header -->
-
             <div id="templatemo_sidebar">
-
                 <div id="templatemo_rss">
                     <a href="#">SUBSCRIBE NOW <br /><span>to our rss feed</span></a>
                 </div>
 
-
                 <form method="post" onsubmit="return validateSearchByTitle();">
                     <label for="searchByTitle">Поиск по названию:</label>
                     <input type="text" name="searchByTitle" id="searchByTitle" value="" />
-                    <input type="submit" name="search1" value="Поиск" />
+                    <input type="submit" name="search1" value="Найти" />
                 </form>
                 <div class="cleaner_h20"></div>
 
                 <form method="post" onsubmit="return validateSearchByText();">
                     <label for="searchByText">Поиск по тексту:</label>
                     <textarea name="searchByText" id="searchByText" rows="0" cols="0" class="required"></textarea>
-                    <input type="submit" name="search2" value="Поиск" />
+                    <input type="submit" name="search2" value="Найти" />
                 </form>
 
 
                 <div class="cleaner_h20"></div>
-                <h4>Категории</h4>
-                <ul class="templatemo_list">
-                    <li><a href="http://www.templatemo.com/page/1" target="_parent">Curabitur sed</a></li>
-                    <li><a href="http://www.templatemo.com/page/2" target="_parent">Praesent adipiscing</a></li>
-                    <li><a href="http://www.templatemo.com/page/3" target="_parent">Duis sed justo</a></li>
-                    <li><a href="http://www.templatemo.com/page/4" target="_parent">Mauris vulputate</a></li>
-                    <li><a href="#">Nam auctor</a></li>
-                    <li><a href="#">Aliquam quam</a></li>
-                </ul>
+                <h4>Теги</h4>
+                <div class="cleaner_h20"></div>
+                @if(tags.Count != 0){
+                @foreach(Tag tag in tags){
+                <form method="post">
+                    <input type="radio" name="tag"
+                    <input name=@(tag.Id + "choiseTag") type="submit" value=@tag.Name>
 
+                    <input type="radio" name="tag" id=@tag.Id style="display: none " />
+                    <label for=@tag.Id><input type="submit" name=@(tag.Id + "choiseTag")  value=@tag.Name></label>
+                </form>
+
+                    Request["tag"];
+                }}
+                else
+                {
+                    <div>Нет тегов!</div>
+                }
+
+
+                <div class="cleaner_h20"></div>
+                <h4>Категории</h4>
+                <div class="cleaner_h20"></div>
+                <form method="post">
+                   
+                    
+                    <ul class="templatemo_list">
+                        <li><a href="http://www.templatemo.com/page/1" target="_parent">Curabitur sed</a></li>
+                        <li><a href="http://www.templatemo.com/page/2" target="_parent">Praesent adipiscing</a></li>
+                        <li><a href="http://www.templatemo.com/page/3" target="_parent">Duis sed justo</a></li>
+                        <li><a href="http://www.templatemo.com/page/4" target="_parent">Mauris vulputate</a></li>
+                        <li><a href="#">Nam auctor</a></li>
+                        <li><a href="#">Aliquam quam</a></li>
+                    </ul>
+                </form>
                 <div class="cleaner_h40"></div>
 
-                <h4>Теги</h4>
-                <ul class="templatemo_list">
-                    <li><a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a></li>
-                    <li><a href="http://www.flashmo.com" target="_parent">Flash Templates</a></li>
-                    <li><a href="http://www.flashmo.com/store" target="_parent">Premium Themes</a></li>
-                    <li><a href="http://www.webdesignmo.com/blog" target="_parent">Web Design Blog</a></li>
-                    <li><a href="http://www.koflash.com" target="_parent">Flash Web Gallery</a></li>
-                    <li><a href="#">Curabitur sed lacinia</a></li>
-                    <li><a href="#">Vestibulum laoreet tincidunt</a></li>
-                    <li><a href="#">Nullam nec mi enim</a></li>
-                    <li><a href="#">Aliquam quam nulla</a></li>
-                    <li><a href="#">Curabitur non felis massa</a></li>
-                </ul>
-
-                <h4>Последние посты</h4>
-                <ul class="templatemo_list">
-                    <li><a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a></li>
-                    <li><a href="http://www.flashmo.com" target="_parent">Flash Templates</a></li>
-                    <li><a href="http://www.flashmo.com/store" target="_parent">Premium Themes</a></li>
-                    <li><a href="http://www.webdesignmo.com/blog" target="_parent">Web Design Blog</a></li>
-                    <li><a href="http://www.koflash.com" target="_parent">Flash Web Gallery</a></li>
-                </ul>
+                @*<h4>Последние комментарии</h4>
+        <ul class="templatemo_list">
+            <li><a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a></li>
+            <li><a href="http://www.flashmo.com" target="_parent">Flash Templates</a></li>
+            <li><a href="http://www.flashmo.com/store" target="_parent">Premium Themes</a></li>
+            <li><a href="http://www.webdesignmo.com/blog" target="_parent">Web Design Blog</a></li>
+            <li><a href="http://www.koflash.com" target="_parent">Flash Web Gallery</a></li>
+        </ul>*@
 
             </div> <!-- end of templatemo_sidebar -->
 
@@ -125,10 +173,7 @@
         <div class="cleaner_h20"></div>
 
         <div id="templatemo_footer">
-
-            Copyright © 2048 <a href="#">Your Company Name</a> |
-            <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
-
+            Copyright © @DateTime.Now.Year <a href="#">Personal Blog</a> |
         </div>
 
         <div class="cleaner"></div>

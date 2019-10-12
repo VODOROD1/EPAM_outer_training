@@ -120,7 +120,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="about.cshtml" />
-    <Content Include="blog_post.cshtml" />
+    <Content Include="showFullPost.cshtml" />
     <Content Include="contact.cshtml" />
     <Content Include="portfolio.cshtml" />
     <Content Include="_mainLayout.cshtml" />
@@ -128,6 +128,8 @@
     <Content Include="registration.cshtml" />
     <Content Include="managePosts.cshtml" />
     <Content Include="manageUsers.cshtml" />
+    <Content Include="StartPage.cshtml" />
+    <Content Include="showChoisenPosts.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -163,7 +165,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
-    <Content Include="index.cshtml" />
+    <Content Include="recentPosts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

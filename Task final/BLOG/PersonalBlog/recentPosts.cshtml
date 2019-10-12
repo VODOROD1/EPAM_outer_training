@@ -10,7 +10,6 @@
     string errorMessage2 = null;
     string errorMessage3 = null;
 
-    IList<Post> test =  entity.getAllPosts();
     IList<Post> posts = entity.getAllPosts();
     IList<Category> categories = entity.getAllCategories();
     //IList<Tag> tags = entity.getAllTags();
@@ -34,7 +33,7 @@
 }
 
 @section head{
-    <title>Clean Blog Template</title>
+    <title>Recent posts</title>
     <meta name="keywords" content="clean blog template, html css layout" />
     <meta name="description" content="Clean Blog Template is provided by templatemo.com" />
     <link href="Content/templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -97,7 +96,7 @@
 
                 <h2>@post.Title</h2>
 
-                @post.DataCreate <strong>|</strong> <strong>Категория:</strong> @postCategory.Title <strong>|</strong> <strong>Теги:</strong> @postCategory.Title
+                @post.DataCreate.ToString("dd:MM:yyyy") <strong>|</strong> <strong>Категория:</strong> @postCategory.Title <strong>|</strong> <strong>Теги:</strong> @postCategory.Title
 
                 <img src="Content/images/templatemo_image_01.jpg" alt="image 1" />
 

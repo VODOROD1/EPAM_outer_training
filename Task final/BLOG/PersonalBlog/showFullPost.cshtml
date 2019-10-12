@@ -1,0 +1,142 @@
+﻿@using PersonalBlog.Models;
+@using BLOG.Entities;
+@{
+    Layout = "~/_mainLayout.cshtml";
+    Page.Name = "Unknown";
+    EntityWithBlogManager entity = new EntityWithBlogManager();
+}
+@{
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    string errorMessage3 = null;
+
+    IList<Post> posts = entity.getAllPosts();
+    IList<Tag> tags = entity.getAllTags();
+    int postId = Temp.selectedPostId;
+    Category postCategory = entity.GetPostCategory(postId);
+    Post choisenPost = entity.GetChoisenPost(postId);
+    IList<PostComment> comments = entity.GetAllCommentsOfPost(postId);
+    IList<User> users = entity.GetUsersOfPost(postId);
+    User userWhichComments = null;
+    IList<Tag> postTags = entity.GetPostTags(postId);
+
+    if (IsPost)
+    {
+        switch (Request.Form["Submit"])
+        {
+            case "Ввод":
+                String comment = Request["comment"];
+                entity.AddNewComment(postId, Auth.LoggedUser.Id, comment, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"));
+                Response.Redirect(Request.RawUrl); 
+                break;
+            case "авторизуйтесь":
+                Response.Redirect("/enter"); 
+                break;
+        }
+
+    }
+    }
+
+    @section head{
+    <title>Blog Post</title>
+    <meta name="keywords" content="clean blog post, 2-column, multi-level, comments, html css layout" />
+    <meta name="description" content="Clean Blog Post with multi-level commenting" />
+    <link href="Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+}
+
+<div id="templatemo_right_column">
+
+    <div id="templatemo_main">
+
+        <div class="post_section">
+            <form method="post">
+
+                <h3>@choisenPost.Title</h3>
+
+                @choisenPost.DataCreate.ToString("dd:MM:yyyy") <strong>|</strong> <strong>Категория:</strong> @postCategory.Title <strong>|</strong> <strong>Теги:</strong> @postCategory.Title;
+
+                <img src="Content/images/templatemo_image_01.jpg" alt="image 1" />
+
+                <p>@choisenPost.Description</p>
+            </form>
+        </div>
+
+        <div class="comment_tab">
+            Comments
+        </div>
+
+        <div id="comment_section">
+            <ol class="comments first_level">
+
+                @if (comments.Count != 0)
+                {
+                    foreach (PostComment comment in comments)
+                    {
+                        userWhichComments = entity.GetUserOfComment(comment.Id);
+                        <li class="comment_box commentbox2">
+                            <div class="gravatar">
+                                <img src="Content/images/avator.png" alt="some user" />
+                            </div>
+                            <div class="comment_text">
+                                <div class="comment_author">@userWhichComments.Login<span class="date">@comment.DataCreate</span></div>
+                                <p>@comment.Description</p>
+                                @*<div class="reply"><input type="submit" class="submit_btn" name="deletePost" id="deletePost" value="Ответить" onsubmit="return validate();" /></div>*@
+                            </div>
+
+                            <div class="cleaner"></div>
+                        </li>
+                    }
+                }
+                else {
+                <div>
+                    <h3>Ещё никто не оставлял комментарий, будьте первым!</h3>
+                </div>
+                }
+                <li>
+                    <div class="comment_box commentbox2">
+
+
+                        <div class="gravatar">
+                            <img src="Content/images/avator.png" alt="author 4" />
+                        </div>
+                        <div class="comment_text">
+                            <div class="comment_author">Помощь<span class="date">December 24, 2048</span><span class="time">10:55 AM</span></div>
+                            <p>Nam sodales, pede vel dapibus lobortis, ipsum diam molestie risus, a vulputate risus nisl pulvinar lacus.</p>
+                            <div class="reply"><a href="#">Reply</a></div>
+                        </div>
+
+                        <div class="cleaner"></div>
+                    </div>
+
+
+                </li>
+            </ol>
+        </div>
+
+        <div id="comment_form">
+
+            @if (!Auth.visitor)
+            {
+                <h3>Оставить комментарий</h3>
+                <form action="#" method="post">
+                    <div class="form_row">
+                        <label><strong>Comment</strong></label>
+                        <br />
+                        <textarea name="comment" rows="" cols=""></textarea>
+                    </div>
+                    <input type="submit" name="Submit" value="Ввод" class="submit_btn" />
+                </form>
+            }
+            else
+            {   
+                <form action="#" method="post">
+                    <h3>Пожалуйста <input type="submit" name="Submit" value="авторизуйтесь" class="submit_btn" style ="width:100px; color:red"/> для того чтобы оставить комментарий!</h3>
+                    
+                </form>
+            }
+        </div>
+
+    </div> <!-- end of main -->
+
+    <div class="cleaner"></div>
+</div>

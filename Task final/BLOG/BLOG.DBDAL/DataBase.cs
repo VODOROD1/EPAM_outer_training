@@ -324,11 +324,11 @@ namespace BLOG.DBDAL
                     posts.Add(new Post
                     {
                         Id = reader.GetInt32(0),
-                        Title = reader.GetString(1),
-                        ShortDescription = reader.GetString(2),
-                        Description = reader.GetString(3),
+                        Title = reader.IsDBNull(1) ? "" : reader.GetString(1),
+                        ShortDescription = reader.IsDBNull(2) ? "" : reader.GetString(2),
+                        Description = reader.IsDBNull(3) ? "" : reader.GetString(3),
                         DataCreate = (DateTime)reader.GetDateTime(4),
-                        DataModified = (DateTime)reader.GetDateTime(5),
+                        DataModified = reader.IsDBNull(5) ? new DateTime() : (DateTime)reader.GetDateTime(5),
                         CategoryId = reader.GetInt32(6)
                     });
                 }
@@ -359,11 +359,11 @@ namespace BLOG.DBDAL
                     post = new Post
                     {
                         Id = reader.GetInt32(0),
-                        Title = reader.GetString(1),
-                        ShortDescription = reader.GetString(2),
-                        Description = reader.GetString(3),
+                        Title = reader.IsDBNull(1) ? "" : reader.GetString(1),
+                        ShortDescription = reader.IsDBNull(2) ? "" : reader.GetString(2),
+                        Description = reader.IsDBNull(3) ? "" : reader.GetString(3),
                         DataCreate = (DateTime)reader.GetDateTime(4),
-                        DataModified = (DateTime)reader.GetDateTime(5),
+                        DataModified = reader.IsDBNull(5) ? new DateTime() : (DateTime)reader.GetDateTime(5),
                         CategoryId = reader.GetInt32(6)
                     };
                 }
@@ -392,9 +392,9 @@ namespace BLOG.DBDAL
                         Id = reader.GetInt32(0),
                         Title = reader.GetString(1),
                         ShortDescription = reader.GetString(2),
-                        Description = reader.GetString(3),
+                        Description = reader.IsDBNull(3) ? "" : reader.GetString(3),
                         DataCreate = (DateTime)reader.GetDateTime(4),
-                        DataModified = (DateTime)reader.GetDateTime(5),
+                        DataModified = reader.IsDBNull(5) ? new DateTime() : (DateTime)reader.GetDateTime(5),
                         CategoryId = reader.GetInt32(6)
                     });
                 }
@@ -442,7 +442,7 @@ namespace BLOG.DBDAL
                     {
                         Id = reader.GetInt32(0),
                         Title = reader.GetString(1),
-                        Description = reader.GetString(2)
+                        Description = reader.IsDBNull(2) ? "" : reader.GetString(2)
                     });
                 }
             }
@@ -462,11 +462,15 @@ namespace BLOG.DBDAL
 
                 while (reader.Read())
                 {
+
+                    //reader.IsDBNull(2) ? "": reader.GetString(2);
+                    
+
                     tags.Add(new Tag
                     {
                         Id = reader.GetInt32(0),
-                        Name = reader.GetString(1),
-                        Description = reader.GetString(2)
+                        Name = reader.IsDBNull(1) ? "" : reader.GetString(1),
+                        Description = reader.IsDBNull(2) ? "" : reader.GetString(2)
                     });
                 }
             }
@@ -493,7 +497,7 @@ namespace BLOG.DBDAL
                         Password = reader.GetString(2),
                         Email = reader.GetString(3),
                         DataRegistration = reader.GetDateTime(4),
-                        MetaId = reader.GetInt32(5)
+                        MetaId = reader.IsDBNull(5) ? -1 : reader.GetInt32(5)
                     });
                 }
             }
@@ -520,7 +524,7 @@ namespace BLOG.DBDAL
                         Password = reader.GetString(2),
                         Email = reader.GetString(3),
                         DataRegistration = reader.GetDateTime(4),
-                        MetaId = reader.GetInt32(5)
+                        MetaId = reader.IsDBNull(5) ? -1 : reader.GetInt32(5)
                     });
                 }
             }
@@ -555,7 +559,7 @@ namespace BLOG.DBDAL
                         Password = reader.GetString(2),
                         Email = reader.GetString(3),
                         DataRegistration = (DateTime)reader.GetDateTime(4),
-                        MetaId = reader.GetInt32(6)
+                        MetaId = reader.IsDBNull(6) ? -1 : reader.GetInt32(6)
                     };
                 }
             }
@@ -619,9 +623,9 @@ namespace BLOG.DBDAL
                         Id = reader.GetInt32(0),
                         PostId = reader.GetInt32(1),
                         UserID = reader.GetInt32(2),
-                        Description = reader.GetString(3),
+                        Description = reader.IsDBNull(3) ? "" : reader.GetString(3),
                         DataCreate = (DateTime)reader.GetDateTime(4),
-                        DataModified = (DateTime)reader.GetDateTime(5)
+                        DataModified = reader.IsDBNull(5) ? new DateTime() : (DateTime)reader.GetDateTime(5),
                     });
                 }
             }
@@ -653,9 +657,9 @@ namespace BLOG.DBDAL
                         Id = reader.GetInt32(0),
                         PostId = reader.GetInt32(1),
                         UserID = reader.GetInt32(2),
-                        Description = reader.GetString(3),
+                        Description = reader.IsDBNull(3) ? "" : reader.GetString(3),
                         DataCreate = (DateTime)reader.GetDateTime(4),
-                        DataModified = (DateTime)reader.GetDateTime(5)
+                        DataModified = reader.IsDBNull(5) ? new DateTime() : (DateTime)reader.GetDateTime(5),
                     });
                 }
             }
@@ -735,7 +739,7 @@ namespace BLOG.DBDAL
                     {
                         Id = reader.GetInt32(0),
                         Title = reader.GetString(1),
-                        Description = reader.GetString(2)
+                        Description = reader.IsDBNull(2) ? "" : reader.GetString(2)
                     };
                 }
             }
@@ -747,7 +751,7 @@ namespace BLOG.DBDAL
             using (var connection = new SqlConnection(_connectionString))
             {
                 var command = connection.CreateCommand();
-                command.CommandText = "sp_GetPostCategory";
+                command.CommandText = "sp_GetPostById";
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter parameter1 = new SqlParameter();
@@ -769,7 +773,7 @@ namespace BLOG.DBDAL
                         ShortDescription = reader.GetString(2),
                         Description = reader.GetString(3),
                         DataCreate = (DateTime)reader.GetDateTime(4),
-                        //DataModified = reader.IsDBNull(5) ? DateTime.ParseExact("01-01-0001", "mm.dd.yyyy", null) : (DateTime)reader.GetDateTime(5),//(DateTime)reader.GetDateTime(5),
+                        DataModified = reader.IsDBNull(5) ? new DateTime() : (DateTime)reader.GetDateTime(5),
                         CategoryId = reader.GetInt32(6)
                     };
                 }
@@ -797,14 +801,14 @@ namespace BLOG.DBDAL
 
                 while (reader.Read())
                 {
-                    new User
+                  user =  new User
                     {
                         Id = reader.GetInt32(0),
                         Login = reader.GetString(1),
                         Password = reader.GetString(2),
                         Email = reader.GetString(3),
                         DataRegistration = (DateTime)reader.GetDateTime(4),
-                        MetaId = reader.GetInt32(5)
+                        MetaId = reader.IsDBNull(5) ? -1 : reader.GetInt32(5)
                     };
                 }
             }
