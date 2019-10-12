@@ -382,6 +382,13 @@ namespace BLOG.DBDAL
                 command.CommandText = "sp_GetPostsByTag";
                 command.CommandType = CommandType.StoredProcedure;
 
+                SqlParameter parameter1 = new SqlParameter();
+                parameter1.ParameterName = "@TagId";
+                parameter1.SqlDbType = SqlDbType.Int;
+                parameter1.Direction = ParameterDirection.Input;
+                parameter1.Value = tagId;
+                command.Parameters.Add(parameter1);
+
                 connection.Open();
                 var reader = command.ExecuteReader();
 
@@ -590,8 +597,10 @@ namespace BLOG.DBDAL
                     {
                         Id = reader.GetInt32(0),
                         Info = reader.GetString(1),
-                        DateBirth = (DateTime)reader.GetDateTime(4),
-                        Age = reader.GetInt32(6)
+                        DateBirth = (DateTime)reader.GetDateTime(2),
+                        Age = reader.GetInt32(3)
+                        //DateBirth = (DateTime)reader.GetDateTime(4),
+                        //Age = reader.GetInt32(6)
                     };
                 }
             }

@@ -45,28 +45,42 @@
 
                 break;
         }
-        foreach (Tag choisenTag in tags)
-        {
-            
-            switch (Request.Form[choisenTag.Id + "choiseTag"])
-            {
-                case "tag":
 
-                    break;
-            }
-            
-        }
-        foreach (Category choisenCategory in categories)
+        switch (Request.Form["choiseTag"])
         {
-            
-            switch (Request.Form[choisenCategory.Id + "choiseTag"])
-            {
-                case "tag":
+            case "Выбрать статьи по тегу":
+                string choisenTagName = Request["tag"];
+                if (choisenTagName != null)
+                {
+                    IList<Post> selectedPosts = entity.getPostsByTag(choisenTagName);
 
-                    break;
-            }
-            
+                    foreach (Post post in selectedPosts)
+                    {
+                        Temp.selectedPostsId.Add(post.Id);
+                    }
+                    Response.Redirect("/showChoisenPosts");
+                }
+                break;
         }
+
+        switch (Request.Form["choiseCat"])
+        {
+            case "Выбрать статьи по категории":
+                string choisenCatId = Request["category"];
+                string choisenTagName = Request["tag"];
+                if (choisenCatId != null)
+                {
+                    IList<Post> choisenPosts = entity.getAllPosts().Where(p => p.CategoryId == Convert.ToInt32(choisenCatId)).ToList();
+
+                    foreach (Post post in choisenPosts)
+                    {
+                        Temp.selectedPostsId.Add(post.Id);
+                    }
+                    Response.Redirect("/showChoisenPosts");
+                }
+                break;
+        }
+
     }
 }
 <!DOCTYPE html>
@@ -75,6 +89,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     @RenderSection("head", false)
+    <link href="Content/MyCSS/hideArea.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="templatemo_wrapper">
@@ -82,8 +97,10 @@
         <div id="templatemo_menu">
 
             <ul>
-                <li><a href="manageUsers.cshtml">Управление пользователями</a></li>
-                <li><a href="managePosts.cshtml">Управление статьями</a></li>
+                @if (Auth.Admin)
+                {
+                    <li><a href="manageHUB.cshtml">Управление</a></li>
+                }
                 <li><a href="recentPosts.cshtml" class="current">Статьи</a></li>
                 <li><a href="about.cshtml">Обо мне</a></li>
                 <li><a href="contact.cshtml">Связаться</a></li>
@@ -115,43 +132,45 @@
                     <input type="submit" name="search2" value="Найти" />
                 </form>
 
-
                 <div class="cleaner_h20"></div>
                 <h4>Теги</h4>
-                <div class="cleaner_h20"></div>
-                @if(tags.Count != 0){
-                @foreach(Tag tag in tags){
-                <form method="post">
-                    <input type="radio" name="tag"
-                    <input name=@(tag.Id + "choiseTag") type="submit" value=@tag.Name>
-
-                    <input type="radio" name="tag" id=@tag.Id style="display: none " />
-                    <label for=@tag.Id><input type="submit" name=@(tag.Id + "choiseTag")  value=@tag.Name></label>
-                </form>
-
-                    Request["tag"];
-                }}
+                <div class="cleaner_h10"></div>
+                @if (tags.Count != 0)
+                {
+                    <form method="post">
+                        @foreach (Tag tag in tags)
+                        {
+                            <input type="radio" id=@tag.Name class="hide" name="tag" value=@tag.Name>
+                            <label for=@tag.Name>@tag.Name</label>
+                        }
+                        <input type="submit" name="choiseTag" value="Выбрать статьи по тегу" />
+                    </form>
+                }
                 else
                 {
                     <div>Нет тегов!</div>
                 }
 
-
                 <div class="cleaner_h20"></div>
                 <h4>Категории</h4>
-                <div class="cleaner_h20"></div>
-                <form method="post">
-                   
-                    
-                    <ul class="templatemo_list">
-                        <li><a href="http://www.templatemo.com/page/1" target="_parent">Curabitur sed</a></li>
-                        <li><a href="http://www.templatemo.com/page/2" target="_parent">Praesent adipiscing</a></li>
-                        <li><a href="http://www.templatemo.com/page/3" target="_parent">Duis sed justo</a></li>
-                        <li><a href="http://www.templatemo.com/page/4" target="_parent">Mauris vulputate</a></li>
-                        <li><a href="#">Nam auctor</a></li>
-                        <li><a href="#">Aliquam quam</a></li>
-                    </ul>
-                </form>
+                <div class="cleaner_h10"></div>
+                @if (categories.Count != 0)
+                {
+                    <form method="post">
+                        @foreach (Category cat in categories)
+                        {
+                            <input type="radio" id=@cat.Title class="hide" name="category" value=@cat.Id>
+                            <label for=@cat.Title>@cat.Title</label>
+                            <br />
+                        }
+                        <div class="cleaner_h10"></div>
+                        <input type="submit" name="choiseCat" value="Выбрать статьи по категории" >
+                    </form>
+                }
+                else
+                {
+                    <div>Нет тегов!</div>
+                }
                 <div class="cleaner_h40"></div>
 
                 @*<h4>Последние комментарии</h4>
@@ -198,8 +217,8 @@
             }
             return true;
         }
-    </script>
+-   </script>
 
-    @RenderSection("validate", false)
+-    @RenderSection("validate", false)
 </body>
 </html>

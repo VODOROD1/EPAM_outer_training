@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/_mainLayout.cshtml";
+    Page.Name = "Unknown";
+}
+@{
+    if (IsPost)
+    {
+
+    }
+}
+
+@section head{
+    <title>Start page</title>
+    <meta name="keywords" content="clean blog template, about page, html css layout" />
+    <meta name="description" content="Clean Blog Template is a W3C standards-compliant HTML-CSS layout by templatemo.com" />
+    <link href="Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+}
+<div id="templatemo_right_column">
+    <div id="templatemo_main">
+        <ul>
+            <li><a href="manageUsers.cshtml">Управление пользователями</a></li>
+            
+            <li><a href="managePosts.cshtml">Управление статьями</a></li>
+            
+            <li><a href="managePosts.cshtml">Управление тегами и категориями</a></li>
+        </ul>
+    </div> <!-- end of main -->
+    <div class="cleaner"></div>
+</div>
+<!-- end of right column -->
