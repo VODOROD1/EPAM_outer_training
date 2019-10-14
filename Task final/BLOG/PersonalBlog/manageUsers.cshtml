@@ -7,29 +7,38 @@
 }
 @{
     IList<User> users = entity.GetAllUsers();
-    IList<PostComment> comments = new List<PostComment>();
-    int userId = -1;
+    int userId = Temp.selectedUserId;
+    bool showComments = Temp.showComments;
+    bool showMeta = Temp.showMeta;
 
     if (IsPost)
     {
         var selectUser = Request["user"];
-        userId = int.Parse(selectUser);
+        
+        //int commentId = entity.GetUserById(userId).Id;
         if (selectUser != null) {
-            switch (Request.Form["addPost"])
+            Temp.selectedUserId = int.Parse(selectUser);
+            int id = int.Parse(selectUser);
+            switch (Request.Form["btn"])
             {
                 case "Удалить":
-                    entity.DeleteUser(userId);
+                    entity.DeleteUser(id);
+                    Response.Redirect(Request.RawUrl);
                     break;
                 case "Добавить в черный список":
-                    entity.AddBlackList(userId);
+                    entity.AddBlackList(id);
+                    Response.Redirect(Request.RawUrl);
                     break;
                 case "Убрать из черного списка":
-                    entity.RemoveBlackList(userId);
+                    entity.RemoveBlackList(id);
+                    Response.Redirect(Request.RawUrl);
                     break;
-                case "Смотреть комментарии":
-                    comments = entity.GetAllCommentsOfUser(userId);
+                case "Комментарии пользователя":
+                    Temp.showComments = true;
                     break;
-
+                case "Информация о пользователе":
+                    Temp.showMeta = true;
+                    break;
             }
             Response.Redirect(Request.RawUrl); /*Остаться на этой же странице*/
             return;
@@ -56,46 +65,99 @@
             {<div>
                     Выберите пользователя
                 </div>
-                <p>
-                    @foreach (User user in users)
-                    {
-                        <input type="radio" id="hd-1" @*class="hide"*@ name="user" value=@user.Id />
-                        <label for="hd-1">
-                            <em>
+                foreach (User user in users)
+                {
+                    <p>
+                        @if (entity.CheckBlackList(user.Id))
+                        {
+                            <input type="radio" id=@user.Id @*class="hide"*@ name="user" value=@user.Id />
+                            <label for="@user.Id" style="background-color:darkslategrey; color:white">
+                                <strong>Логин:</strong>
                                 @user.Login
-                            </em>
-                            <em>
-                                @user.Password
-                            </em>
-                            <em>
-                                @user.DataRegistration
-                            </em>
-                            @if (user.MetaId != 0)
-                            {
-                                <em>
-                                    @entity.GetMetaAboutUser(user.Id);
-                                    @*НУЖНО ОТПРАВЛЯТЬ ID МЕТЫ А НЕ ПОЛЬЗОВАТЕЛЯ, Т,Е, НАДО СНАЧАЛА НАЙТИ ID МЕТЫ*@
-                                </em>
-                            }
-                            else
-                            {<em>Нет мета-информации о пользователе!</em>}
-                        </label>
-                    }
-                </p>
-                <button id="delete" name="btn">Удалить</button>
-                <button id="addBlackList" name="btn">Добавить в черный список</button>
-                <button id="removeBlackList" name="btn">Убрать из черного списка</button>
-                <button id="removeBlackList" name="btn">Смотреть комментарии</button>
+                                <strong>Пароль:</strong>
+                                | @user.Password
+                                <strong>Дата регистрации:</strong>
+                                | @user.DataRegistration.ToString("dd:MM:yyyy")
+                            </label>
+                        }
+                        else
+                        {
+                            <input type="radio" id=@user.Id @*class="hide"*@ name="user" value=@user.Id />
+                            <label for="@user.Id">
+                                <strong>Логин:</strong>
+                                @user.Login |
+                                <strong>Пароль:</strong>
+                                @user.Password |
+                                <strong>Дата регистрации:</strong>
+                                @user.DataRegistration.ToString("dd:MM:yyyy")
+                            </label>
+                        }
+                    </p>
+                }
+                <input type="submit" name="btn" value="Удалить" />
+                <input type="submit" name="btn" value="Добавить в черный список" />
+                <input type="submit" name="btn" value="Убрать из черного списка" />
+                <input type="submit" name="btn" value="Комментарии пользователя" />
+                <input type="submit" name="btn" value="Информация о пользователе" />
                 <div>
-                    @if (userId >= 0)
+                    @if (showComments)
                     {
-                        foreach (PostComment comment in comments)
+                        IList<PostComment> comments = entity.GetAllCommentsOfUser(userId);
+                        <strong>Комментарии пользователя:</strong>
+                        <div class="cleaner_h10"></div>
+                        if (comments.Count != 0)
+                        {
+                            foreach (PostComment comment in comments)
+                            {<div>
+                                    <strong>Дата написания:</strong>
+                                    @comment.DataCreate
+                                    <strong>Дата изменения:</strong>
+                                    | @comment.DataModified
+                                    <br />
+                                    @comment.Description
+                                </div>
+                            }
+                        }
+                        else
                         {
                             <div>
-                                @comment.Description
+                                Этот пользователь не оставлял комментариев.
                             </div>
                         }
-
+                        Temp.showComments = false;
+                        Temp.selectedUserId = -1;
+                    }
+                </div>
+                <div>
+                    @if (showMeta)
+                    {
+                        User u = entity.GetUserById(userId);
+                        int metaId = u.MetaId;
+                        MetaAboutUser userInfo = entity.GetMetaAboutUser(metaId);
+                        <strong>Информация о пользователе:</strong>
+                        <div class="cleaner_h10"></div>
+                        if (userInfo != null)
+                        {
+                            <div>
+                                <strong>Дата рождения:</strong>
+                                @userInfo.DateBirth.ToString("dd:MM:yyyy")
+                            </div>
+                            <div>
+                                <strong>Возраст:</strong>
+                                @userInfo.Age
+                            </div>
+                            <div>
+                                <strong>Общая инфа:</strong>
+                                @userInfo.Info
+                            </div>
+                            <div class="cleaner_h10"></div>
+                        }
+                        else
+                        {
+                            <div>Нет информации о пользователе!</div>
+                        }
+                        Temp.showMeta = false;
+                        Temp.selectedUserId = -1;
                     }
                 </div>
             }
@@ -104,7 +166,6 @@
                 <div>Нет пользователей!</div>
             }
         </form>
-
     </div> <!-- end of main -->
     <div class="cleaner"></div>
 </div> <!-- end of right column -->

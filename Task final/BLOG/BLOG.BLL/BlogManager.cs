@@ -25,7 +25,16 @@ namespace BLOG.BLL
             {
                 date1 = DateTime.Now;
             }
-            else { date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy HH:mm:ss", null); }
+            else {
+                try
+                {
+                    date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy HH:mm:ss", null);
+                }
+                catch
+                {
+                    date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy", null);
+                }
+            }
             
             date2 = DateTime.Now;
             Post newPost = new Post {Title = title, ShortDescription = shortDescription , Description = description, DataCreate = date1, DataModified = date2, CategoryId = choisenCategory.Id };
@@ -57,7 +66,7 @@ namespace BLOG.BLL
         }
         public bool AddBlackList(int userId)
         {
-            if (CheckBlackList(userId))
+            if (!CheckBlackList(userId))
             {
                 storage.AddBlackList(userId);
                 return true;
@@ -200,7 +209,7 @@ namespace BLOG.BLL
         }
         public void RemoveBlackList(int userId)
         {
-            if(!CheckBlackList(userId))
+            if(CheckBlackList(userId))
             {
                 storage.deleteUserFromBlackList(userId);
             }
@@ -235,7 +244,16 @@ namespace BLOG.BLL
         public bool ChangePost(int postId, String title, String shortDescription, String description, String dateCreate, String dateModified, Category choisenCategory, IList<Tag> choisenTags)
         {
             AddTagsForPost(postId, choisenTags);
-            DateTime date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy HH:mm:ss", null);
+            //DateTime date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy HH:mm:ss", null);
+            DateTime date1;
+            try
+            {
+                date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy HH:mm:ss", null);
+            }
+            catch
+            {
+                date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy", null);
+            }
             DateTime date2 = DateTime.Now;
             Post newPost = new Post { Title = title, ShortDescription = shortDescription, Description = description, DataCreate = date1, DataModified = date2, CategoryId = choisenCategory.Id };
             storage.ChangePost(newPost);
@@ -344,12 +362,13 @@ namespace BLOG.BLL
             else { return false; }
         }
         public bool CheckBlackList(int userId)
-        {
-            bool b = true;
+        {   
+            bool b = false;
             foreach (User user in GetBlackList()) {
                 if (user.Id == userId)
                 {
-                    b = false;
+                    b = true;
+                    break;
                 }
             }
             if (b)

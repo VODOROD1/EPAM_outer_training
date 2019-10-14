@@ -192,5 +192,9 @@ namespace PersonalBlog.Models
             BlogManager.ChangeMeta(id, info, dateBirth, age);
         }
         #endregion
+        public bool CheckBlackList(int userId)
+        {
+            return BlogManager.CheckBlackList(userId);
+        }
     }
 }

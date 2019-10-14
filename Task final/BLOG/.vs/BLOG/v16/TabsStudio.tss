@@ -2,16 +2,16 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\Models\EntityWithBlogManager.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\StartPage.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
       <string>C:\FinalTask\BLOG\PersonalBlog\manageHUB.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\FinalTask\BLOG\PersonalBlog\Models\Auth.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\PersonalBlog\recentPosts.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\PersonalBlog\StartPage.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\FinalTask\BLOG\PersonalBlog\_mainLayout.cshtml</string>
@@ -20,10 +20,19 @@
       <string>C:\FinalTask\BLOG\PersonalBlog\Models\Temp.cs</string>
     </ArrayOfString>
     <ArrayOfString>
+      <string>C:\FinalTask\BLOG\PersonalBlog\manageUsers.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\BLOG.BLL\BlogManager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
       <string>C:\FinalTask\BLOG\BLOG.DBDAL\DataBase.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\FinalTask\BLOG\PersonalBlog\manageUsers.cshtml</string>
+      <string>C:\FinalTask\BLOG\PersonalBlog\managePosts.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\FinalTask\BLOG\PersonalBlog\Models\EntityWithBlogManager.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
   <ArrayOfArrayOfString>

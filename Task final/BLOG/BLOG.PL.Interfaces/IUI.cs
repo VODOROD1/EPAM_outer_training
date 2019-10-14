@@ -90,5 +90,7 @@ namespace BLOG.PL.Interfaces
          void ChangeMeta(int id, string info, string dateBirth, int age);
 
         #endregion
+
+        bool CheckBlackList(int userId);
     }
 }

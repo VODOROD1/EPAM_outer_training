@@ -68,7 +68,7 @@ namespace BLOG.DBDAL
                 connection.Open();
                 command.ExecuteNonQuery();
 
-                return (int)command.Parameters["@Id"].Value;
+                return Convert.ToInt32(command.ExecuteScalar());
             }
         }
 
@@ -566,7 +566,7 @@ namespace BLOG.DBDAL
                         Password = reader.GetString(2),
                         Email = reader.GetString(3),
                         DataRegistration = (DateTime)reader.GetDateTime(4),
-                        MetaId = reader.IsDBNull(6) ? -1 : reader.GetInt32(6)
+                        MetaId = reader.IsDBNull(5) ? -1 : reader.GetInt32(5)
                     };
                 }
             }
