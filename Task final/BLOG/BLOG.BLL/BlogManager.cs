@@ -255,7 +255,7 @@ namespace BLOG.BLL
                 date1 = DateTime.ParseExact(dateCreate, "dd.MM.yyyy", null);
             }
             DateTime date2 = DateTime.Now;
-            Post newPost = new Post { Title = title, ShortDescription = shortDescription, Description = description, DataCreate = date1, DataModified = date2, CategoryId = choisenCategory.Id };
+            Post newPost = new Post {Id=postId, Title = title, ShortDescription = shortDescription, Description = description, DataCreate = date1, DataModified = date2, CategoryId = choisenCategory.Id };
             storage.ChangePost(newPost);
 
             return true;

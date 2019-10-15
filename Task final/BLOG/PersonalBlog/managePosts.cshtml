@@ -13,7 +13,7 @@
     IList<Post> posts = entity.getAllPosts();
     IList<Category> categories = entity.getAllCategories();
     IList<Tag> tags = entity.getAllTags();
-
+    
     IList<Tag> postTags = new List<Tag>();
 
 
@@ -85,7 +85,7 @@
 
                     if (select1 != null && select2 != null)
                     {
-                        entity.ChangePost(currentPost.Id,title, shortDescription, description, dateCreate, dateModified, choisenCategory, choisenTags);
+                        entity.ChangePost(currentPost.Id, title, shortDescription, description, dateCreate, dateModified, choisenCategory, choisenTags);
                         Response.Redirect(Request.RawUrl); /*Остаться на этой же странице*/
                         return;
                     }
@@ -134,7 +134,7 @@
             <label for="hd-1">Добавление новой статьи</label>
             <div>
                 <form method="post">
-                    
+
                     <label for="title">Название статьи:</label>
                     <br />
                     <input type="text" id="title" name="title" />
@@ -193,7 +193,7 @@
             </div>
             <br />
             <br />
-
+            @*//////////////////////////////////////////////////////*@
 
             <input type="checkbox" id="hd-2" class="hide" />
             <label for="hd-2">Изменение статьи</label>
@@ -209,17 +209,17 @@
 
                                 <label for="title">Название статьи:</label>
                                 <br />
-                                <input type="text" id="title" name="title" value=@post.Title />
+                                <input type="text" id="title" name="title" size="30" value='@post.Title' />
                                 <div class="cleaner_h10"></div>
 
                                 <label for="shortDescription">Краткое описание статьи:</label>
                                 <br />
-                                <textarea id="shortDescription" name="shortDescription" rows="10" cols="20" class="required">@post.ShortDescription</textarea>
+                                <textarea id="shortDescription" name="shortDescription"  class="required">@post.ShortDescription</textarea>
                                 <div class="cleaner_h10"></div>
 
                                 <label for="description">Содержимое статьи:</label>
                                 <br />
-                                <textarea id="description" name="description" rows="0" cols="0" class="required">@post.Description </textarea>
+                                <textarea id="description" name="description" rows="20" cols="30" class="required">@post.Description </textarea>
                                 <div class="cleaner_h10"></div>
 
                                 <label for="dataCreate">Дата публикации:</label>
@@ -261,6 +261,10 @@
                                     postTags = entity.GetPostTags(post.Id);
                                     foreach (Tag tag in tags)
                                     {
+                                        if (postTags.Count == 0)
+                                        {
+                                            <p><input name="tag" type="checkbox" value=@tag.Id>@tag.Name</p>
+                                        }
                                         for (int c = 0; c < postTags.Count; c++)
                                         {
                                             if (tag.Id == postTags[c].Id)
@@ -268,7 +272,7 @@
                                                 <p><input name="tag" type="checkbox" value=@tag.Id checked style="color:darkgreen">@tag.Name</p>
                                                 break;
                                             }
-                                            if(c == postTags.Count-1)
+                                            if (c == postTags.Count - 1)
                                             {
                                                 <p><input name="tag" type="checkbox" value=@tag.Id>@tag.Name</p>
                                             }
@@ -285,30 +289,33 @@
 
                             </form>
                         </div>
+                        <div class="cleaner_h10"></div>
                     }
-                 }
-                 else
-                 {
+                }
+                else
+                {
                     <div>Нет статей!</div>
-                 }
+                }
             </div>
             <br />
             <br />
-
+            @*//////////////////////////////////////////////////////*@
 
             <input type="checkbox" id="hd-3" class="hide" />
             <label for="hd-3">Удаление статьи</label>
             <div>
                 <form method="post">
-                    @if (posts.Count != 0) {
+                    @if (posts.Count != 0)
+                    {
                         foreach (Post post in posts)
                         {
-                        <p><input name="post" type="checkbox" value=@post.Id checked style="color:darkgreen">@post.Title</p>
+                            <p><input name="post" type="checkbox" value=@post.Id style="color:darkgreen">@post.Title</p>
                         }
-                    <div class="cleaner_h10"></div>
-                    <input type="submit" class="submit_btn" name="deletePost" id="deletePost" value="Удалить" @*onsubmit="return validate();"*@ />
+                        <div class="cleaner_h10"></div>
+                        <input type="submit" class="submit_btn" name="deletePost" id="deletePost" value="Удалить" @*onsubmit="return validate();"*@ />
                     }
-                    else {<div>Нет статей!</div> }
+                    else
+                    {<div>Нет статей!</div>}
                 </form>
             </div>
             <br />

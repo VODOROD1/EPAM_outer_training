@@ -66,7 +66,7 @@ namespace BLOG.DBDAL
                 command.Parameters.Add(parameter6);
 
                 connection.Open();
-                command.ExecuteNonQuery();
+                //command.ExecuteNonQuery();
 
                 return Convert.ToInt32(command.ExecuteScalar());
             }
