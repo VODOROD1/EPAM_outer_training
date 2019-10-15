@@ -1,0 +1,211 @@
+﻿@using PersonalBlog.Models;
+@using BLOG.Entities;
+@{
+    Layout = "~/_mainLayout.cshtml";
+    Page.Name = "Manage Tags and Categories";
+    EntityWithBlogManager entity = new EntityWithBlogManager();
+}
+@{
+    string errorMessage1 = null;
+    string errorMessage2 = null;
+    string errorMessage3 = null;
+    IList<Category> cats = entity.getAllCategories();
+    IList<Tag> tags = entity.getAllTags();
+    bool changeTag = Temp.changeTag;
+    bool changeCat = Temp.changeCat;
+
+}
+@if (IsPost)
+{   switch (Request.Form["tag"])
+    {
+        case "Добавить новый тег":
+            var newTegName = Request["newTagName"];
+            var newTegDescript = Request["newTagDescript"];
+            Temp.newTagName = newTegName;
+            Temp.newTagDesript = newTegDescript;
+            Temp.changeTag = entity.AddNewTag(newTegName, newTegDescript);
+            
+            break;
+    }
+    foreach (Tag someTag in tags) {
+        switch (Request.Form["tag"])
+        {
+            case "Удалить тег":
+                var choisenDeleteTag = Request["choisenTag"];
+                entity.DeleteTag(Convert.ToInt32(choisenDeleteTag));
+                Response.Redirect(Request.RawUrl);
+                break;
+            case "Сохранить изменения тега":
+                var choisenChangeTag = Request["choisenTag"];
+                int selectedTegId = Convert.ToInt32(choisenChangeTag);
+                var changeTegName = Request[(someTag.Id + "namingTagField")];
+                var changeTegDescript = Request[(someTag.Id + "descriptTagName")];
+                entity.ChangeTag(selectedTegId, changeTegName, changeTegDescript);
+                Response.Redirect(Request.RawUrl);
+                break;
+        }
+    }
+    //////////////////////////////////////////////
+    switch (Request.Form["cat"])
+    {
+        case "Добавить новую категорию":
+            var newCatName = Request["newCatName"];
+            var newCatDescript = Request["newCatDescript"];
+            Temp.newCatName = newCatName;
+            Temp.newCatDescript = newCatDescript;
+            Temp.changeCat = entity.AddNewCategory(newCatName, newCatDescript);
+            break;
+    }
+    foreach (Category someCat in cats) {
+        switch (Request.Form["cat"])
+        {
+            case "Удалить категорию":
+                var choisenDeleteCat = Request["choisenCat"];
+                entity.DeleteCategory(Convert.ToInt32(choisenDeleteCat));
+                Response.Redirect(Request.RawUrl);
+                break;
+            case "Сохранить изменения категории":
+                var choisenChangeCat = Request["choisenCat"];
+                int selectedCatId = Convert.ToInt32(choisenChangeCat);
+                var changeCatName = Request[(someCat.Id + "namingCatField")];
+                var changeCatDescript = Request[(someCat.Id + "descriptCatName")];
+                entity.ChangeCategory(selectedCatId, changeCatName, changeCatDescript);
+                Response.Redirect(Request.RawUrl);
+                break;
+        }
+    }
+}
+
+@section head{
+<title>Manage tagsCats</title>
+<meta name="keywords" content="clean blog template, contact form, html css layout" />
+<meta name="description" content="Clean Blog Template - Contact Form, easy to use" />
+<link href="Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="Content/MyCSS/hideArea.css" rel="stylesheet" type="text/css" />
+}
+<div id="templatemo_right_column">
+
+    <div id="templatemo_main">
+
+        <h2>Управление тегами и категориями</h2>
+
+        <p>Здесь вы можете добавлять, удалять, редактировать теги и категории. </p>
+
+        <div class="containerForHideAreas">
+
+            <input type="checkbox" id="hd-1" class="hide" />
+            <label for="hd-1">Управление тегами</label>
+            <div class="tagsManage">
+                @if (tags.Count != 0)
+                {
+                <form method="post">
+                    <div class="cleaner_h5"></div>
+                    <input type="text" id="newTagName" name="newTagName" style="vertical-align:top" placeholder="Введите наименование" />
+                    <textarea name="newTagDescript" placeholder="Введите описание"></textarea>
+                    <input type="submit" name="tag" value="Добавить новый тег" style="display:inline-block" />
+                    @if (changeTag && Temp.newTagName != "")
+                    {
+                        <div style="color:darkgreen">Вы успешно добавили тег!</div>
+                        @(Temp.newTagName = "")
+                    }
+                    else if (Temp.newTagName != "")
+                    { <div style="color:darkred">Такой тег уже существует!</div> 
+                    @(Temp.newTagName = "")
+                    }
+
+                    <div>
+                        Выберите тег
+                    </div>
+                    @foreach (Tag tag in tags)
+                    {
+                        <div style="display:inline-block; vertical-align:top">
+                            <input type="radio" id=@(tag.Id + "tag") @*class="hide"*@ name="choisenTag" value=@tag.Id />
+                        </div>
+                        <label for=@(tag.Id + "tag") style="display:inline-block">
+                            <div>
+                                <div style="display:inline-block; vertical-align:top">
+                                    <label for=@(tag.Id + "namingTag")>Наименование</label>
+                                    <br />
+                                    <input type="text" id=@(tag.Id + "namingTag") name=@(tag.Id + "namingTagField") value="@tag.Name" />
+                                </div>
+                                <div style="display:inline-block; vertical-align:top">
+                                    <label for=@(tag.Id + "descriptTag")>Описание</label>
+                                    <br />
+                                    <textarea id="@(tag.Id + "descriptTag")" name=@(tag.Id + "descriptTagName") class="required">@tag.Description</textarea>
+                                </div>
+                            </div>
+                        </label>
+                        <br />
+                    }
+                    <div class="cleaner_h10"></div>
+                    <input type="submit" class="submit_btn" name="tag" id="deleteTag" value="Удалить тег" @*onsubmit="return validate();"*@ />
+                    <input type="submit" class="submit_btn" name="tag" id="changeTag" value="Сохранить изменения тега" @*onsubmit="return validate();"*@ />
+                </form>
+                }
+                else
+                {
+                    <div>Нет тегов!</div>
+                }
+            </div>
+
+            @*///////////////////////////////////////////////////////////////////////*@
+            <input type="checkbox" id="hd-2" class="hide" />
+            <label for="hd-2">Управление категориями</label>
+            <div class="categoryManage">
+                @if (cats.Count != 0)
+                {
+                <form method="post">
+                    <div class="cleaner_h5"></div>
+                    <input type="text" id="newCatName" name="newCatName" style="vertical-align:top" placeholder="Введите наименование" />
+                    <textarea name="newCatDescript" placeholder="Введите описание"></textarea>
+
+                    <input type="submit" name="cat" value="Добавить новую категорию" style="display:inline-block" />
+                    @if (changeCat && Temp.newCatName != "")
+                    {
+                        <div style="color:darkgreen">Вы успешно добавили категорию!</div>
+                        @(Temp.newCatName = "")
+                    }
+                    else if (Temp.newCatName != "")
+                    { <div style="color:darkred">Такая категория уже существует!</div>
+                        @(Temp.newCatName = "")
+                    }
+
+                    <div>
+                        Выберите категорию
+                    </div>
+                    @foreach (Category cat in cats)
+                    {
+                        <div style="display:inline-block; vertical-align:top">
+                            <input type="radio" id=@(cat.Id + "tag") name="choisenCat" value=@cat.Id />
+                        </div>
+                        <label for=@(cat.Id + "cat") style="display:inline-block">
+                            <div>
+                                <div style="display:inline-block; vertical-align:top">
+                                    <label for=@(cat.Id + "namingCat")>Наименование</label>
+                                    <br />
+                                    <input type="text" id=@(cat.Id + "namingCat") name=@(cat.Id + "namingCatField") value="@cat.Title" />
+                                </div>
+                                <div style="display:inline-block; vertical-align:top">
+                                    <label for=@(cat.Id + "descriptCat")>Описание</label>
+                                    <br />
+                                    <textarea id="@(cat.Id + "descriptCat")" name=@(cat.Id + "descriptCatName") class="required">@cat.Description</textarea>
+                                </div>
+                            </div>
+                        </label>
+                        <br />
+                    }
+                    <div class="cleaner_h10"></div>
+                    <input type="submit" class="submit_btn" name="cat" id="deleteCat" value="Удалить категорию" />
+                    <input type="submit" class="submit_btn" name="cat" id="changeCat" value="Сохранить изменения категории" />
+                </form>
+                }
+                else
+                {
+                    <div>Нет категорий!</div>
+                }
+            </div>
+
+        </div>
+    </div> <!-- end of main -->
+    <div class="cleaner"></div>
+</div> <!-- end of right column -->

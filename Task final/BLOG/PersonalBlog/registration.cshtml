@@ -1,7 +1,10 @@
 ﻿@using System.Text.RegularExpressions;
+@using PersonalBlog.Models;
+@using BLOG.Entities;
 @{
     Layout = "~/_mainLayout.cshtml";
-    Page.Name = "Unknown";
+    Page.Name = "Registration";
+    EntityWithBlogManager entity = new EntityWithBlogManager();
 }
 
 @{
@@ -12,22 +15,27 @@
         var pass = Request["password"];
         var repeatPass = Request["repeatPassword"];
         var email = Request["email"];
-
-      
-        if (true)
+        var meta = Request["meta"];
+        var birth = Request["birth"];
+        var age = Request["age"];
+        var metaId = 0;
+        if (meta == "" && birth == "" && age == "")
         {
-            Response.Redirect("/contact");
-            return;
+            metaId = 0;
         }
-        else
+        else { metaId = entity.AddMetaAboutUser(meta, birth, Convert.ToInt32(age)); }
+        bool b = entity.AddNewUser(login, pass, email, metaId);
+        if (b)
         {
-            
+            Temp.checkNewUser = 1;
         }
+        else { Temp.checkNewUser = 2;}
+        Response.Redirect(Request.RawUrl);
     }
 }
 
 @section head{
-    <title>Clean Blog - Contact Page</title>
+    <title>Registration Page</title>
     <meta name="keywords" content="clean blog template, contact form, html css layout" />
     <meta name="description" content="Clean Blog Template - Contact Form, easy to use" />
     <link href="Content/templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -37,6 +45,14 @@
     <div id="templatemo_main">
 
         <h1>Регистрация</h1>
+        @if (Temp.checkNewUser == 1)
+        {
+            <div>Вы успешно зарегистрировались! Теперь пройдите авторизацию!</div>
+            Temp.checkNewUser = 0;
+        }
+        else if (Temp.checkNewUser == 2) { <div>Пользователь с таким логином и электронной почтой уже зарегистрирован!</div> Temp.checkNewUser = 0;}
+        else
+        {<div class="cleaner_h30"></div>}
         <p>Введите логин, пароль и адрес электронной почты</p>
         <div class="cleaner_h50"></div>
 
@@ -57,11 +73,18 @@
                 <label for="email">Ваш email:</label> <input type="email" id="email" name="email" class="validate-email required input_field" />
                 <div class="cleaner_h10"></div>
 
-                <input type="submit" class="submit_btn" name="submit" id="submit" value="Зарегистрироваться" />
+                <div>
+                    <label for="meta">Общая информация:</label> <textarea id="meta" name="meta" cols="30" rows="10"></textarea>
+                    <label for="birth">Дата вашего рождения:</label> <input type="date" id="birth" name="birth" />
+                    <label for="age">Ваш возраст:</label> <input type="text" id="age" name="age" />
+                </div>
+                <div class="cleaner_h10"></div>
+
+                <input type="submit" class="submit_btn" name="registrate" id="submit" value="Зарегистрироваться" />
                 <br />
                 <br />
                 <div>
-                    <button id="back" class="btn btn-primary" type="button">Я уже зарегистрирован</button>
+                    <a href="enter.cshtml">Я уже зарегистрирован</a>
                 </div>
             </form>
 
@@ -110,7 +133,7 @@
                 newElem.setAttribute("id", "span2");
                 insertAfter(newElem, userPassword);
                 return false;
-            } else { 
+            } else {
                 if (document.getElementById("span2") != null) {
                     userPassword.style.border = "1px solid grey";
                     document.getElementById("span2").remove();
@@ -126,7 +149,7 @@
                 newElem.setAttribute("id", "span3");
                 insertAfter(newElem, repeatPassword);
                 return false;
-            } else { 
+            } else {
                 if (document.getElementById("span3") != null) {
                     repeatPassword.style.border = "1px solid grey";
                     document.getElementById("span3").remove();
@@ -143,7 +166,7 @@
                 newElem.setAttribute("id", "span4");
                 insertAfter(newElem, repeatPassword);
                 return false;
-            } else { 
+            } else {
                 if (document.getElementById("span4") != null) {
                     userPassword.style.border = "1px solid grey";
                     repeatPassword.style.border = "1px solid grey";

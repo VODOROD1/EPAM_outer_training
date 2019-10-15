@@ -180,7 +180,7 @@ namespace BLOG.DBDAL
                 command.Parameters.Add(parameter1);
 
                 SqlParameter parameter2 = new SqlParameter();
-                parameter2.ParameterName = "@DateBirth";
+                parameter2.ParameterName = "@DataBirth";
                 parameter2.SqlDbType = SqlDbType.DateTime;
                 parameter2.Direction = ParameterDirection.Input;
                 parameter2.Value = metaAboutUser.DateBirth;
@@ -193,17 +193,9 @@ namespace BLOG.DBDAL
                 parameter3.Value = metaAboutUser.Age;
                 command.Parameters.Add(parameter3);
 
-                SqlParameter parameter4 = new SqlParameter();
-                parameter4.ParameterName = "@Id";
-                parameter4.SqlDbType = SqlDbType.Int;
-                parameter4.Direction = ParameterDirection.Output;
-                parameter4.Value = metaAboutUser.Info;
-                command.Parameters.Add(parameter4);
-
                 connection.Open();
-                command.ExecuteNonQuery();
 
-                return (int)command.Parameters["@Id"].Value;
+                return Convert.ToInt32(command.ExecuteScalar());
             }
         }
         public void AddNewTag(Tag tag)
@@ -241,7 +233,7 @@ namespace BLOG.DBDAL
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter parameter1 = new SqlParameter();
-                parameter1.ParameterName = "@Name";
+                parameter1.ParameterName = "@Title";
                 parameter1.SqlDbType = SqlDbType.NVarChar;
                 parameter1.Direction = ParameterDirection.Input;
                 parameter1.Value = category.Title;
@@ -1204,7 +1196,7 @@ namespace BLOG.DBDAL
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter parameter1 = new SqlParameter();
-                parameter1.ParameterName = "@Name";
+                parameter1.ParameterName = "@Title";
                 parameter1.SqlDbType = SqlDbType.NVarChar;
                 parameter1.Direction = ParameterDirection.Input;
                 parameter1.Value = category.Title;

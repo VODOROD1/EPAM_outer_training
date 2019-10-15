@@ -130,6 +130,7 @@
     <Content Include="manageUsers.cshtml" />
     <Content Include="StartPage.cshtml" />
     <Content Include="showChoisenPosts.cshtml" />
+    <Content Include="manageTagsCats.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

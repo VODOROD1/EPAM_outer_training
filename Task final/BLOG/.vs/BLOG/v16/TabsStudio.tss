@@ -2,36 +2,39 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\BLOG\PersonalBlog\Models\EntityWithBlogManager.cs</string>
+      <string>C:\BLOG\BLOG.Entities\Post.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\BLOG\PersonalBlog\StartPage.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\BLOG\PersonalBlog\_mainLayout.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
+      <string>C:\BLOG\PersonalBlog\managePosts.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\BLOG\PersonalBlog\Models\EntityWithBlogManager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
       <string>C:\BLOG\BLOG.BLL\BlogManager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\BLOG\PersonalBlog\Models\Temp.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\BLOG\PersonalBlog\registration.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\BLOG\BLOG.DBDAL\DataBase.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\BLOG\PersonalBlog\managePosts.cshtml</string>
+      <string>C:\BLOG\PersonalBlog\recentPosts.cshtml</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\BLOG\BLOG.Entities\User.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\BLOG\BLOG.Entities\Tag.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\BLOG\BLOG.Entities\Post.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\BLOG\BLOG.Entities\Category.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\BLOG\BLOG.Entities\PostComment.cs</string>
+      <string>C:\BLOG\BLOG.Entities\MetaAboutUser.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

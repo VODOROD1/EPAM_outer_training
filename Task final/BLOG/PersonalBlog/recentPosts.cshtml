@@ -23,13 +23,11 @@
             {
                 case "Продолжить чтение...":
                     Temp.selectedPostId = currentPost.Id;
-
-
+                    Response.Redirect("/showFullPost");
                     break;
             }
         }
     }
-
 }
 
 @section head{
@@ -113,14 +111,6 @@
         </div>
     </div>
         
-
-
-
-
-
-
-
-
 
 
     <div id="templatemo_main">

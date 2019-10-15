@@ -85,8 +85,9 @@ namespace BLOG.BLL
         }
         public int AddMetaAboutUser(string info, string dateBirth, int age)
         {
+            //DateBirth = DateTime.ParseExact(dateBirth, "dd.MM.yyyy", null),
             
-            return storage.AddMetaAboutUser(new MetaAboutUser { Info=info, DateBirth = DateTime.ParseExact(dateBirth, "dd.MM.yyyy", null), Age = age});;
+            return storage.AddMetaAboutUser(new MetaAboutUser { Info=info, DateBirth = DateTime.ParseExact(dateBirth, "yyyy-MM-dd", null), Age = age});
         }
         public bool AddNewTag(String name, String description)
         {
@@ -337,6 +338,7 @@ namespace BLOG.BLL
                 if (tag.Name == name)
                 {
                     b = false;
+                    break;
                 }
             }
             if (b)
